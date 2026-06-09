@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile · Trill CreatorOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  </style>
+</head>
+<body class="bg-[#f5efe7] text-[#1a1611] min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-56 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-6 scrollbar-thin">
+
+        <!-- Header -->
+        <div class="mb-5">
+          <h1 class="text-2xl font-semibold text-[#1a1611] tracking-tight">Profile & Settings</h1>
+          <p class="text-sm text-[#6b5e52] mt-1">Public-facing profile · personas · connected platforms · privacy</p>
+        </div>
+
+        <!-- Public profile editor -->
+        <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5 mb-5">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-[#1a1611]">Public Trill profile</h2>
+            <a href="#" class="text-xs text-[#9c2516] hover:text-[#1a1611]">preview as follower →</a>
+          </div>
+          <div class="grid grid-cols-3 gap-5">
+            <div class="text-center">
+              <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#9c2516] to-[#9c2516] flex items-center justify-center text-4xl font-bold text-[#0f0a1f] mx-auto mb-2">C</div>
+              <button class="text-xs text-[#9c2516] hover:text-[#1a1611]">change avatar</button>
+            </div>
+            <div class="col-span-2 space-y-3">
+              <div>
+                <label class="block text-[11px] uppercase text-[#6b5e52] font-mono mb-1">Display name</label>
+                <input type="text" value="Cryptodemo" class="w-full bg-[#ebe3d4] border border-[#d6cfc4] rounded px-3 py-2 text-sm text-[#1a1611]">
+              </div>
+              <div>
+                <label class="block text-[11px] uppercase text-[#6b5e52] font-mono mb-1">Bio</label>
+                <textarea rows="2" class="w-full bg-[#ebe3d4] border border-[#d6cfc4] rounded px-3 py-2 text-sm text-[#1a1611] resize-none">Solana × MEV × Liquid Staking · Public thesis, public misses · Verified by Trill</textarea>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] uppercase text-[#6b5e52] font-mono mb-1">Primary vertical</label>
+                  <select class="w-full bg-[#ebe3d4] border border-[#d6cfc4] rounded px-3 py-2 text-sm text-[#1a1611]">
+                    <option>DeFi</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-[11px] uppercase text-[#6b5e52] font-mono mb-1">Sub-verticals (max 3)</label>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="inline-flex items-center px-2 py-1 rounded text-xs bg-violet-500/20 text-[#9c2516] border border-[#9c2516]/40">MEV ×</span>
+                    <span class="inline-flex items-center px-2 py-1 rounded text-xs bg-violet-500/20 text-[#9c2516] border border-[#9c2516]/40">Solana ×</span>
+                    <span class="inline-flex items-center px-2 py-1 rounded text-xs bg-violet-500/20 text-[#9c2516] border border-[#9c2516]/40">Liquid Staking ×</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Persona + Connected accounts row -->
+        <div class="grid grid-cols-3 gap-5 mb-5">
+
+          <!-- Persona selector -->
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
+            <h2 class="text-sm font-semibold text-[#1a1611] mb-1">Persona</h2>
+            <p class="text-[11px] text-[#6b5e52] mb-4">determines what evidence the Trill Score module shows · public profile unaffected</p>
+            <div class="space-y-2">
+              <label class="block rounded-lg border border-violet-400/50 bg-violet-500/10 p-3 cursor-pointer">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="persona" checked class="mt-1 w-4 h-4 accent-violet-500">
+                  <div>
+                    <div class="font-medium text-[#1a1611] text-sm">Trader</div>
+                    <div class="text-[11px] text-[#6b5e52] leading-relaxed mt-0.5">Verified call ledger surface · price-source citations · invalidation tracking</div>
+                  </div>
+                </div>
+              </label>
+              <label class="block rounded-lg border border-[#d6cfc4] p-3 cursor-pointer hover:border-[#9c2516]/40">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="persona" class="mt-1 w-4 h-4 accent-violet-500">
+                  <div>
+                    <div class="font-medium text-[#1a1611] text-sm">Analyst</div>
+                    <div class="text-[11px] text-[#6b5e52] leading-relaxed mt-0.5">Thesis ledger with revisions · citation impact · long-form quality</div>
+                  </div>
+                </div>
+              </label>
+              <label class="block rounded-lg border border-[#d6cfc4] p-3 cursor-not-allowed opacity-60">
+                <div class="flex items-start gap-3">
+                  <input type="radio" name="persona" disabled class="mt-1 w-4 h-4 accent-violet-500">
+                  <div>
+                    <div class="font-medium text-[#1a1611] text-sm flex items-center gap-2">Builder <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/60 text-[#6b5e52] font-mono uppercase">V2</span></div>
+                    <div class="text-[11px] text-[#6b5e52] leading-relaxed mt-0.5">Shipped-vs-promised ledger · requires GitHub/protocol linkage</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Connected accounts -->
+          <div class="col-span-2 rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-sm font-semibold text-[#1a1611]">Connected platforms</h2>
+              <span class="text-[11px] text-[#6b5e52]">3 of 6 active · multi-platform identity</span>
+            </div>
+            <div class="space-y-2" id="accounts-list"></div>
+          </div>
+        </div>
+
+        <!-- A placeholder: Multi-platform Launch Studio -->
+        <div class="rounded-xl bg-gradient-to-br from-fuchsia-500/8 via-violet-500/5 to-orange-500/5 border border-fuchsia-400/30 p-5 mb-5 relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-fuchsia-400/10 blur-3xl"></div>
+          <div class="relative grid grid-cols-3 gap-5">
+            <div class="col-span-2">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] px-2 py-0.5 rounded bg-fuchsia-500/30 text-fuchsia-100 border border-fuchsia-300/40 font-mono uppercase tracking-wider">Coming Q3</span>
+                <span class="text-xs text-fuchsia-200/70">Multi-platform Launch Studio</span>
+              </div>
+              <h2 class="text-xl font-semibold text-[#1a1611] mb-2">Bring your X audience to new platforms — without starting from zero</h2>
+              <p class="text-sm text-[#1a1611] leading-relaxed mb-4 max-w-2xl">
+                Most KOLs build a strong X presence and then face a cold start everywhere else. The Launch Studio finds the subset of your X audience that's already active on YouTube, Telegram, Substack, or Farcaster. Then it generates a dual-platform first-post package and tracks seed-follower conversion in real time.
+              </p>
+              <div class="grid grid-cols-3 gap-3 mb-4">
+                <div class="rounded-lg bg-[#f5efe7] border border-fuchsia-400/15 p-3">
+                  <div class="text-[10px] uppercase text-fuchsia-300/70 font-mono mb-1">Step 1</div>
+                  <div class="text-sm font-medium text-[#1a1611] mb-1">Audience cross-mapping</div>
+                  <div class="text-[11px] text-[#6b5e52]">Identify who in your X audience also lives on the target platform</div>
+                </div>
+                <div class="rounded-lg bg-[#f5efe7] border border-fuchsia-400/15 p-3">
+                  <div class="text-[10px] uppercase text-fuchsia-300/70 font-mono mb-1">Step 2</div>
+                  <div class="text-sm font-medium text-[#1a1611] mb-1">Content adaptation</div>
+                  <div class="text-[11px] text-[#6b5e52]">AI restructures your top X content for the target format (long-form video script, podcast intro, newsletter)</div>
+                </div>
+                <div class="rounded-lg bg-[#f5efe7] border border-fuchsia-400/15 p-3">
+                  <div class="text-[10px] uppercase text-fuchsia-300/70 font-mono mb-1">Step 3</div>
+                  <div class="text-sm font-medium text-[#1a1611] mb-1">Seed conversion tracking</div>
+                  <div class="text-[11px] text-[#6b5e52]">First-week new-platform follower attribution back to source X posts</div>
+                </div>
+              </div>
+              <div class="text-xs text-fuchsia-200/80">
+                Already detected: <span class="font-mono font-semibold text-fuchsia-200">17,136</span> X followers active on YouTube · <span class="font-mono font-semibold text-fuchsia-200">11,424</span> on Telegram
+              </div>
+            </div>
+            <div class="flex flex-col justify-center items-end gap-3">
+              <button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#ebe3d4] border border-fuchsia-400/40 text-fuchsia-200 text-sm font-medium" disabled>
+                Notify me when ready
+              </button>
+              <span class="text-[10px] text-[#6b5e52]">Q3 2026 · waitlist open</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- V2 Monetization (with isolation note) -->
+        <div class="rounded-xl border border-dashed border-[#d6cfc4] bg-[#f5efe7] p-5 mb-5">
+          <div class="grid grid-cols-3 gap-5">
+            <div class="col-span-2">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-2xl">💰</span>
+                <h2 class="text-base font-semibold text-[#1a1611]">Monetization Hub</h2>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-700/60 text-[#6b5e52] border border-slate-600/60 font-mono uppercase">V2</span>
+              </div>
+              <p class="text-sm text-[#6b5e52] leading-relaxed mb-3">
+                Subscription tiers, paid Telegram, tipping, sponsorship inbox, payout schedule, tax reporting. Reserved for V2.
+              </p>
+              <div class="rounded-lg border border-emerald-400/30 bg-emerald-500/5 px-3 py-2 inline-flex items-start gap-2 text-xs">
+                <span class="text-emerald-400 mt-0.5">🔒</span>
+                <div class="text-emerald-200/90 leading-relaxed">
+                  <span class="font-semibold text-emerald-200">Structural isolation guarantee.</span> Monetization Hub has zero read access to Trill Score outputs. Enforced at the service layer. This is methodological bedrock — your rating is never influenced by who pays.
+                </div>
+              </div>
+            </div>
+            <div class="text-right text-xs text-[#6b5e52]">
+              <div class="mb-1">Compare:</div>
+              <div class="leading-relaxed text-[#6b5e52]">Kaito Studio: brand-creator marketplace inside the same product</div>
+              <div class="leading-relaxed text-[#6b5e52] mt-1">Cookie3 Launchpad: KOLs paid in project tokens by same vendor that scores them</div>
+              <div class="mt-2 text-[#9c2516] font-medium">Trill: hard wall.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom row: small settings cards -->
+        <div class="grid grid-cols-4 gap-4">
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-4">
+            <div class="text-[11px] uppercase tracking-widest text-[#6b5e52] font-mono mb-2">Notifications</div>
+            <div class="text-sm text-[#1a1611] mb-2">Daily digest at 9am UTC</div>
+            <div class="text-[11px] text-[#6b5e52]">+ realtime peer mentions</div>
+            <a href="#" class="block mt-3 text-xs text-[#9c2516] hover:text-[#1a1611]">manage →</a>
+          </div>
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-4">
+            <div class="text-[11px] uppercase tracking-widest text-[#6b5e52] font-mono mb-2">Privacy</div>
+            <div class="text-sm text-[#1a1611] mb-2">Standard tier</div>
+            <div class="text-[11px] text-[#6b5e52]">Methodology partners only</div>
+            <a href="#" class="block mt-3 text-xs text-[#9c2516] hover:text-[#1a1611]">manage →</a>
+          </div>
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-4">
+            <div class="text-[11px] uppercase tracking-widest text-[#6b5e52] font-mono mb-2">Security</div>
+            <div class="text-sm text-[#1a1611] mb-2">2FA · wallet-signed</div>
+            <div class="text-[11px] text-emerald-400">✓ all green</div>
+            <a href="#" class="block mt-3 text-xs text-[#9c2516] hover:text-[#1a1611]">manage →</a>
+          </div>
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-4">
+            <div class="text-[11px] uppercase tracking-widest text-[#6b5e52] font-mono mb-2">Data</div>
+            <div class="text-sm text-[#1a1611] mb-2">Export available</div>
+            <div class="text-[11px] text-[#6b5e52]">Rating persists (Moody's)</div>
+            <a href="#" class="block mt-3 text-xs text-[#9c2516] hover:text-[#1a1611]">export →</a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "profile";
+    window.PAGE_TITLE = "Profile & Settings";
+    window.PAGE_SUBTITLE = "public profile · persona · connected platforms · privacy";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+
+  <script>
+    // Connected accounts
+    const accountsEl = document.getElementById("accounts-list");
+    const platformIcons = { "X / Twitter": "𝕏", "Wallet": "₩", "Telegram": "✈", "YouTube": "▶", "Substack": "Ⓢ", "Farcaster": "ƒ" };
+    DEMO_KOL.connectedAccounts.forEach((acc) => {
+      const isConnected = acc.status.startsWith("connected");
+      const html = `
+        <div class="flex items-center gap-3 py-2 border-b border-slate-700/30 last:border-0">
+          <div class="w-9 h-9 rounded-lg ${isConnected ? 'bg-emerald-500/15 border-emerald-400/30' : 'bg-[#ebe3d4] border-[#d6cfc4]'} border flex items-center justify-center text-sm font-bold ${isConnected ? 'text-emerald-300' : 'text-[#6b5e52]'}">${platformIcons[acc.platform] || "?"}</div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium text-[#1a1611]">${acc.platform}</span>
+              ${isConnected ? `<span class="text-xs text-[#6b5e52]">${acc.handle}</span>` : ""}
+            </div>
+            <div class="text-[11px] ${isConnected ? 'text-emerald-400' : 'text-[#6b5e52]'}">
+              ${isConnected ? `connected · ${acc.since}` : "not connected"}
+            </div>
+          </div>
+          ${isConnected
+            ? `<button class="text-xs text-[#6b5e52] hover:text-[#1a1611]">manage</button>`
+            : `<button class="text-xs px-3 py-1 rounded bg-violet-500/20 border border-[#9c2516]/40 text-[#9c2516] hover:bg-[#9c2516]/10">+ connect</button>`
+          }
+        </div>
+      `;
+      accountsEl.insertAdjacentHTML("beforeend", html);
+    });
+  </script>
+</body>
+</html>

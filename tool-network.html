@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network · Trill CreatorOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 22, 17, 0.08); }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">Tools · Network</p>
+          <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">KOL <span class="italic text-[#9c2516]">↔</span> KOL.</h1>
+          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">The audiences worth belonging to are built together. Co-marketing with starred peers in your vertical · reciprocal threads · cross-quotes that compound recognition. Pay-to-play disabled. Quality matched on Trill Score.</p>
+        </header>
+
+        <!-- STATUS row -->
+        <div class="grid grid-cols-4 gap-4 mb-10">
+          <div class="bg-[#fef4e8] border border-[#9c2516]/40 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Action needed</p>
+            <p class="font-serif text-4xl text-[#9c2516] tabular-nums">2</p>
+            <p class="text-xs text-[#1a1611] mt-1">peers waiting on your reply</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Live pairings</p>
+            <p class="font-serif text-4xl tabular-nums">5</p>
+            <p class="text-xs text-[#6b5e52] mt-1">active reciprocal slots</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Cross-quotes (30d)</p>
+            <p class="font-serif text-4xl tabular-nums">18</p>
+            <p class="text-xs text-emerald-700 font-semibold mt-1">+632 net new followers</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Reciprocity score</p>
+            <p class="font-serif text-4xl tabular-nums">0.84</p>
+            <p class="text-xs text-[#6b5e52] mt-1">you give as much as you take</p>
+          </div>
+        </div>
+
+        <!-- LIFECYCLE FLOW · pairing happens inside Trill, not via X DM -->
+        <section class="mb-12 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
+          <div class="flex items-baseline justify-between mb-5">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">How a pairing works</p>
+              <h2 class="font-serif text-2xl tracking-tight">Trill-internal lifecycle · not X DM</h2>
+            </div>
+            <span class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">7 steps · ~3–5 days</span>
+          </div>
+          <div class="grid grid-cols-7 gap-2 text-center">
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">1</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Propose</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">type · thesis · lead split · timing</p>
+            </div>
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">2</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Receive</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">in their "Action needed" — never X DM</p>
+            </div>
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">3</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Accept / Counter</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">terms can be modified</p>
+            </div>
+            <div class="border border-[#6b5e52] rounded p-3 bg-[#9c2516]/10">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">4</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Workspace</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">co-draft + AI Writer + chat</p>
+            </div>
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">5</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Lock</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">both confirm · schedule</p>
+            </div>
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">6</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Publish</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">each posts to X separately</p>
+            </div>
+            <div class="border border-[#6b5e52]/30 rounded p-3">
+              <p class="font-serif text-2xl text-[#9c2516] mb-1">7</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4]">Track</p>
+              <p class="text-[11px] text-[#d6cfc4] mt-1 leading-tight">Growth logs conversions · reciprocity updated</p>
+            </div>
+          </div>
+          <p class="font-serif italic text-sm text-[#d6cfc4] text-center mt-5">All messaging, drafting and tracking happens inside Trill. X is only the final publishing destination. Notification reaches you via Telegram bot or email — set in Profile.</p>
+        </section>
+
+        <!-- ACTIVE COLLABORATIONS — in-progress workspace entries -->
+        <section class="mb-12">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-[#9c2516]/40">
+            <div>
+              <h2 class="font-serif text-3xl tracking-tight">Active collaborations · 2 in workspace</h2>
+              <p class="text-xs text-[#6b5e52] italic mt-1">Step 4–6 · drafting / locking / awaiting publish</p>
+            </div>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">all active →</a>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5">
+
+            <a href="tool-network-workspace.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-base font-serif font-bold text-[#f5efe7]">H</div>
+                <span class="font-serif text-xl text-[#9c2516]">×</span>
+                <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-base font-serif font-bold text-[#f5efe7]">C</div>
+                <div class="ml-1 flex-1">
+                  <h3 class="font-serif text-lg tracking-tight">@hsakatrades × you</h3>
+                  <p class="text-[11px] text-[#6b5e52]">Reciprocal thread · "Restaking · risk concentration"</p>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold bg-[#9c2516]/10 px-2 py-1 rounded">Drafting</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 mb-3">
+                <div class="h-1 rounded bg-[#1a1611]"></div>
+                <div class="h-1 rounded bg-[#9c2516]"></div>
+                <div class="h-1 rounded bg-[#d6cfc4]"></div>
+                <div class="h-1 rounded bg-[#d6cfc4]"></div>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-[#9c2516]/30">
+                <p class="text-[11px] text-[#9c2516] font-semibold">@hsakatrades locked · waiting on you</p>
+                <span class="text-[10px] text-[#6b5e52] font-mono">→ Open workspace</span>
+              </div>
+            </a>
+
+            <a href="tool-network-workspace.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-base font-serif font-bold text-[#f5efe7]">V</div>
+                <span class="font-serif text-xl text-[#9c2516]">×</span>
+                <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-base font-serif font-bold text-[#f5efe7]">C</div>
+                <div class="ml-1 flex-1">
+                  <h3 class="font-serif text-lg tracking-tight">@vance_research × you</h3>
+                  <p class="text-[11px] text-[#6b5e52]">Cross-quote · "Allocator's view of restaking"</p>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest text-emerald-700 font-semibold bg-emerald-50 px-2 py-1 rounded">Locked</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1 mb-3">
+                <div class="h-1 rounded bg-[#1a1611]"></div>
+                <div class="h-1 rounded bg-[#1a1611]"></div>
+                <div class="h-1 rounded bg-[#9c2516]"></div>
+                <div class="h-1 rounded bg-[#d6cfc4]"></div>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t border-subtle">
+                <p class="text-[11px] text-emerald-700 font-semibold">Scheduled · publishes Friday 3pm UTC</p>
+                <span class="text-[10px] text-[#6b5e52] font-mono">→ Open workspace</span>
+              </div>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- ACTION NEEDED — incoming pairing requests -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-3xl tracking-tight">Action needed · 2 waiting</h2>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">all requests →</a>
+          </div>
+
+          <div class="space-y-4">
+
+            <div class="card rounded-lg border-2 border-[#9c2516]/40 bg-[#fef4e8] p-6">
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-full bg-[#9c2516] flex items-center justify-center text-2xl font-serif font-bold text-[#f5efe7] shrink-0">H</div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-1">
+                    <h3 class="font-serif text-xl tracking-tight">@hsakatrades</h3>
+                    <span class="font-mono text-[#9c2516] text-sm">★★★★</span>
+                  </div>
+                  <p class="text-sm text-[#1a1611] mb-3 italic">"Want to write a reciprocal thread on restaking risk? I've got the AVS deposit data, you've got the failure-mode framing. 50/50 split on the lead, your thread first."</p>
+                  <div class="grid grid-cols-3 gap-3 text-xs">
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Audience overlap</p><p class="font-mono">18% · room to grow</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Their boost potential</p><p class="font-mono">≈ +480 followers</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Topic fit</p><p class="font-mono">DeFi · 0.91</p></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2 shrink-0">
+                  <a href="tool-network-workspace.html" class="px-5 py-2 bg-[#9c2516] text-[#f5efe7] text-xs font-semibold rounded text-center">Accept →</a>
+                  <button class="px-5 py-2 border border-subtle text-[#6b5e52] text-xs rounded hover:text-[#1a1611]">Counter</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border-2 border-[#9c2516]/40 bg-[#fef4e8] p-6">
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 rounded-full bg-[#9c2516] flex items-center justify-center text-2xl font-serif font-bold text-[#f5efe7] shrink-0">V</div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-3 mb-1">
+                    <h3 class="font-serif text-xl tracking-tight">@vance_research</h3>
+                    <span class="font-mono text-[#9c2516] text-sm">★★★</span>
+                  </div>
+                  <p class="text-sm text-[#1a1611] mb-3 italic">"Cross-quote my latest restaking primer? I'll quote your validator-queue thread back. Both on record · same week."</p>
+                  <div class="grid grid-cols-3 gap-3 text-xs">
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Audience overlap</p><p class="font-mono">11% · high room</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Their boost potential</p><p class="font-mono">≈ +210 followers</p></div>
+                    <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Topic fit</p><p class="font-mono">DeFi · 0.88</p></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2 shrink-0">
+                  <a href="tool-network-workspace.html" class="px-5 py-2 bg-[#9c2516] text-[#f5efe7] text-xs font-semibold rounded text-center">Accept →</a>
+                  <button class="px-5 py-2 border border-subtle text-[#6b5e52] text-xs rounded hover:text-[#1a1611]">Counter</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- DISCOVER PEERS — Trill-matched -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-3xl tracking-tight">Discover · matched on Trill Score</h2>
+            <p class="text-xs text-[#6b5e52] italic">Star tier ≥ ★★ · DeFi/Macro overlap</p>
+          </div>
+
+          <div class="grid grid-cols-3 gap-5">
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-12 h-12 rounded-full bg-[#9c2516] flex items-center justify-center text-lg font-serif font-bold text-[#f5efe7]">R</div>
+                <div>
+                  <h4 class="font-serif text-lg tracking-tight">@ren</h4>
+                  <p class="text-[11px] text-[#6b5e52]"><span class="font-mono text-[#9c2516]">★★</span> · DeFi · Contrarian</p>
+                </div>
+              </div>
+              <p class="text-xs text-[#1a1611] italic mb-3">"Walks back wrong calls before anyone notices."</p>
+              <div class="flex items-center justify-between pt-3 border-t border-subtle">
+                <p class="text-[11px] text-[#9c2516] font-semibold">Boost potential ≈ +180</p>
+                <a href="tool-network-workspace.html" class="text-xs text-[#9c2516] hover:underline font-semibold">Send pairing →</a>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-12 h-12 rounded-full bg-[#9c2516] flex items-center justify-center text-lg font-serif font-bold text-[#f5efe7]">L</div>
+                <div>
+                  <h4 class="font-serif text-lg tracking-tight">@ledger_status</h4>
+                  <p class="text-[11px] text-[#6b5e52]"><span class="font-mono text-[#9c2516]">★★</span> · Macro · Entertainer</p>
+                </div>
+              </div>
+              <p class="text-xs text-[#1a1611] italic mb-3">"Substance with a sense of humour."</p>
+              <div class="flex items-center justify-between pt-3 border-t border-subtle">
+                <p class="text-[11px] text-[#9c2516] font-semibold">Boost potential ≈ +240</p>
+                <a href="tool-network-workspace.html" class="text-xs text-[#9c2516] hover:underline font-semibold">Send pairing →</a>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-12 h-12 rounded-full bg-[#9c2516] flex items-center justify-center text-lg font-serif font-bold text-[#f5efe7]">T</div>
+                <div>
+                  <h4 class="font-serif text-lg tracking-tight">@tetranode</h4>
+                  <p class="text-[11px] text-[#6b5e52]"><span class="font-mono text-[#9c2516]">★★★</span> · Onchain</p>
+                </div>
+              </div>
+              <p class="text-xs text-[#1a1611] italic mb-3">"Reads wallets like literature."</p>
+              <div class="flex items-center justify-between pt-3 border-t border-subtle">
+                <p class="text-[11px] text-[#9c2516] font-semibold">Boost potential ≈ +320</p>
+                <a href="tool-network-workspace.html" class="text-xs text-[#9c2516] hover:underline font-semibold">Send pairing →</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- WHY UNIQUE -->
+        <section class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">Why this is uniquely Trill</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-tight mb-3">No KOL rings. No paid boosts. <em>Just real peers.</em></h2>
+              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed">Twitter KOL rings tag each other's alts and call it a recommendation. We match you with starred peers in your vertical — and reciprocity score keeps it honest. If you take more than you give, the matches dry up. The audience worth belonging to is the one earned together.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">5</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Active pairings</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">+632</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Followers · 30d</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">18</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Cross-quotes</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">0</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Paid promos</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-network";
+    window.PAGE_TITLE = "Network";
+    window.PAGE_SUBTITLE = "KOL ↔ KOL · matched on Trill Score, kept honest by reciprocity.";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

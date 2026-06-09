@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic Pulse · Trill 创作者操作系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 22, 17, 0.08); }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">工具 · Topic Pulse</p>
+          <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">我今天该写什么?</h1>
+          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">narrative 按 evaluated creator 的讨论密度加权 — 不是按 raw mention 数。只采纳来自机构认可声音的热度。</p>
+        </header>
+
+        <!-- 4 POSITION LEGEND -->
+        <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-3">4 个位置 · 每个 narrative 都落在其中之一</p>
+        <div class="grid grid-cols-4 gap-4 mb-12">
+          <div class="card rounded-lg border border-emerald-700/30 bg-[#f5efe7] p-5">
+            <div class="flex items-baseline justify-between mb-2">
+              <h3 class="font-serif text-xl text-emerald-700 tracking-tight">Opportunity</h3>
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            </div>
+            <p class="text-[11px] text-[#1a1611] italic leading-snug">热 · 仍开着 · 顶级声音已在动。</p>
+          </div>
+          <div class="card rounded-lg border border-[#9c2516]/30 bg-[#f5efe7] p-5">
+            <div class="flex items-baseline justify-between mb-2">
+              <h3 class="font-serif text-xl text-[#9c2516] tracking-tight">Covered</h3>
+              <span class="w-2 h-2 rounded-full bg-[#9c2516]"></span>
+            </div>
+            <p class="text-[11px] text-[#1a1611] italic leading-snug">你写过 · 角度 on record。</p>
+          </div>
+          <div class="card rounded-lg border border-amber-700/30 bg-[#f5efe7] p-5">
+            <div class="flex items-baseline justify-between mb-2">
+              <h3 class="font-serif text-xl text-amber-700 tracking-tight">Saturated</h3>
+              <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+            </div>
+            <p class="text-[11px] text-[#1a1611] italic leading-snug">关闭中 · 角度被强声音用尽。</p>
+          </div>
+          <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5">
+            <div class="flex items-baseline justify-between mb-2">
+              <h3 class="font-serif text-xl text-[#6b5e52] tracking-tight">Off-vertical</h3>
+              <span class="w-2 h-2 rounded-full border border-[#6b5e52]"></span>
+            </div>
+            <p class="text-[11px] text-[#1a1611] italic leading-snug">不是你的领域 · 说不的纪律。</p>
+          </div>
+        </div>
+
+        <!-- TODAY'S OPPORTUNITIES -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-5 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-3xl tracking-tight">今天的机会</h2>
+            <p class="text-xs text-[#6b5e52] italic">3 个角度仍开着 · 顶级声音已在动</p>
+          </div>
+
+          <div class="space-y-4">
+
+            <div class="card rounded-lg border-2 border-emerald-700/40 bg-emerald-50 p-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <div class="flex items-center gap-3 mb-1">
+                    <span class="font-mono text-emerald-700 text-xl">●</span>
+                    <h3 class="font-serif text-2xl tracking-tight">Restaking · 风险集中</h3>
+                    <span class="text-[10px] uppercase tracking-widest bg-emerald-700 text-white px-2 py-0.5 rounded font-semibold">Opportunity(机会)</span>
+                  </div>
+                  <p class="text-sm text-[#6b5e52] italic">快速上升 · EigenLayer TVL 占 53% · 角度仍开着</p>
+                </div>
+                <a href="tool-ai-writer.html" class="text-xs text-[#9c2516] hover:underline font-semibold shrink-0">写这个 →</a>
+              </div>
+              <div class="grid grid-cols-4 gap-3 pt-3 border-t border-emerald-700/20">
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">热度</p><p class="font-mono text-sm font-semibold">★★★★☆</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">方向</p><p class="font-mono text-sm font-semibold text-emerald-700">↗ rising · 4h</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">饱和度</p><p class="font-mono text-sm font-semibold">2 / 6 top voices</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">领域匹配</p><p class="font-mono text-sm font-semibold">DeFi · 0.94</p></div>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border-2 border-emerald-700/40 bg-emerald-50 p-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <div class="flex items-center gap-3 mb-1">
+                    <span class="font-mono text-emerald-700 text-xl">●</span>
+                    <h3 class="font-serif text-2xl tracking-tight">AI agent · 归因层</h3>
+                    <span class="text-[10px] uppercase tracking-widest bg-emerald-700 text-white px-2 py-0.5 rounded font-semibold">Opportunity(机会)</span>
+                  </div>
+                  <p class="text-sm text-[#6b5e52] italic">上升 · 覆盖不足 · 新框架空间</p>
+                </div>
+                <a href="tool-ai-writer.html" class="text-xs text-[#9c2516] hover:underline font-semibold shrink-0">写这个 →</a>
+              </div>
+              <div class="grid grid-cols-4 gap-3 pt-3 border-t border-emerald-700/20">
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">热度</p><p class="font-mono text-sm font-semibold">★★★☆☆</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">方向</p><p class="font-mono text-sm font-semibold text-emerald-700">↗ rising · 12h</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">饱和度</p><p class="font-mono text-sm font-semibold">1 / 6 top voices</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">领域匹配</p><p class="font-mono text-sm font-semibold">AI · 0.81</p></div>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border-2 border-emerald-700/40 bg-emerald-50 p-6">
+              <div class="flex items-start justify-between mb-3">
+                <div>
+                  <div class="flex items-center gap-3 mb-1">
+                    <span class="font-mono text-emerald-700 text-xl">●</span>
+                    <h3 class="font-serif text-2xl tracking-tight">Solana DePIN · 上线饱和度</h3>
+                    <span class="text-[10px] uppercase tracking-widest bg-emerald-700 text-white px-2 py-0.5 rounded font-semibold">Opportunity(机会)</span>
+                  </div>
+                  <p class="text-sm text-[#6b5e52] italic">热 · 反向解读的角度仍开着</p>
+                </div>
+                <a href="tool-ai-writer.html" class="text-xs text-[#9c2516] hover:underline font-semibold shrink-0">写这个 →</a>
+              </div>
+              <div class="grid grid-cols-4 gap-3 pt-3 border-t border-emerald-700/20">
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">热度</p><p class="font-mono text-sm font-semibold">★★★★★</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">方向</p><p class="font-mono text-sm font-semibold text-emerald-700">↗ rising · 2d</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">饱和度</p><p class="font-mono text-sm font-semibold">3 / 6 top voices</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">领域匹配</p><p class="font-mono text-sm font-semibold">DePIN · 0.72</p></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- COVERED + SATURATED summary row -->
+        <div class="grid grid-cols-2 gap-6 mb-10">
+
+          <section>
+            <div class="flex items-baseline justify-between mb-4 pb-2 border-b border-subtle">
+              <h3 class="font-serif text-xl tracking-tight">Covered(已覆盖) · holding</h3>
+              <span class="text-[10px] text-[#6b5e52]">2 个话题</span>
+            </div>
+            <div class="space-y-2">
+              <div class="border border-[#9c2516]/30 rounded p-3 bg-[#fef4e8]/60">
+                <p class="text-sm"><span class="font-mono text-[#9c2516]">●</span> Validator queue · Ethereum</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-0.5">你 5/27 的 thread · 312 个引用 · 仍是权威</p>
+              </div>
+              <div class="border border-[#9c2516]/30 rounded p-3 bg-[#fef4e8]/60">
+                <p class="text-sm"><span class="font-mono text-[#9c2516]">●</span> $SOL → $200 预测 unwind</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-0.5">你 6/5 的跟进 · 主动认 MISS · 计入 IH</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="flex items-baseline justify-between mb-4 pb-2 border-b border-subtle">
+              <h3 class="font-serif text-xl tracking-tight">Saturated(饱和) · skip</h3>
+              <span class="text-[10px] text-[#6b5e52]">4 个话题</span>
+            </div>
+            <div class="space-y-2">
+              <div class="border border-amber-700/30 rounded p-3 bg-amber-50/60">
+                <p class="text-sm"><span class="font-mono text-amber-700">●</span> Memecoin 超级周期</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-0.5">Murad + 另 4 位每日在写 · 角度用尽</p>
+              </div>
+              <div class="border border-amber-700/30 rounded p-3 bg-amber-50/60">
+                <p class="text-sm"><span class="font-mono text-amber-700">●</span> ETH ETF 重定级</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-0.5">6 位顶级声音都已表态 · 现在纯重复</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- WHY UNIQUE TO TRILL -->
+        <section class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">为什么这件事只有 Trill 能做</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-tight mb-3">"热度"只有我们能定义。</h2>
+              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed">Kaito / Cookie3 weight heat by mention count — trivially gamed by bots and paid promotion. Topic Pulse weights heat by the discussion density of evaluated creators. A narrative is hot because credible voices are writing on it, not because a meme account spun up 50,000 retweets. Only Trill can do this — because only Trill holds a Star tier for every evaluated creator.</p>
+            </div>
+            <div class="space-y-3">
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mb-1">他们对"热"的定义</p>
+                <p class="font-mono text-lg text-[#1a1611] line-through text-[#d6cfc4]">50,000 mentions</p>
+                <p class="text-[11px] italic text-[#d6cfc4] mt-1">→ 12,000 from bots · 18 from creators</p>
+              </div>
+              <div class="border border-[#9c2516] rounded p-4 bg-[#9c2516]/10">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] mb-1">我们对"热"的定义</p>
+                <p class="font-mono text-lg text-[#9c2516] font-bold">4 of 6 ★★★ writing on it</p>
+                <p class="text-[11px] italic text-[#d6cfc4] mt-1">↗ signal that compounds with re-rating</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-topic-pulse";
+    window.PAGE_TITLE = "Topic Pulse";
+    window.PAGE_SUBTITLE = "What should I write about today?";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

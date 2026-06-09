@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Writer · Trill 创作者操作系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 22, 17, 0.08); }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+
+    <aside class="w-60 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <!-- HERO -->
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <div class="flex items-start justify-between">
+            <div class="max-w-3xl">
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">旗舰工具 · AI Writer</p>
+              <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">你的声音。<span class="italic text-[#9c2516]">被改进。</span></h1>
+              <p class="font-serif italic text-lg text-[#6b5e52] leading-relaxed">在起草任何东西之前,先研究你近期的真实 post。产出听起来像 <em>你自己</em> 的内容 — 但在 Trill 奖励的维度上更强。靠"更好"赢得位置,不靠"更快"。</p>
+            </div>
+            <div class="text-right shrink-0 ml-8">
+              <p class="font-serif text-6xl text-[#9c2516] tabular-nums leading-none">147</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mt-2">已 run draft 总数</p>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-1">+0.06 avg EV 提升 per draft</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- TWO ENTRY POINTS -->
+        <section class="mb-10">
+          <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-4">开始一篇 draft</p>
+          <div class="grid grid-cols-2 gap-5">
+
+            <!-- Entry: from Topic Pulse -->
+            <div class="card rounded-lg border border-subtle bg-[#fef4e8] p-6">
+              <div class="flex items-baseline justify-between mb-3">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">日节奏</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">来自 Topic Pulse</p>
+              </div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">抓一个 hot narrative</h3>
+              <p class="text-sm text-[#1a1611] leading-snug mb-5">3 个 narrative 在 DeFi 里发热 · 2 个角度仍开着 · 顶级声音已在动。选一个 — 我们给你写。</p>
+              <div class="space-y-2 mb-5">
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Restaking · 风险集中</p>
+                    <p class="text-[11px] text-[#6b5e52]">上升 · 6 位顶级声音里 2 位已覆盖 · 角度开着</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">写这个 →</button>
+                </div>
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">AI agent · 归因层</p>
+                    <p class="text-[11px] text-[#6b5e52]">快速上升 · 仍未充分覆盖</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">写这个 →</button>
+                </div>
+              </div>
+              <a href="tool-topic-pulse.html" class="text-xs text-[#9c2516] hover:underline">查看全部 12 个 hot topic →</a>
+            </div>
+
+            <!-- Entry: from Score -->
+            <div class="card rounded-lg border border-subtle bg-[#fef4e8] p-6">
+              <div class="flex items-baseline justify-between mb-3">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">月节奏</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">来自 Score</p>
+              </div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">提升一个弱维度</h3>
+              <p class="text-sm text-[#1a1611] leading-snug mb-5">你 7 个维度里 2 个被 flag。有意识地工作在一个上 — 每篇 draft 都内嵌那个轴的 rubric。</p>
+              <div class="space-y-2 mb-5">
+                <div class="bg-[#f5efe7] border border-[#9c2516]/40 rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Community Confidence(社区信任) <span class="text-[#9c2516] text-[10px] font-mono ml-1">0.34 · LOW</span></p>
+                    <p class="text-[11px] text-[#6b5e52]">Layer-2 命中率下跌 · 需要 context post</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">改进这个 →</button>
+                </div>
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Community Care(社区关怀) <span class="text-[#6b5e52] text-[10px] font-mono ml-1">0.55 · AVG</span></p>
+                    <p class="text-[11px] text-[#6b5e52]">回复质量 + miss-acknowledgement 偏低</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">改进这个 →</button>
+                </div>
+              </div>
+              <a href="score.html" class="text-xs text-[#9c2516] hover:underline">查看完整 Score 拆解 →</a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ACTIVE GUIDED DRAFT — flagship workbench -->
+        <section class="mb-10 rounded-lg border-2 border-[#9c2516] bg-[#f5efe7] overflow-hidden">
+          <div class="bg-[#1a1611] text-[#f5efe7] px-6 py-4 flex items-baseline justify-between">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">引导式 draft · 进行中</p>
+              <h2 class="font-serif text-2xl tracking-tight">Restaking · 风险集中</h2>
+            </div>
+            <p class="text-xs text-[#d6cfc4] italic">第 4 / 6 步 · 还有 2 个问题</p>
+          </div>
+
+          <div class="grid grid-cols-5 gap-0">
+
+            <!-- LEFT: guided Q&A -->
+            <div class="col-span-3 p-6 border-r border-subtle">
+              <div class="space-y-5">
+
+                <!-- Answered Q1 -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">1.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Topic & 角度?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"Restaking risk concentration — EigenLayer is now 53% of all liquid restaking. What's the systemic fragility?"</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- Answered Q2 -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">2.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">类型 & 长度?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"长 thread · 8–12 帖 · 嵌入数据图"</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- Answered Q3 (with rubric trigger) -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">3.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">specific named source(具名来源)?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"EigenLayer dashboard · Renzo on-chain TVL · Ren's Mar 4 thread on restaking-as-loop · my own May 9 prediction (graded MISS)"</p>
+                    <p class="text-[11px] text-[#9c2516] mt-1 font-semibold">↳ 计入 Analytical Depth(具名来源规则)</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- 已启用 Q4 -->
+                <div class="flex gap-3 bg-[#fef4e8] -mx-6 px-6 py-4 border-l-4 border-[#9c2516]">
+                  <span class="font-serif text-[#9c2516] w-6">4.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-2">如果你的 thesis 错了,具体的失败模式是什么?</p>
+                    <p class="text-[11px] text-[#9c2516] font-semibold mb-3">↳ Required for Intellectual Honesty + Community Confidence(社区信任) (miss-acknowledgement rule)</p>
+                    <textarea class="w-full bg-[#f5efe7] border border-subtle rounded p-3 text-sm focus:outline-none focus:border-[#9c2516]" rows="4" placeholder="它真正会崩的点。说具体变量,不是 vibe。">A coordinated AVS deposit unwind across 3+ operators within a 24-hour window — if it happens before Symbiotic launches, my "diversification thesis" collapses to a single counterparty failure mode. I gave it a 12% probability in my last call.</textarea>
+                  </div>
+                </div>
+
+                <!-- Pending Q5 -->
+                <div class="flex gap-3 opacity-50">
+                  <span class="font-serif text-[#6b5e52] w-6">5.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">reusable framework(可复用框架)?</p>
+                    <p class="text-[11px] text-[#6b5e52] italic">↳ 为 Educational Value</p>
+                  </div>
+                  <span class="text-[#6b5e52] text-xs italic">pending</span>
+                </div>
+
+                <!-- Pending Q6 -->
+                <div class="flex gap-3 opacity-50">
+                  <span class="font-serif text-[#6b5e52] w-6">6.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">语气校准?</p>
+                    <p class="text-[11px] text-[#6b5e52] italic">↳ 从你近 30 帖里学到的声音</p>
+                  </div>
+                  <span class="text-[#6b5e52] text-xs italic">pending</span>
+                </div>
+
+              </div>
+
+              <div class="mt-7 pt-5 border-t border-subtle flex items-center justify-between">
+                <button class="text-sm text-[#6b5e52] hover:text-[#1a1611]">← back</button>
+                <button class="px-6 py-2.5 bg-[#9c2516] text-[#f5efe7] text-sm font-semibold rounded">下一题 →</button>
+              </div>
+            </div>
+
+            <!-- RIGHT: voice study panel -->
+            <div class="col-span-2 bg-[#ebe3d4]/40 p-6">
+              <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-3">你的声音 · 已研究</p>
+              <p class="text-xs text-[#6b5e52] italic mb-5">从你近 30 帖来。不会写任何听起来不像你的东西。</p>
+
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">节奏</p>
+                  <p class="text-sm">短开场钩子 · 2–3 段长数据段 · 中间承认 miss · 收尾问题。</p>
+                </div>
+
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">常用措辞</p>
+                  <p class="text-sm font-mono text-[11px] text-[#1a1611]">"the trade was right · the framing wasn't"<br>"on record · time-stamped"<br>"if I'm wrong here, here's why"</p>
+                </div>
+
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">我们不会假装的习惯</p>
+                  <ul class="text-sm space-y-1">
+                    <li>· You name the failure mode when calling something</li>
+                    <li>· You quote your own historical call before refining</li>
+                    <li>· You never use "GM", "wagmi", or emoji clusters</li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-subtle">
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">引用的来源材料</p>
+                  <p class="text-xs text-[#1a1611]"><strong>4 of your own posts</strong> · <strong>1 verified call</strong> (May 9, graded MISS) · <strong>2 peer threads</strong> (Ren, hsakatrades)</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RECENT DRAFT HISTORY -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-2xl tracking-tight">近期 draft</h2>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">查看全部 147 →</a>
+          </div>
+
+          <div class="space-y-3">
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">Why my $SOL → $200 call held while the chart didn't</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">已发 · 3 天前</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">Topic-driven · 宏观 · Educational Value rubric</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"The trade was right. The framing wasn't. Here's the order of operations I missed and why my next call corrects it…"</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.08</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">EV 提升</p>
+                <p class="text-[10px] text-emerald-700 mt-1">+312 followers · 84% smart</p>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">Validator queue · the Ethereum question nobody's asking</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">已发 · 1 周前</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">Dimension-driven · Analytical Depth 重点</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"There's a 47,000-validator backlog and the EIP-7251 changes don't fix it. Here's the math…"</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.05</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">AD 提升</p>
+                <p class="text-[10px] text-emerald-700 mt-1">Quoted by @hsakatrades</p>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">The MEV walkthrough most threads miss</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">已发 · 2 周前</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">教育者框架 · Educational Value</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"5-step framework for reading the mempool. Reusable. With a worked example from yesterday's flow."</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.06</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">EV 提升</p>
+                <p class="text-[10px] text-emerald-700 mt-1">+428 followers</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- WHY UNIQUE TO TRILL -->
+        <section class="mb-8 bg-[#1a1611] text-[#f5efe7] rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">为什么这件事只有 Trill 能做</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-tight mb-3">每个问题都映射到我们评估的一个维度。</h2>
+              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed">它要求具名来源。它要求 miss-acknowledgement。它坚持要 reusable framework,不只是 take。它在让一次 follow 值得信任的那些具体轴上写出 <em>更好</em> 的内容 — 用你的声音。永远不把你变成 rubric 的学生。</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">+0.06</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Avg EV 提升 / draft</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">31%</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">同行引用的 draft 数</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">0</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">产出的通用 post 数</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">147</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">你的 · 用你的声音</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-ai-writer";
+    window.PAGE_TITLE = "AI Writer";
+    window.PAGE_SUBTITLE = "改进引擎,用你自己的声音。";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

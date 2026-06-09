@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growth · Trill 创作者操作系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 22, 17, 0.08); }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">工具 · Growth</p>
+          <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">Guide 把人送 <span class="italic text-[#9c2516]">到你这里</span>。</h1>
+          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">当 follower 跑 Trill 的 Recommendation 流、你匹配他的 archetype 时,你出现在他的名单里。追踪转化。Trill Seal 嵌到你已存在的所有地方。Recognition 变成流量。</p>
+        </header>
+
+        <div class="grid grid-cols-4 gap-4 mb-10">
+          <div class="bg-[#fef4e8] border border-[#9c2516]/40 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Trill 导流 · 30 天</p>
+            <p class="font-serif text-4xl text-[#9c2516] tabular-nums">+212</p>
+            <p class="text-xs text-emerald-700 font-semibold mt-1">vs 上月 +94</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Recommend 出现次数</p>
+            <p class="font-serif text-4xl tabular-nums">487</p>
+            <p class="text-xs text-[#6b5e52] mt-1">出现在 487 个 follower 流里</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">转化率</p>
+            <p class="font-serif text-4xl tabular-nums">43.5%</p>
+            <p class="text-xs text-emerald-700 font-semibold mt-1">vs 平台均值 +8 pp</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Seal 嵌入(live)</p>
+            <p class="font-serif text-4xl tabular-nums">4</p>
+            <p class="text-xs text-[#6b5e52] mt-1">X bio · TG · 个人站 · Discord</p>
+          </div>
+        </div>
+
+        <!-- TWO COL: Recommend appearance + Seal embed -->
+        <div class="grid grid-cols-2 gap-6 mb-10">
+
+          <!-- Recommend 出现次数 detail -->
+          <section class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+            <h2 class="font-serif text-2xl tracking-tight mb-2">你出现在哪些地方</h2>
+            <p class="text-sm text-[#6b5e52] italic mb-5">本月驱动流量的 top archetype 匹配</p>
+
+            <div class="space-y-3">
+              <div class="flex items-center justify-between pb-3 border-b border-subtle">
+                <div>
+                  <p class="text-sm font-semibold">DeFi 研究 · Thesis-driven</p>
+                  <p class="text-[11px] text-[#6b5e52]">231 次 follower 搜索 · 排名第 4 / 12</p>
+                </div>
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+94</p>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-subtle">
+                <div>
+                  <p class="text-sm font-semibold">宏观 & 流动性</p>
+                  <p class="text-[11px] text-[#6b5e52]">152 次 follower 搜索 · 排名第 7 / 18</p>
+                </div>
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+58</p>
+              </div>
+              <div class="flex items-center justify-between pb-3 border-b border-subtle">
+                <div>
+                  <p class="text-sm font-semibold">链上分析</p>
+                  <p class="text-[11px] text-[#6b5e52]">104 次 follower 搜索 · 排名第 11 / 23</p>
+                </div>
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+38</p>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold">Restaking · 小众</p>
+                  <p class="text-[11px] text-[#6b5e52]">52 次 follower 搜索 · 排名第 2 / 8</p>
+                </div>
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+22</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Seal embed -->
+          <section class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
+            <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Trill Seal · live 任何地方</p>
+            <h2 class="font-serif text-2xl tracking-tight mb-2">你的 credibility,可移植。</h2>
+            <p class="text-sm text-[#d6cfc4] italic mb-5">随你的 record live 更新。把流量导回你的 Trill profile。</p>
+
+            <!-- Seal preview -->
+            <div class="bg-[#f5efe7] rounded-lg p-5 mb-5 text-[#1a1611]">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-[#9c2516] flex items-center justify-center text-2xl font-serif font-bold text-[#f5efe7] shrink-0">C</div>
+                <div class="flex-1">
+                  <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Trill Verified</p>
+                  <h3 class="font-serif text-xl tracking-tight">@cryptodemo · <span class="font-mono text-[#9c2516]">★★★★</span></h3>
+                  <p class="text-[11px] text-[#6b5e52]">在 Analytical Depth · Accuracy Discipline 上 Distinguished</p>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-t border-subtle grid grid-cols-3 gap-2 text-center">
+                <div><p class="text-[10px] text-[#6b5e52]">已记录 call</p><p class="font-mono text-sm font-semibold">47</p></div>
+                <div><p class="text-[10px] text-[#6b5e52]">命中率</p><p class="font-mono text-sm font-semibold">73%</p></div>
+                <div><p class="text-[10px] text-[#6b5e52]">主动认错</p><p class="font-mono text-sm font-semibold">3</p></div>
+              </div>
+            </div>
+
+            <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mb-2">嵌入代码</p>
+            <code class="block bg-[#3a1f1a] text-[#d6cfc4] font-mono text-xs p-3 rounded mb-3">&lt;script src="trill.xyz/seal/cryptodemo"&gt;&lt;/script&gt;</code>
+            <div class="flex items-center gap-2">
+              <button class="text-xs text-[#f5efe7] underline">复制</button>
+              <span class="text-[#6b5e52]">·</span>
+              <button class="text-xs text-[#f5efe7] underline">下载 PNG</button>
+              <span class="text-[#6b5e52]">·</span>
+              <button class="text-xs text-[#f5efe7] underline">自定义</button>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- CONVERSION LOG -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-3xl tracking-tight">转化日志 · live</h2>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">完整日志 →</a>
+          </div>
+
+          <div class="space-y-2">
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-4 flex items-center gap-4">
+              <span class="text-xs font-mono text-[#6b5e52] w-16 shrink-0">12s ago</span>
+              <p class="text-sm flex-1">follower 搜了 <strong>"DeFi · Thesis-driven"</strong> → 看到你排第 4 → 关注了</p>
+              <span class="text-xs font-semibold text-emerald-700 shrink-0">+1 粉丝</span>
+            </div>
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-4 flex items-center gap-4">
+              <span class="text-xs font-mono text-[#6b5e52] w-16 shrink-0">1m ago</span>
+              <p class="text-sm flex-1">follower 在 Recommend 里扫了 X feed → 你被 flag 为缺失 → 添加了</p>
+              <span class="text-xs font-semibold text-emerald-700 shrink-0">+1 粉丝</span>
+            </div>
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-4 flex items-center gap-4">
+              <span class="text-xs font-mono text-[#6b5e52] w-16 shrink-0">4m ago</span>
+              <p class="text-sm flex-1">follower 在 @ren 的置顶 thread 里点了你的 <strong>Trill Seal</strong> → 打开你的 profile → 关注了</p>
+              <span class="text-xs font-semibold text-emerald-700 shrink-0">+1 粉丝</span>
+            </div>
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-4 flex items-center gap-4">
+              <span class="text-xs font-mono text-[#6b5e52] w-16 shrink-0">6m ago</span>
+              <p class="text-sm flex-1">Bulk follow · 8 users via Recommend list <strong>"宏观 & 流动性 / Thesis-driven"</strong></p>
+              <span class="text-xs font-semibold text-emerald-700 shrink-0">+8 粉丝</span>
+            </div>
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-4 flex items-center gap-4">
+              <span class="text-xs font-mono text-[#6b5e52] w-16 shrink-0">11m ago</span>
+              <p class="text-sm flex-1">编辑部引用 — 你出现在 <strong>"4 位三星悄悄做多 $EIGEN"</strong> 里</p>
+              <span class="text-xs font-semibold text-emerald-700 shrink-0">+22 粉丝</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHY UNIQUE -->
+        <section class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">为什么这件事只有 Trill 能做</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-tight mb-3">受众已经在 <em>找</em> 你。</h2>
+              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed">每个上 Trill Guide 的 follower 都按 archetype 进来 — 在看到你之前先告诉我们他要什么。你匹配上,Guide 就把他递给你。没有付费推广。没有广告负担。只有按匹配驱动的流量 — 而且转化率随 record 改善复利。</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">+212</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Trill 来源粉丝 · 30 天</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">43.5%</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">转化 vs 均值</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">487</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Recommend 命中</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">$0</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">广告支出</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-growth";
+    window.PAGE_TITLE = "Growth";
+    window.PAGE_SUBTITLE = "Guide 把新 audience 递给你 · 按 archetype、按匹配、按 record。";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

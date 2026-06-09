@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace · Network · Trill 创作者操作系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+    .step-active { background:#9c2516; color:#f5efe7; }
+    .step-done { background:#1a1611; color:#f5efe7; }
+    .step-pending { background:#ebe3d4; color:#6b5e52; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <!-- BREADCRUMB -->
+        <nav class="mb-6 text-xs text-[#6b5e52]">
+          <a href="tool-network.html" class="hover:text-[#9c2516]">Network</a>
+          <span class="mx-2">/</span>
+          <span class="text-[#1a1611]">协作 Workspace</span>
+        </nav>
+
+        <!-- HERO -->
+        <header class="mb-8 pb-6 border-b border-subtle">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">进行中的协作</p>
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-12 h-12 rounded-full bg-[#9c2516] flex items-center justify-center text-lg font-serif font-bold text-[#f5efe7]">H</div>
+                <span class="font-serif text-3xl text-[#9c2516]">×</span>
+                <div class="w-12 h-12 rounded-full bg-[#9c2516] flex items-center justify-center text-lg font-serif font-bold text-[#f5efe7]">C</div>
+                <div class="ml-3">
+                  <h1 class="font-serif text-3xl tracking-tight">@hsakatrades × @cryptodemo</h1>
+                  <p class="text-sm text-[#6b5e52]">★★★★ × ★★★★ · DeFi 领域</p>
+                </div>
+              </div>
+              <p class="font-serif italic text-lg text-[#6b5e52]">Reciprocal thread · "Restaking · 风险集中"</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">预计影响</p>
+              <p class="font-serif text-3xl text-emerald-700 tabular-nums">+480</p>
+              <p class="text-[11px] text-[#6b5e52] italic">位粉丝每边</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- TIMELINE -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2">
+            <div class="flex-1 flex items-center gap-1">
+              <div class="step-done w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold font-serif shrink-0">1</div>
+              <div class="flex-1 h-0.5 bg-[#1a1611]"></div>
+              <div class="step-active w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold font-serif shrink-0">2</div>
+              <div class="flex-1 h-0.5 bg-[#d6cfc4]"></div>
+              <div class="step-pending w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold font-serif shrink-0">3</div>
+              <div class="flex-1 h-0.5 bg-[#d6cfc4]"></div>
+              <div class="step-pending w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold font-serif shrink-0">4</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-4 gap-2 mt-2 text-center text-[11px]">
+            <div>
+              <p class="font-semibold text-[#1a1611]">已接受</p>
+              <p class="text-[#6b5e52]">2 天前</p>
+            </div>
+            <div>
+              <p class="font-semibold text-[#9c2516]">起草中</p>
+              <p class="text-[#6b5e52]">进行中</p>
+            </div>
+            <div>
+              <p class="text-[#6b5e52]">发布</p>
+              <p class="text-[#6b5e52] italic">预计明天</p>
+            </div>
+            <div>
+              <p class="text-[#6b5e52]">追踪</p>
+              <p class="text-[#6b5e52] italic">发布后 7 天</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TWO-COLUMN: shared draft + sidepanel -->
+        <div class="grid grid-cols-5 gap-6 mb-10">
+
+          <!-- LEFT: shared draft + AI Writer -->
+          <section class="col-span-3 bg-[#f5efe7] border border-subtle rounded-lg overflow-hidden">
+            <div class="bg-[#1a1611] text-[#f5efe7] px-5 py-3 flex items-baseline justify-between">
+              <div>
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">共享 draft · 双方可编辑</p>
+                <p class="text-sm mt-0.5">你的 thread(先发 · 60% lead)</p>
+              </div>
+              <a href="tool-ai-writer.html" class="text-xs text-[#9c2516] hover:text-[#f5efe7]">在 AI Writer 里打开 →</a>
+            </div>
+
+            <div class="p-5 space-y-4">
+              <div class="bg-white border border-subtle rounded-lg p-4">
+                <div class="text-xs text-[#6b5e52] mb-2 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  你的部分 · 由 AI Writer 起草 · 用你的声音
+                </div>
+                <p class="text-sm leading-relaxed text-[#1a1611]">EigenLayer 现在占 <strong>所有 liquid restaking TVL 的 53%</strong>。大多数 thread 把这框成"规模"。我觉得正好相反。</p>
+                <p class="text-sm leading-relaxed text-[#1a1611] mt-3">这是 thesis 会崩的点:24 小时窗口内 3+ operator 协同 AVS 存款 unwind。如果发生在 Symbiotic 上线之前,"多元化 thesis" 坍缩成单一对手方风险。上月我给了 12% 概率。我 hold 这个数。</p>
+                <p class="text-sm leading-relaxed text-[#1a1611] mt-3 italic">@hsakatrades 手上有 AVS 存款数据能让我们验证 operator 集中度 — 下一段交给他接。</p>
+              </div>
+
+              <div class="border-l-2 border-[#9c2516] pl-4 py-2 bg-[#fef4e8]/60">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-1">@hsakatrades 写下一段 · 24h 内发</p>
+                <p class="text-sm text-[#6b5e52] italic">[等他的 draft — 他在自己的 AI Writer 会话里写,会同步到这里]</p>
+              </div>
+
+              <!-- AI Writer inline lift suggestion -->
+              <div class="bg-emerald-50 border border-emerald-700/30 rounded-lg p-4 flex items-start gap-3">
+                <span class="font-serif text-2xl text-emerald-700">✍</span>
+                <div class="flex-1">
+                  <p class="text-[10px] uppercase tracking-widest text-emerald-700 font-semibold mb-1">AI Writer · 建议</p>
+                  <p class="text-sm text-[#1a1611] leading-snug mb-2">你第 2 段命名了一个 failure mode 但没引用自己历史 record。加一句 "我 5/27 给了 12% 概率 — thread 在这" 会让 <strong>Intellectual Honesty +0.04</strong> 并让 thesis 更扎实。</p>
+                  <button class="text-xs text-emerald-700 hover:underline font-semibold">应用 →</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-5 py-4 border-t border-subtle bg-[#ebe3d4]/40 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" class="w-4 h-4 accent-[#9c2516]">
+                  <span class="text-sm text-[#1a1611]">准备发布(你)</span>
+                </label>
+                <label class="flex items-center gap-2 opacity-70">
+                  <input type="checkbox" class="w-4 h-4 accent-[#9c2516]" checked disabled>
+                  <span class="text-sm text-[#1a1611]">准备发布(@hsakatrades)✓</span>
+                </label>
+              </div>
+              <button class="px-5 py-2 bg-[#9c2516] text-[#f5efe7] text-xs font-semibold rounded">锁定 & 排期 →</button>
+            </div>
+          </section>
+
+          <!-- RIGHT: side panel -->
+          <aside class="col-span-2 space-y-5">
+
+            <!-- Pairing terms -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-3">配对条款</p>
+              <div class="space-y-2.5 text-sm">
+                <div class="flex justify-between border-b border-subtle pb-2">
+                  <span class="text-[#6b5e52]">类型</span>
+                  <span class="font-semibold">Reciprocal thread</span>
+                </div>
+                <div class="flex justify-between border-b border-subtle pb-2">
+                  <span class="text-[#6b5e52]">Lead 分配</span>
+                  <span class="font-semibold">60 / 40(你 lead)</span>
+                </div>
+                <div class="flex justify-between border-b border-subtle pb-2">
+                  <span class="text-[#6b5e52]">顺序</span>
+                  <span class="font-semibold">你先 → 他 < 24h</span>
+                </div>
+                <div class="flex justify-between border-b border-subtle pb-2">
+                  <span class="text-[#6b5e52]">窗口</span>
+                  <span class="font-semibold">本周(周五前)</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[#6b5e52]">KPI</span>
+                  <span class="font-semibold text-emerald-700">+480 每边(预估)</span>
+                </div>
+              </div>
+              <button class="mt-3 text-xs text-[#9c2516] hover:underline font-semibold">提议修改 →</button>
+            </div>
+
+            <!-- Chat -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <div class="flex items-baseline justify-between mb-3">
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">Chat · Trill 内部</p>
+                <span class="text-[10px] text-emerald-700 font-semibold">@hsakatrades 在线</span>
+              </div>
+              <div class="space-y-2.5 mb-3 max-h-44 overflow-y-auto pr-2">
+                <div class="flex items-start gap-2">
+                  <div class="w-7 h-7 rounded-full bg-[#9c2516] flex items-center justify-center text-xs font-serif font-bold text-[#f5efe7] shrink-0">H</div>
+                  <div class="flex-1">
+                    <p class="text-xs"><strong>@hsakatrades</strong> <span class="text-[10px] text-[#6b5e52] ml-1">2 小时前</span></p>
+                    <p class="text-sm text-[#1a1611]">锁定我那部分了。AI Writer 给我预填了 AVS 存款数据段,我在 polish hook。</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2">
+                  <div class="w-7 h-7 rounded-full bg-[#9c2516] flex items-center justify-center text-xs font-serif font-bold text-[#f5efe7] shrink-0">C</div>
+                  <div class="flex-1">
+                    <p class="text-xs"><strong>你</strong> <span class="text-[10px] text-[#6b5e52] ml-1">1 小时前</span></p>
+                    <p class="text-sm text-[#1a1611]">好。我按 AI Writer 上面的建议改完就 lock。下午 3 点 UTC 发?</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-2">
+                  <div class="w-7 h-7 rounded-full bg-[#9c2516] flex items-center justify-center text-xs font-serif font-bold text-[#f5efe7] shrink-0">H</div>
+                  <div class="flex-1">
+                    <p class="text-xs"><strong>@hsakatrades</strong> <span class="text-[10px] text-[#6b5e52] ml-1">42 分钟前</span></p>
+                    <p class="text-sm text-[#1a1611]">可以。6 小时内 quote-tweet 你的。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <input type="text" placeholder="回复…" class="flex-1 bg-[#ebe3d4] rounded px-3 py-1.5 text-xs focus:outline-none">
+                <button class="px-3 py-1.5 bg-[#9c2516] text-[#f5efe7] text-xs font-semibold rounded">发送</button>
+              </div>
+            </div>
+
+            <!-- Prior collab history -->
+            <div class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-5">
+              <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-3">过往合作</p>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between border-b border-[#6b5e52]/30 pb-2">
+                  <span class="text-[#d6cfc4]">跟 @hsakatrades 总共</span>
+                  <span class="font-semibold">3 次(这是第 4 次)</span>
+                </div>
+                <div class="flex justify-between border-b border-[#6b5e52]/30 pb-2">
+                  <span class="text-[#d6cfc4]">上次合作</span>
+                  <span class="font-semibold">22 天前 · validator queue</span>
+                </div>
+                <div class="flex justify-between border-b border-[#6b5e52]/30 pb-2">
+                  <span class="text-[#d6cfc4]">近 3 次合计提升</span>
+                  <span class="font-semibold text-emerald-400">+1,840 粉丝</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-[#d6cfc4]">你的 reciprocity 分数</span>
+                  <span class="font-semibold text-emerald-400">0.84</span>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+        </div>
+
+        <!-- POST-PUBLISH TRACKING preview -->
+        <section class="mb-10 bg-[#ebe3d4]/40 border border-subtle rounded-lg p-6">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-1">发布后 · Growth 自动追踪</p>
+              <h2 class="font-serif text-2xl tracking-tight">会被测什么</h2>
+            </div>
+            <span class="text-xs text-[#6b5e52] italic">发布后 7 天 · then reciprocity scored</span>
+          </div>
+          <div class="grid grid-cols-4 gap-4">
+            <div class="bg-[#f5efe7] border border-subtle rounded p-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">导给你的转化</p>
+              <p class="font-mono text-2xl tabular-nums">— 粉丝</p>
+              <p class="text-[10px] text-[#6b5e52] italic mt-1">通过 Trill referral 参数追踪</p>
+            </div>
+            <div class="bg-[#f5efe7] border border-subtle rounded p-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">导给他的转化</p>
+              <p class="font-mono text-2xl tabular-nums">— 粉丝</p>
+              <p class="text-[10px] text-[#6b5e52] italic mt-1">同 · 对称</p>
+            </div>
+            <div class="bg-[#f5efe7] border border-subtle rounded p-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">合计互动</p>
+              <p class="font-mono text-2xl tabular-nums">—</p>
+              <p class="text-[10px] text-[#6b5e52] italic mt-1">下游 quote / 回复</p>
+            </div>
+            <div class="bg-[#f5efe7] border border-subtle rounded p-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Reciprocity 变化</p>
+              <p class="font-mono text-2xl tabular-nums">±0.0X</p>
+              <p class="text-[10px] text-[#6b5e52] italic mt-1">双方按提升打分</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-network";
+    window.PAGE_TITLE = "协作 Workspace";
+    window.PAGE_SUBTITLE = "Reciprocal thread · @hsakatrades × @cryptodemo";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

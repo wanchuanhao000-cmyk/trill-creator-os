@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trill AI Writer · Trigger</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .gradient-border { position: relative; }
+    .gradient-border::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: linear-gradient(135deg, #f59e0b, #d946ef, #6366f1); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+  </style>
+</head>
+<body class="bg-[#0a0617] text-slate-200 min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-56 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-6 scrollbar-thin">
+
+        <!-- Breadcrumb -->
+        <div class="mb-5 flex items-center gap-2 text-xs text-slate-500">
+          <a href="../score.html" class="hover:text-violet-400">Trill Score</a>
+          <span>›</span>
+          <span class="text-slate-300">AI Writer · Step 1 of 3</span>
+        </div>
+
+        <!-- Header -->
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 via-amber-400 to-violet-500 flex items-center justify-center font-bold text-[#0f0a1f]">AI</div>
+            <h1 class="text-2xl font-semibold text-white tracking-tight">Trill AI Writer</h1>
+            <span class="text-xs px-2 py-0.5 rounded bg-violet-500/20 text-violet-300 border border-violet-400/30 font-mono uppercase">contextual coaching</span>
+          </div>
+          <p class="text-sm text-slate-400 max-w-3xl leading-relaxed">
+            Trill AI detected a dimension below your peer baseline. We'll walk you through 10 short questions about your style and intent, then draft a publish-ready post that's tuned to lift the specific dimension. You review every line before it goes live.
+          </p>
+        </div>
+
+        <!-- Stepper -->
+        <div class="flex items-center gap-3 mb-6">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-orange-500 text-orange-950 flex items-center justify-center text-xs font-bold">1</div>
+            <span class="text-xs font-medium text-white">Pick angle</span>
+          </div>
+          <div class="flex-1 h-px bg-slate-700"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700 text-slate-500 flex items-center justify-center text-xs font-bold">2</div>
+            <span class="text-xs text-slate-500">10 questions</span>
+          </div>
+          <div class="flex-1 h-px bg-slate-700"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-slate-800 border border-slate-700 text-slate-500 flex items-center justify-center text-xs font-bold">3</div>
+            <span class="text-xs text-slate-500">Review draft</span>
+          </div>
+        </div>
+
+        <!-- Target dimension -->
+        <div class="rounded-xl bg-orange-500/5 border border-orange-400/30 p-5 mb-5">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-[11px] uppercase tracking-widest text-orange-300/70 font-mono">Targeting</span>
+                <span class="text-xs text-slate-500">· detected this cycle</span>
+              </div>
+              <h2 class="text-lg font-semibold text-white">Community Confidence <span class="text-orange-300 font-mono ml-2">0.34</span></h2>
+              <p class="text-sm text-slate-400 mt-1">Below avg band · −0.08 vs last cycle · peers in same vertical avg 0.61</p>
+            </div>
+            <div class="text-right">
+              <div class="text-[10px] uppercase tracking-widest text-slate-500 font-mono mb-1">Expected lift</div>
+              <div class="text-xl font-bold text-emerald-400 font-mono tabular-nums">+0.07</div>
+              <div class="text-[10px] text-slate-500">over next cycle</div>
+            </div>
+          </div>
+          <div class="border-t border-orange-400/15 pt-3">
+            <div class="text-xs text-slate-400 mb-2 font-medium">Three drivers Trill AI identified:</div>
+            <ul class="space-y-1 text-xs text-slate-300">
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">▸</span><span>Layer 2 hit rate at 41% — below the 50% cap that anchors <code class="font-mono text-orange-300 text-[11px]">community_trust</code></span></li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">▸</span><span>Inbound replies skew toward smaller accounts — trimmed-mean peer follower count 8.4K (below 10K band)</span></li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">▸</span><span>Learning-signal density in comments at 4.2% — below the 5% band where Educational Impact transitions up</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Recommended angle -->
+        <div class="mb-3 text-xs uppercase tracking-widest text-slate-500 font-mono">Recommended angle</div>
+        <label class="block rounded-xl gradient-border bg-slate-900/40 border border-slate-700/50 p-5 mb-3 cursor-pointer hover:border-violet-400/40 transition-colors">
+          <div class="flex items-start gap-4">
+            <input type="radio" name="angle" value="recap" checked class="mt-1.5 w-4 h-4 accent-violet-500">
+            <div class="flex-1">
+              <div class="flex items-center gap-2 mb-1">
+                <h3 class="font-semibold text-white">"Wins & Misses" recap thread</h3>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-mono">strongest lift</span>
+              </div>
+              <p class="text-sm text-slate-400 mb-3 leading-relaxed">
+                Cover your last 10 calls — winners and losers honestly tagged. Embed the Trill verified-calls widget. Targets <code class="font-mono text-orange-300 text-[11px]">community_trust</code>, <code class="font-mono text-sky-300 text-[11px]">peer_endorsement</code>, and <code class="font-mono text-sky-300 text-[11px]">miss_acknowledgement</code> at once.
+              </p>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="rounded bg-slate-800/40 border border-slate-700/40 p-2">
+                  <div class="text-[10px] text-slate-500 mb-0.5">Community Confidence</div>
+                  <div class="font-mono text-emerald-300 text-sm font-semibold">+0.07</div>
+                </div>
+                <div class="rounded bg-slate-800/40 border border-slate-700/40 p-2">
+                  <div class="text-[10px] text-slate-500 mb-0.5">Intellectual Honesty</div>
+                  <div class="font-mono text-emerald-300 text-sm font-semibold">+0.03</div>
+                </div>
+                <div class="rounded bg-slate-800/40 border border-slate-700/40 p-2">
+                  <div class="text-[10px] text-slate-500 mb-0.5">Educational Value</div>
+                  <div class="font-mono text-emerald-300 text-sm font-semibold">+0.02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+
+        <div class="mb-2 text-xs uppercase tracking-widest text-slate-500 font-mono">Other angles</div>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <label class="rounded-xl bg-slate-900/30 border border-slate-700/40 p-4 cursor-pointer hover:border-violet-400/30 transition-colors">
+            <div class="flex items-start gap-3">
+              <input type="radio" name="angle" value="receipts" class="mt-1 w-4 h-4 accent-violet-500">
+              <div>
+                <h4 class="font-medium text-white mb-1">Long-form invalidation post</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Explain why one ongoing call would be invalidated, with thresholds. Stronger lift on <span class="font-mono text-sky-300">silent_reversal_penalty</span>.</p>
+                <div class="text-[11px] text-emerald-400 font-mono mt-2">+0.05 CC · +0.04 IH</div>
+              </div>
+            </div>
+          </label>
+          <label class="rounded-xl bg-slate-900/30 border border-slate-700/40 p-4 cursor-pointer hover:border-violet-400/30 transition-colors">
+            <div class="flex items-start gap-3">
+              <input type="radio" name="angle" value="qa" class="mt-1 w-4 h-4 accent-violet-500">
+              <div>
+                <h4 class="font-medium text-white mb-1">Q&A reply session</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">Open a 90-min reply window, AI helps draft substantive answers. Targets <span class="font-mono text-orange-300">educational_impact</span> and Care.</p>
+                <div class="text-[11px] text-emerald-400 font-mono mt-2">+0.04 CC · +0.05 Care</div>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <!-- Differentiation note -->
+        <div class="mb-6 rounded-lg border border-violet-400/30 bg-violet-500/5 px-4 py-3 flex items-start gap-3">
+          <span class="text-violet-300 mt-0.5">ℹ</span>
+          <div class="text-xs text-violet-200/90 leading-relaxed">
+            <span class="font-semibold text-violet-200">This is not generic AI writing.</span>
+            Trill AI knows your past style, your tracked calls, and the specific evidence items pulling your score down. Each suggestion is tied to a concrete dimension improvement — no vague "engagement tips."
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex items-center justify-between">
+          <a href="../score.html" class="text-sm text-slate-400 hover:text-slate-200">← Back to Trill Score</a>
+          <a href="chat.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-400 text-orange-950 text-sm font-semibold transition-colors">
+            Start the 10-question briefing
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "score";
+    window.PAGE_PREFIX = "../";
+    window.PAGE_TITLE = "Trill AI Writer";
+    window.PAGE_SUBTITLE = "draft a post tuned to lift a specific dimension";
+  </script>
+  <script src="../data/demo-kol.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

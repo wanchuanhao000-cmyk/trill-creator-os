@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trill AI Writer · Draft Review</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .hl-disclosure { background: rgb(168 85 247 / 0.18); border-bottom: 1px dotted rgb(168 85 247 / 0.7); padding: 0 2px; border-radius: 2px; }
+    .hl-source { background: rgb(34 197 94 / 0.18); border-bottom: 1px dotted rgb(34 197 94 / 0.7); padding: 0 2px; border-radius: 2px; }
+    .hl-accountability { background: rgb(245 158 11 / 0.18); border-bottom: 1px dotted rgb(245 158 11 / 0.7); padding: 0 2px; border-radius: 2px; }
+    .tweet-card { background: rgb(15 10 31 / 0.6); border: 1px solid rgb(51 65 85 / 0.5); }
+  </style>
+</head>
+<body class="bg-[#0a0617] text-slate-200 min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-56 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-6 scrollbar-thin">
+
+        <!-- Breadcrumb -->
+        <div class="mb-3 flex items-center gap-2 text-xs text-slate-500">
+          <a href="../score.html" class="hover:text-violet-400">Trill Score</a>
+          <span>›</span>
+          <a href="trigger.html" class="hover:text-violet-400">AI Writer</a>
+          <span>›</span>
+          <span class="text-slate-300">Step 3 of 3 · Draft</span>
+        </div>
+
+        <!-- Stepper compact -->
+        <div class="flex items-center gap-3 mb-6">
+          <div class="flex items-center gap-2 opacity-50">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center text-xs font-bold">✓</div>
+            <span class="text-xs text-slate-500">Angle</span>
+          </div>
+          <div class="flex-1 h-px bg-emerald-400/30"></div>
+          <div class="flex items-center gap-2 opacity-50">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center text-xs font-bold">✓</div>
+            <span class="text-xs text-slate-500">10 questions</span>
+          </div>
+          <div class="flex-1 h-px bg-emerald-400/30"></div>
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full bg-orange-500 text-orange-950 flex items-center justify-center text-xs font-bold">3</div>
+            <span class="text-xs font-medium text-white">Review draft</span>
+          </div>
+        </div>
+
+        <!-- Two-column: draft | impact preview -->
+        <div class="grid grid-cols-3 gap-5">
+
+          <!-- Left: 2/3 — draft thread -->
+          <div class="col-span-2 space-y-3">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-semibold text-white">Draft · long thread · 2 SOL trades · self-reflective tone</h2>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-sm bg-violet-400/60"></span><span class="text-slate-400">disclosure tag</span></span>
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-sm bg-emerald-400/60"></span><span class="text-slate-400">source citation</span></span>
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-sm bg-amber-400/60"></span><span class="text-slate-400">named miss / invalidation</span></span>
+              </div>
+            </div>
+
+            <!-- Tweet 1: opener -->
+            <div class="tweet-card rounded-xl p-4">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-amber-400 flex items-center justify-center font-bold text-[#0f0a1f]">C</div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-white">Cryptodemo</span>
+                    <span class="text-xs text-slate-500">@cryptodemo</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500">tweet 1 of 8 · opener</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-100 leading-relaxed">
+                two SOL trades. same asset. same general window. completely different outcomes. here's what actually separated them.
+              </p>
+            </div>
+
+            <!-- Tweet 2: trade 1 (the win) -->
+            <div class="tweet-card rounded-xl p-4">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-amber-400 flex items-center justify-center font-bold text-[#0f0a1f]">C</div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-white">Cryptodemo</span>
+                    <span class="text-xs text-slate-500">@cryptodemo</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500">tweet 2 · trade 1, the one that worked</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-100 leading-relaxed">
+                oct 2024. SOL at $135. post-election, everyone still arguing whether the move was real or a dead cat. i thought it was real.<br><br>
+                sized for 12% max drawdown before i touched the buy button. target was $185. that was the whole plan, written before entry.<br><br>
+                mid-dec, SOL hit $182. took 90% off. no drama, no "but what if it goes to $300." the call had played out — i sold the call, not the asset.<br><br>
+                <span class="hl-source">[Coinbase Pro exit timestamps + Solscan TX confirmations]</span> both clean. ~10 weeks. position size never moved once.
+              </p>
+            </div>
+
+            <!-- Tweet 3: trade 2 (the miss) — specifics + invalidation -->
+            <div class="tweet-card rounded-xl p-4">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-amber-400 flex items-center justify-center font-bold text-[#0f0a1f]">C</div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-white">Cryptodemo</span>
+                    <span class="text-xs text-slate-500">@cryptodemo</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500">tweet 5 · trade 2, the one that taught me something</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-100 leading-relaxed">
+                aug 2024. SOL at $160. same framework, i thought. sized for 10% max drawdown. target $250.<br><br>
+                by mid-jan 2025, SOL was at $245 <span class="hl-source">[Coinbase Pro]</span>. took 30% off. let the rest run "for the breakout."<br><br>
+                by march it was back at $135. sold the remainder at $138 <span class="hl-source">[per Solscan confirmation]</span>. watched ~$107 of unrealised gain become a small loss on the back half.<br><br>
+                the entry was fine. the sizing was fine. the miss was exit sizing — i didn't treat <span class="hl-accountability">$245</span> as the call playing out. i treated it as a reason to get greedy.<br><br>
+                <span class="italic text-slate-300">what i should have done:</span> taken 80%+ off at <span class="hl-accountability">$245</span>. or at minimum, set a trailing stop at <span class="hl-accountability">$200</span> and stuck to it. didn't do either.
+              </p>
+            </div>
+
+            <!-- Tweet 4: closing rule + Trill marker + verified track record widget -->
+            <div class="tweet-card rounded-xl p-4">
+              <div class="flex items-start gap-3 mb-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 to-amber-400 flex items-center justify-center font-bold text-[#0f0a1f]">C</div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-sm font-semibold text-white">Cryptodemo</span>
+                    <span class="text-xs text-slate-500">@cryptodemo</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500">tweet 8 · final · the rule</span>
+                </div>
+              </div>
+              <p class="text-sm text-slate-100 leading-relaxed mb-3">
+                the rule i'm taking into every trade from here: the exit plan gets written before the position gets sized. not after. not when it's green. before.<br><br>
+                if i can't define the exit clearly enough to write it down, i'm not ready to size the entry.<br><br>
+                <span class="hl-disclosure">verified track record</span> below 👇
+              </p>
+              <!-- Embedded Trill widget mock -->
+              <div class="rounded-lg border border-violet-400/30 bg-violet-500/5 p-3">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2">
+                    <div class="w-5 h-5 rounded bg-gradient-to-br from-violet-500 to-amber-400 flex items-center justify-center text-[#0f0a1f] text-[10px] font-bold">T</div>
+                    <span class="text-xs font-semibold text-white">Trill Verified Calls · @cryptodemo</span>
+                  </div>
+                  <span class="text-[10px] text-violet-400/80 font-mono">live</span>
+                </div>
+                <div class="grid grid-cols-4 gap-2 text-center">
+                  <div class="rounded bg-emerald-500/15 border border-emerald-400/30 py-1.5"><div class="text-base font-bold text-emerald-300 font-mono">12</div><div class="text-[10px] text-slate-400">HIT</div></div>
+                  <div class="rounded bg-amber-500/15 border border-amber-400/30 py-1.5"><div class="text-base font-bold text-amber-300 font-mono">4</div><div class="text-[10px] text-slate-400">PARTIAL</div></div>
+                  <div class="rounded bg-rose-500/15 border border-rose-400/30 py-1.5"><div class="text-base font-bold text-rose-300 font-mono">7</div><div class="text-[10px] text-slate-400">MISS</div></div>
+                  <div class="rounded bg-slate-700/40 border border-slate-600/40 py-1.5"><div class="text-base font-bold text-slate-300 font-mono">3</div><div class="text-[10px] text-slate-400">ONGOING</div></div>
+                </div>
+                <div class="text-[10px] text-slate-500 mt-2 text-center">contestable · methodology v10.6 · trill.app/c/cryptodemo</div>
+              </div>
+            </div>
+
+            <!-- (rest of thread collapsed for demo brevity) -->
+            <div class="text-xs text-slate-500 italic text-center py-2">
+              + 4 more tweets in the thread (tweets 3, 4, 6, 7 — trade 1 closing details, trade 2 setup, the cross-trade lesson, philosophical layer)
+            </div>
+
+            <!-- Edit / Regenerate -->
+            <div class="flex items-center gap-2 pt-2">
+              <button class="px-3 py-1.5 rounded text-xs border border-slate-700/60 text-slate-300 hover:border-violet-400/40">✎ Edit thread</button>
+              <button class="px-3 py-1.5 rounded text-xs border border-slate-700/60 text-slate-300 hover:border-violet-400/40">↺ Regenerate</button>
+              <button class="px-3 py-1.5 rounded text-xs border border-slate-700/60 text-slate-300 hover:border-violet-400/40">+ Add a tweet</button>
+            </div>
+          </div>
+
+          <!-- Right: 1/3 — impact preview + publish -->
+          <div class="space-y-4">
+
+            <!-- Impact preview card -->
+            <div class="rounded-xl bg-gradient-to-br from-emerald-500/10 to-emerald-700/5 border border-emerald-400/30 p-5 sticky top-4">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-[10px] uppercase tracking-widest text-emerald-300/80 font-mono">Pre-publish impact preview</span>
+              </div>
+              <div class="text-3xl font-bold text-emerald-300 font-mono tabular-nums mb-1">+0.12</div>
+              <div class="text-xs text-slate-400 mb-4">composite expected lift (next cycle)</div>
+
+              <div class="space-y-2 mb-4 pb-4 border-b border-emerald-400/15">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-300">Community Confidence</span>
+                  <span class="font-mono text-emerald-300 font-semibold">+0.07</span>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-300">Intellectual Honesty</span>
+                  <span class="font-mono text-emerald-300 font-semibold">+0.03</span>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-300">Educational Value</span>
+                  <span class="font-mono text-emerald-300 font-semibold">+0.02</span>
+                </div>
+              </div>
+
+              <div class="text-[11px] text-slate-400 mb-3">
+                Triggers that contribute:
+              </div>
+              <ul class="space-y-1.5 text-[11px] mb-4">
+                <li class="flex items-start gap-2"><span class="text-violet-400">●</span><span class="text-slate-300">"verified track record" marker (Sentinel-detected)</span></li>
+                <li class="flex items-start gap-2"><span class="text-emerald-400">●</span><span class="text-slate-300">4 specific source citations (Coinbase Pro, Solscan)</span></li>
+                <li class="flex items-start gap-2"><span class="text-amber-400">●</span><span class="text-slate-300">Named miss: $245 peak / $200 trailing-stop level</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-400">●</span><span class="text-slate-300">Self-attributed exit-sizing failure (no spin)</span></li>
+                <li class="flex items-start gap-2"><span class="text-sky-400">●</span><span class="text-slate-300">1 reusable framework closing ("exit plan before sizing")</span></li>
+              </ul>
+
+              <div class="text-[10px] text-slate-500 mb-4 leading-relaxed">
+                Verified by Trill Sentinel within 24h of publish · effect lands on next scoring cycle (May 26)
+              </div>
+
+              <div class="space-y-2">
+                <button class="w-full py-2.5 rounded-lg bg-gradient-to-r from-orange-500 to-amber-400 hover:from-orange-400 hover:to-amber-300 text-orange-950 text-sm font-semibold transition-all">
+                  Publish to X · scheduled tonight 9pm UTC
+                </button>
+                <button class="w-full py-2 rounded-lg border border-slate-700/60 text-slate-300 hover:border-slate-500 text-xs font-medium">
+                  Save as draft instead
+                </button>
+              </div>
+            </div>
+
+            <!-- Privacy note -->
+            <div class="rounded-lg bg-slate-900/40 border border-slate-700/40 p-4">
+              <div class="text-xs text-slate-400 leading-relaxed">
+                <span class="font-medium text-slate-300">Your data, your draft.</span><br>
+                Trill AI uses only your own X account data + tracked calls. No other KOL's content is referenced. Your draft is not visible to Trill Score evaluators until you publish.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "score";
+    window.PAGE_PREFIX = "../";
+    window.PAGE_TITLE = "Trill AI Writer · Draft Review";
+    window.PAGE_SUBTITLE = "self-reflective tone · 2 SOL trades · accountability-tagged";
+  </script>
+  <script src="../data/demo-kol.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

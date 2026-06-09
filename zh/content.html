@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content · Trill CreatorOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .heatmap-cell { transition: all 0.15s; }
+    .heatmap-cell:hover { transform: scale(1.4); z-index: 10; }
+  </style>
+</head>
+<body class="bg-[#f5efe7] text-[#1a1611] min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-56 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-6 scrollbar-thin">
+
+        <!-- Header -->
+        <div class="mb-5 flex items-end justify-between">
+          <div>
+            <h1 class="text-2xl font-semibold text-[#1a1611] tracking-tight">Content</h1>
+            <p class="text-sm text-[#6b5e52] mt-1">Every post · scored · with feedback fast enough to shape the next one</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="text-[#6b5e52]">feedback windows</span>
+            <button class="px-3 py-1.5 rounded bg-violet-500/20 border border-[#9c2516]/40 text-[#9c2516]">24h</button>
+            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">7d</button>
+            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">30d</button>
+          </div>
+        </div>
+
+        <!-- Recent posts table -->
+        <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5 mb-5">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-[#1a1611]">Recent posts · ranked by smart engagement</h2>
+            <span class="text-[11px] text-[#6b5e52]">smart-engagement = quality-weighted, not raw</span>
+          </div>
+          <div id="posts-list" class="space-y-3"></div>
+        </div>
+
+        <!-- Pre-publish Sim (D placeholder) -->
+        <div class="rounded-xl bg-gradient-to-br from-indigo-500/8 to-fuchsia-500/5 border border-indigo-400/30 p-5 mb-5 relative overflow-hidden">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-indigo-400/10 blur-2xl"></div>
+          <div class="relative grid grid-cols-3 gap-5">
+            <div class="col-span-2">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/30 text-indigo-100 border border-indigo-300/40 font-mono uppercase tracking-wider">Coming Soon</span>
+                <span class="text-xs text-indigo-200/70">Pre-publish Score Simulator</span>
+              </div>
+              <h2 class="text-lg font-semibold text-[#1a1611] mb-2">See your draft's dimension impact before you publish</h2>
+              <p class="text-sm text-[#1a1611] leading-relaxed mb-3">
+                Type into the draft box; Trill scores your text live across all 7 dimensions. Reasoning · Conviction · Originality · Source-density · Disclosure-readiness. Concrete rewrite suggestions for each weak signal — before the post ever leaves your fingers.
+              </p>
+              <p class="text-xs text-[#6b5e52]">Unlike Kaito/Cookie3, this is post-action-aware: the simulator knows which evidence the live post will generate, and feeds back to your score in real-time after publish.</p>
+            </div>
+            <div class="rounded-lg bg-[#f5efe7] border border-indigo-400/20 p-3 self-end">
+              <div class="text-[10px] uppercase text-indigo-300/70 font-mono mb-2">simulator preview</div>
+              <div class="text-xs text-[#6b5e52] mb-2 italic">"Long $SOL here, target 250..."</div>
+              <div class="space-y-1 text-[11px]">
+                <div class="flex justify-between"><span class="text-[#6b5e52]">Reasoning</span><span class="font-mono text-rose-400">0.18</span></div>
+                <div class="flex justify-between"><span class="text-[#6b5e52]">Conviction</span><span class="font-mono text-amber-300">0.62</span></div>
+                <div class="flex justify-between"><span class="text-[#6b5e52]">Source density</span><span class="font-mono text-rose-400">0.05</span></div>
+              </div>
+              <div class="mt-2 pt-2 border-t border-[#d6cfc4] text-[10px] text-indigo-300">+ add invalidation level → +0.15 Reasoning</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row: Format perf + best time -->
+        <div class="grid grid-cols-2 gap-5 mb-5">
+
+          <!-- Format performance -->
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-sm font-semibold text-[#1a1611]">Format performance</h2>
+              <span class="text-[11px] text-[#6b5e52]">avg smart engagement</span>
+            </div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 text-xs">
+                  <span class="text-[#1a1611]">Long thread (8+ tweets)</span>
+                  <span class="font-mono text-emerald-300 font-semibold">0.74</span>
+                </div>
+                <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
+                  <div class="bg-emerald-400 h-full" style="width: 74%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1.5 text-xs">
+                  <span class="text-[#1a1611]">Short thread (3-5 tweets)</span>
+                  <span class="font-mono text-emerald-300 font-semibold">0.66</span>
+                </div>
+                <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
+                  <div class="bg-emerald-400 h-full" style="width: 66%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1.5 text-xs">
+                  <span class="text-[#1a1611]">Single (with media)</span>
+                  <span class="font-mono text-sky-300 font-semibold">0.58</span>
+                </div>
+                <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
+                  <div class="bg-sky-400 h-full" style="width: 58%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1.5 text-xs">
+                  <span class="text-[#1a1611]">Single (text only)</span>
+                  <span class="font-mono text-[#1a1611] font-semibold">0.42</span>
+                </div>
+                <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
+                  <div class="bg-slate-400 h-full" style="width: 42%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-1.5 text-xs">
+                  <span class="text-[#1a1611]">Reply (to peer)</span>
+                  <span class="font-mono text-amber-300 font-semibold">0.39</span>
+                </div>
+                <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
+                  <div class="bg-amber-400 h-full" style="width: 39%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#d6cfc4] text-[11px] text-[#6b5e52]">
+              Suggestion: your long threads consistently outperform — your last 4 threads averaged 0.78 vs 0.51 for singles in same period.
+            </div>
+          </div>
+
+          <!-- Best time to post heatmap -->
+          <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-sm font-semibold text-[#1a1611]">Best time to post</h2>
+              <span class="text-[11px] text-[#6b5e52]">UTC · audience activity</span>
+            </div>
+            <div class="overflow-x-auto">
+              <div class="inline-flex flex-col gap-1">
+                <!-- Hours header -->
+                <div class="flex gap-1 ml-8 text-[9px] text-[#6b5e52] font-mono">
+                  <span class="w-3 text-center">0</span>
+                  <span class="w-3 text-center">2</span>
+                  <span class="w-3 text-center">4</span>
+                  <span class="w-3 text-center">6</span>
+                  <span class="w-3 text-center">8</span>
+                  <span class="w-3 text-center">10</span>
+                  <span class="w-3 text-center">12</span>
+                  <span class="w-3 text-center">14</span>
+                  <span class="w-3 text-center">16</span>
+                  <span class="w-3 text-center">18</span>
+                  <span class="w-3 text-center">20</span>
+                  <span class="w-3 text-center">22</span>
+                </div>
+                <!-- Days -->
+                <div id="heatmap-grid"></div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#d6cfc4] text-[11px] text-[#6b5e52]">
+              Peak: Mon-Wed 14:00-16:00 UTC (US East market open, EU lunch). Your @cryptodemo posts at 21:00 UTC perform 30% above your own average.
+            </div>
+          </div>
+        </div>
+
+        <!-- Topic breakdown -->
+        <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-sm font-semibold text-[#1a1611]">Sub-vertical performance</h2>
+            <span class="text-[11px] text-[#6b5e52]">smart engagement · this 30d</span>
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="rounded-lg bg-emerald-500/5 border border-emerald-400/30 p-3">
+              <div class="text-xs text-[#6b5e52] mb-1">MEV</div>
+              <div class="text-xl font-bold text-emerald-300 font-mono">0.79</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">8 posts · best performer</div>
+            </div>
+            <div class="rounded-lg bg-sky-500/5 border border-sky-400/30 p-3">
+              <div class="text-xs text-[#6b5e52] mb-1">Solana</div>
+              <div class="text-xl font-bold text-sky-300 font-mono">0.71</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">12 posts</div>
+            </div>
+            <div class="rounded-lg bg-amber-500/5 border border-amber-400/30 p-3">
+              <div class="text-xs text-[#6b5e52] mb-1">Liquid Staking</div>
+              <div class="text-xl font-bold text-amber-300 font-mono">0.52</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">5 posts · weakest topic</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "content";
+    window.PAGE_TITLE = "Content";
+    window.PAGE_SUBTITLE = "per-post performance, format, timing";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+
+  <script>
+    // Recent posts
+    const postsEl = document.getElementById("posts-list");
+    DEMO_KOL.recentPosts.forEach((p, i) => {
+      const flagBadge = p.flag ? `<div class="text-[11px] text-amber-300 mt-1.5 italic">⚑ ${p.flag}</div>` : "";
+      const onchainBadge = p.onchainImpact ? `<div class="text-[11px] text-emerald-300 mt-1.5 inline-flex items-center gap-1"><span>🔗</span> on-chain: ${p.onchainImpact.volumeLift} volume, ${p.onchainImpact.walletsActivated} wallets activated</div>` : "";
+      const html = `
+        <div id="${p.id}" class="rounded-lg bg-slate-800/30 border border-[#d6cfc4] p-4 hover:border-[#9c2516]/40 transition-colors">
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <div class="flex items-center gap-2 text-xs text-[#6b5e52]">
+              <span class="font-mono">#${i + 1}</span>
+              <span>${p.timestamp}</span>
+              <span class="text-slate-700">·</span>
+              <span>${p.format}</span>
+              <span class="text-slate-700">·</span>
+              <span>${p.topic}</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="flex items-center gap-1"><span class="text-[#6b5e52]">♥</span><span class="font-mono text-[#1a1611] tabular-nums">${fmtNum(p.likes)}</span></span>
+              <span class="flex items-center gap-1"><span class="text-[#6b5e52]">↻</span><span class="font-mono text-[#1a1611] tabular-nums">${fmtNum(p.retweets)}</span></span>
+              <span class="flex items-center gap-1"><span class="text-[#6b5e52]">💬</span><span class="font-mono text-[#1a1611] tabular-nums">${fmtNum(p.replies)}</span></span>
+            </div>
+          </div>
+          <p class="text-sm text-[#1a1611] leading-relaxed mb-2">${p.text}</p>
+          ${flagBadge}
+          ${onchainBadge}
+          <div class="mt-3 pt-3 border-t border-slate-700/30 grid grid-cols-4 gap-3 text-xs">
+            <div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Smart engagement</div>
+              <div class="font-mono ${p.smartEngagement >= 0.7 ? 'text-emerald-300' : p.smartEngagement >= 0.5 ? 'text-sky-300' : 'text-amber-300'} font-semibold">${fmtScore(p.smartEngagement)}</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Sentiment</div>
+              <div class="font-mono ${p.sentiment >= 0.6 ? 'text-emerald-300' : 'text-[#1a1611]'} font-semibold">+${p.sentiment.toFixed(2)}</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Follower lift</div>
+              <div class="font-mono text-emerald-300 font-semibold">+${p.followerLift}</div>
+            </div>
+            <div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Length</div>
+              <div class="text-[#1a1611]">${p.lengthBucket}</div>
+            </div>
+          </div>
+        </div>
+      `;
+      postsEl.insertAdjacentHTML("beforeend", html);
+    });
+
+    // Heatmap: 7 days x 12 (every-2-hour) buckets
+    const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const heatmapData = [
+      [1,1,2,2,3,3,5,7,8,6,5,3], // Mon
+      [1,1,2,3,3,4,6,9,8,7,5,3], // Tue
+      [2,2,2,3,4,5,7,9,9,6,5,3], // Wed
+      [2,2,2,3,4,4,5,7,6,5,4,3], // Thu
+      [2,2,2,2,3,4,4,5,5,4,4,3], // Fri
+      [1,1,1,2,2,3,3,3,4,3,3,2], // Sat
+      [1,1,1,2,2,2,3,4,4,3,3,2], // Sun
+    ];
+    const heatmapGrid = document.getElementById("heatmap-grid");
+    days.forEach((d, di) => {
+      const cells = heatmapData[di].map((v) => {
+        const opacity = Math.min(1, v / 9);
+        return `<div class="heatmap-cell w-3 h-3 rounded-sm bg-violet-400" style="opacity: ${opacity};" title="${d} · activity ${v}"></div>`;
+      }).join("");
+      const row = `<div class="flex items-center gap-1"><span class="text-[10px] text-[#6b5e52] font-mono w-7 text-right">${d}</span>${cells}</div>`;
+      heatmapGrid.insertAdjacentHTML("beforeend", row);
+    });
+  </script>
+</body>
+</html>

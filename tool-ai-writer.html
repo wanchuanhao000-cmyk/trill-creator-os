@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Writer · Trill CreatorOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26, 22, 17, 0.08); }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+
+    <aside class="w-60 flex-shrink-0">
+      <div id="sidebar"></div>
+    </aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <!-- HERO -->
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <div class="flex items-start justify-between">
+            <div class="max-w-3xl">
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">Flagship Tool · AI Writer</p>
+              <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">Your voice. <span class="italic text-[#9c2516]">Improved.</span></h1>
+              <p class="font-serif italic text-lg text-[#6b5e52] leading-relaxed">Studies your real recent posts before drafting anything. Produces content that sounds like <em>you</em> — but stronger along the dimensions Trill rewards. Earn its place by being better, not faster.</p>
+            </div>
+            <div class="text-right shrink-0 ml-8">
+              <p class="font-serif text-6xl text-[#9c2516] tabular-nums leading-none">147</p>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mt-2">drafts run · all-time</p>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-1">+0.06 avg EV lift per draft</p>
+            </div>
+          </div>
+        </header>
+
+        <!-- TWO ENTRY POINTS -->
+        <section class="mb-10">
+          <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-4">Start a draft</p>
+          <div class="grid grid-cols-2 gap-5">
+
+            <!-- Entry: from Topic Pulse -->
+            <div class="card rounded-lg border border-subtle bg-[#fef4e8] p-6">
+              <div class="flex items-baseline justify-between mb-3">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Daily rhythm</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">From Topic Pulse</p>
+              </div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Catch a hot narrative</h3>
+              <p class="text-sm text-[#1a1611] leading-snug mb-5">3 narratives heating up in DeFi · 2 angles still open · top voices already moving. Pick one — we'll draft you in.</p>
+              <div class="space-y-2 mb-5">
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Restaking · risk concentration</p>
+                    <p class="text-[11px] text-[#6b5e52]">Rising · 2 of 6 top voices covered · angle open</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">Write this →</button>
+                </div>
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">AI agents · attribution layer</p>
+                    <p class="text-[11px] text-[#6b5e52]">Rising fast · still under-covered</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">Write this →</button>
+                </div>
+              </div>
+              <a href="tool-topic-pulse.html" class="text-xs text-[#9c2516] hover:underline">See all 12 hot topics →</a>
+            </div>
+
+            <!-- Entry: from Score -->
+            <div class="card rounded-lg border border-subtle bg-[#fef4e8] p-6">
+              <div class="flex items-baseline justify-between mb-3">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Monthly rhythm</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">From Score</p>
+              </div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Lift a weak dimension</h3>
+              <p class="text-sm text-[#1a1611] leading-snug mb-5">2 of your 7 dimensions are flagged. Work deliberately on one — every draft includes the rubric for that axis, embedded.</p>
+              <div class="space-y-2 mb-5">
+                <div class="bg-[#f5efe7] border border-[#9c2516]/40 rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Community Confidence <span class="text-[#9c2516] text-[10px] font-mono ml-1">0.34 · LOW</span></p>
+                    <p class="text-[11px] text-[#6b5e52]">Layer-2 hit rate fell · needs context post</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">Improve this →</button>
+                </div>
+                <div class="bg-[#f5efe7] border border-subtle rounded p-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-sm font-semibold">Community Care <span class="text-[#6b5e52] text-[10px] font-mono ml-1">0.55 · AVG</span></p>
+                    <p class="text-[11px] text-[#6b5e52]">Reply quality + miss-acknowledgement low</p>
+                  </div>
+                  <button class="text-xs text-[#9c2516] hover:underline font-semibold">Improve this →</button>
+                </div>
+              </div>
+              <a href="score.html" class="text-xs text-[#9c2516] hover:underline">See full Score breakdown →</a>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ACTIVE GUIDED DRAFT — flagship workbench -->
+        <section class="mb-10 rounded-lg border-2 border-[#9c2516] bg-[#f5efe7] overflow-hidden">
+          <div class="bg-[#1a1611] text-[#f5efe7] px-6 py-4 flex items-baseline justify-between">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Guided draft · in progress</p>
+              <h2 class="font-serif text-2xl tracking-tight">Restaking · risk concentration</h2>
+            </div>
+            <p class="text-xs text-[#d6cfc4] italic">Step 4 of 6 · 2 questions remaining</p>
+          </div>
+
+          <div class="grid grid-cols-5 gap-0">
+
+            <!-- LEFT: guided Q&A -->
+            <div class="col-span-3 p-6 border-r border-subtle">
+              <div class="space-y-5">
+
+                <!-- Answered Q1 -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">1.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Topic & angle?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"Restaking risk concentration — EigenLayer is now 53% of all liquid restaking. What's the systemic fragility?"</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- Answered Q2 -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">2.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Type & length?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"Long thread · 8–12 posts · with embedded data graphic"</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- Answered Q3 (with rubric trigger) -->
+                <div class="flex gap-3">
+                  <span class="font-serif text-[#9c2516] w-6">3.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Specific named sources?</p>
+                    <p class="text-sm text-[#6b5e52] italic">"EigenLayer dashboard · Renzo on-chain TVL · Ren's Mar 4 thread on restaking-as-loop · my own May 9 prediction (graded MISS)"</p>
+                    <p class="text-[11px] text-[#9c2516] mt-1 font-semibold">↳ Counts for Analytical Depth (specific source rule)</p>
+                  </div>
+                  <span class="text-emerald-700 text-xs font-semibold">✓ done</span>
+                </div>
+
+                <!-- Active Q4 -->
+                <div class="flex gap-3 bg-[#fef4e8] -mx-6 px-6 py-4 border-l-4 border-[#9c2516]">
+                  <span class="font-serif text-[#9c2516] w-6">4.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-2">If your thesis is wrong, what's the actual failure mode?</p>
+                    <p class="text-[11px] text-[#9c2516] font-semibold mb-3">↳ Required for Intellectual Honesty + Community Confidence (miss-acknowledgement rule)</p>
+                    <textarea class="w-full bg-[#f5efe7] border border-subtle rounded p-3 text-sm focus:outline-none focus:border-[#9c2516]" rows="4" placeholder="The actual point where this breaks down. Name the variable, not the vibe.">A coordinated AVS deposit unwind across 3+ operators within a 24-hour window — if it happens before Symbiotic launches, my "diversification thesis" collapses to a single counterparty failure mode. I gave it a 12% probability in my last call.</textarea>
+                  </div>
+                </div>
+
+                <!-- Pending Q5 -->
+                <div class="flex gap-3 opacity-50">
+                  <span class="font-serif text-[#6b5e52] w-6">5.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Reusable framework?</p>
+                    <p class="text-[11px] text-[#6b5e52] italic">↳ For Educational Value</p>
+                  </div>
+                  <span class="text-[#6b5e52] text-xs italic">pending</span>
+                </div>
+
+                <!-- Pending Q6 -->
+                <div class="flex gap-3 opacity-50">
+                  <span class="font-serif text-[#6b5e52] w-6">6.</span>
+                  <div class="flex-1">
+                    <p class="text-sm font-semibold mb-1">Tone calibration?</p>
+                    <p class="text-[11px] text-[#6b5e52] italic">↳ Voice studied from your last 30 posts</p>
+                  </div>
+                  <span class="text-[#6b5e52] text-xs italic">pending</span>
+                </div>
+
+              </div>
+
+              <div class="mt-7 pt-5 border-t border-subtle flex items-center justify-between">
+                <button class="text-sm text-[#6b5e52] hover:text-[#1a1611]">← back</button>
+                <button class="px-6 py-2.5 bg-[#9c2516] text-[#f5efe7] text-sm font-semibold rounded">Next question →</button>
+              </div>
+            </div>
+
+            <!-- RIGHT: voice study panel -->
+            <div class="col-span-2 bg-[#ebe3d4]/40 p-6">
+              <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-3">Your voice · studied</p>
+              <p class="text-xs text-[#6b5e52] italic mb-5">Drawn from your last 30 posts. We won't write anything that doesn't sound like you.</p>
+
+              <div class="space-y-4">
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Cadence</p>
+                  <p class="text-sm">Short opening hook · 2–3 long data paragraphs · acknowledged miss in the middle · closing question.</p>
+                </div>
+
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Recurring phrasing</p>
+                  <p class="text-sm font-mono text-[11px] text-[#1a1611]">"the trade was right · the framing wasn't"<br>"on record · time-stamped"<br>"if I'm wrong here, here's why"</p>
+                </div>
+
+                <div>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Habits we won't fake</p>
+                  <ul class="text-sm space-y-1">
+                    <li>· You name the failure mode when calling something</li>
+                    <li>· You quote your own historical call before refining</li>
+                    <li>· You never use "GM", "wagmi", or emoji clusters</li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-subtle">
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Source material referenced</p>
+                  <p class="text-xs text-[#1a1611]"><strong>4 of your own posts</strong> · <strong>1 verified call</strong> (May 9, graded MISS) · <strong>2 peer threads</strong> (Ren, hsakatrades)</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RECENT DRAFT HISTORY -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <h2 class="font-serif text-2xl tracking-tight">Recent drafts</h2>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">see all 147 →</a>
+          </div>
+
+          <div class="space-y-3">
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">Why my $SOL → $200 call held while the chart didn't</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Published · 3d ago</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">Topic-driven · Macro · Educational Value rubric</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"The trade was right. The framing wasn't. Here's the order of operations I missed and why my next call corrects it…"</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.08</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">EV lift</p>
+                <p class="text-[10px] text-emerald-700 mt-1">+312 followers · 84% smart</p>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">Validator queue · the Ethereum question nobody's asking</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">Published · 1w ago</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">Dimension-driven · Analytical Depth focus</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"There's a 47,000-validator backlog and the EIP-7251 changes don't fix it. Here's the math…"</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.05</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">AD lift</p>
+                <p class="text-[10px] text-emerald-700 mt-1">Quoted by @hsakatrades</p>
+              </div>
+            </div>
+
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-5 flex items-start gap-5">
+              <div class="flex-1">
+                <div class="flex items-baseline gap-3 mb-1">
+                  <p class="font-serif text-lg">The MEV walkthrough most threads miss</p>
+                  <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">Published · 2w ago</span>
+                </div>
+                <p class="text-xs text-[#6b5e52] italic mb-2">Educator framework · Educational Value</p>
+                <p class="text-sm text-[#1a1611] leading-snug">"5-step framework for reading the mempool. Reusable. With a worked example from yesterday's flow."</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.06</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">EV lift</p>
+                <p class="text-[10px] text-emerald-700 mt-1">+428 followers</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- WHY UNIQUE TO TRILL -->
+        <section class="mb-8 bg-[#1a1611] text-[#f5efe7] rounded-lg p-8">
+          <div class="grid grid-cols-2 gap-10 items-center">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">Why this is uniquely Trill</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-tight mb-3">Every question maps to a dimension we evaluate.</h2>
+              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed">It demands named sources. It requires miss-acknowledgement. It insists on reusable framework, not just a take. It writes <em>better</em> content along the specific axes that make a follow worth trusting — in your voice. Never turning you into a student of the rubric.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">+0.06</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Avg EV lift / draft</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">31%</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Drafts quoted by peers</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">0</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Generic posts produced</p>
+              </div>
+              <div class="border border-[#9c2516]/40 rounded p-4">
+                <p class="font-mono text-3xl text-[#9c2516] tabular-nums">147</p>
+                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Yours · in your voice</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    window.PAGE_KEY = "tool-ai-writer";
+    window.PAGE_TITLE = "AI Writer";
+    window.PAGE_SUBTITLE = "The improvement engine, in your own voice.";
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

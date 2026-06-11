@@ -30,75 +30,57 @@
       <div id="topbar"></div>
       <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
 
-        <!-- HERO greeting -->
+        <!-- HERO greeting (Vincent feedback · star tier promoted to top right · stats moved into dark band) -->
         <header class="mb-10 pb-8 border-b border-subtle">
-          <div class="grid grid-cols-5 gap-10 items-end">
+          <div class="grid grid-cols-5 gap-10 items-center">
             <div class="col-span-3">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Workbench · ★★★★ Trill Verified</p>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-4">Workbench</p>
               <h1 class="font-serif text-6xl tracking-tight mb-3 leading-tight">Welcome back,<br><span id="greet-name" class="text-[#9c2516] italic">Cryptodemo</span>.</h1>
               <p class="font-serif italic text-xl text-[#6b5e52]">Your community is what you build. The institution hands you the tools.</p>
             </div>
-            <div class="col-span-2 text-right">
-              <div class="grid grid-cols-2 gap-4">
-                <div class="border-l-2 border-[#9c2516] pl-3 text-left">
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Followers · 24h</p>
-                  <p class="font-mono text-2xl text-emerald-700 tabular-nums">+428</p>
-                  <p class="text-[10px] text-[#6b5e52]">142.8K total</p>
-                </div>
-                <div class="border-l-2 border-[#9c2516] pl-3 text-left">
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Interactions · 24h</p>
-                  <p class="font-mono text-2xl text-emerald-700 tabular-nums">+247</p>
-                  <p class="text-[10px] text-[#6b5e52]">replies · quotes · mentions</p>
-                </div>
-                <div class="border-l-2 border-subtle pl-3 text-left">
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">6 dim · 30d</p>
-                  <p class="font-mono text-2xl text-emerald-700 tabular-nums">+0.08</p>
-                  <p class="text-[10px] text-[#6b5e52]">avg lift · 4 up / 2 flat</p>
-                </div>
-                <div class="border-l-2 border-subtle pl-3 text-left">
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">Trill-driven · 30d</p>
-                  <p class="font-mono text-2xl text-emerald-700">+212</p>
-                  <p class="text-[10px] text-[#6b5e52]">followers from The Guide</p>
-                </div>
+
+            <!-- Star Tier · promoted to top right per Vincent feedback -->
+            <div class="col-span-2">
+              <div class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-6 text-center">
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#d6cfc4] font-semibold mb-3">Trill Verified · current standing</p>
+                <p class="font-mono text-6xl text-[#9c2516] tracking-wider leading-none mb-3">★ ★ ★ ★</p>
+                <p class="text-xs text-[#d6cfc4] uppercase tracking-widest mb-1">Four-Star Creator</p>
+                <p class="text-[10px] text-[#6b5e52] italic">DeFi · top 13% · next review 39d</p>
+                <a href="score.html" class="inline-block mt-3 text-[10px] text-[#9c2516] hover:text-[#f5efe7] uppercase tracking-widest font-semibold border-t border-[#6b5e52]/40 pt-3 w-full">Open Score detail →</a>
               </div>
             </div>
           </div>
         </header>
 
-        <!-- TODAY'S SNAPSHOT strip (renamed from Live Pulse — per Charles: data is daily not live) -->
+        <!-- TODAY'S SNAPSHOT strip (now hosts the 4 daily stats Charles asked for · star tier promoted to hero) -->
         <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-          <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center justify-between mb-5">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-[#9c2516]"></span>
               <span class="text-[10px] uppercase tracking-[0.2em] text-[#d6cfc4] font-mono">Today's snapshot · updated daily 9am UTC</span>
             </div>
             <span class="text-[10px] text-[#d6cfc4] italic">since last visit · 14h ago</span>
           </div>
-          <div class="grid grid-cols-5 gap-6">
-            <div class="border-l-2 border-[#9c2516] pl-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Mentions · 1h</p>
-              <p class="font-serif text-3xl text-[#f5efe7] tabular-nums" id="pulse-mentions-1h"></p>
-              <p class="text-[10px] text-[#d6cfc4]">187 in last 24h</p>
+          <div class="grid grid-cols-4 gap-6">
+            <div class="border-l-2 border-[#9c2516] pl-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Followers · 24h</p>
+              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+428</p>
+              <p class="text-[10px] text-[#d6cfc4] mt-1">142.8K total</p>
             </div>
-            <div class="border-l-2 border-emerald-500 pl-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Sentiment shift</p>
-              <p class="font-serif text-3xl text-emerald-400 tabular-nums">+0.08</p>
-              <p class="text-[10px] text-[#d6cfc4]">vs 24h baseline</p>
+            <div class="border-l-2 border-[#9c2516] pl-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Interactions · 24h</p>
+              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+247</p>
+              <p class="text-[10px] text-[#d6cfc4] mt-1">replies · quotes · mentions</p>
             </div>
-            <div class="border-l-2 border-emerald-500 pl-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Follower delta · 24h</p>
-              <p class="font-serif text-3xl text-emerald-400 tabular-nums">+428</p>
-              <p class="text-[10px] text-[#d6cfc4]">142.8K total</p>
+            <div class="border-l-2 border-emerald-500 pl-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">6 dim · 30d</p>
+              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+0.08</p>
+              <p class="text-[10px] text-[#d6cfc4] mt-1">avg lift · 4 up / 2 flat</p>
             </div>
-            <div class="border-l-2 border-emerald-500 pl-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Reply velocity</p>
-              <p class="font-serif text-3xl text-emerald-400 tabular-nums">+34%</p>
-              <p class="text-[10px] text-[#d6cfc4]">vs baseline</p>
-            </div>
-            <div class="border-l-2 border-[#9c2516] pl-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Star tier</p>
-              <p class="font-serif text-3xl text-[#9c2516] tabular-nums" id="pulse-stars">★★★★</p>
-              <p class="text-[10px] text-[#d6cfc4]">unchanged this cycle</p>
+            <div class="border-l-2 border-emerald-500 pl-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Trill-driven · 30d</p>
+              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+212</p>
+              <p class="text-[10px] text-[#d6cfc4] mt-1">followers from The Guide</p>
             </div>
           </div>
         </section>
@@ -107,28 +89,32 @@
         <section class="mb-10">
           <div class="grid grid-cols-4 gap-4">
 
-            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5">
+            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
+              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
               <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Audience</p>
               <p class="font-serif text-3xl tracking-tight mb-1">78%</p>
               <p class="text-xs text-[#6b5e52] mb-3">smart-follower ratio</p>
               <p class="text-[11px] text-emerald-700 font-semibold">+428 / 24h · 142.8K total</p>
             </a>
 
-            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5">
+            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
+              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
               <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Content</p>
               <p class="font-serif text-3xl tracking-tight mb-1">0.79</p>
               <p class="text-xs text-[#6b5e52] mb-3">top post · smart engagement</p>
               <p class="text-[11px] text-emerald-700 font-semibold">MEV walkthrough · +312 followers</p>
             </a>
 
-            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5">
+            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
+              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
               <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Peers</p>
               <p class="font-serif text-3xl tracking-tight mb-1">5</p>
               <p class="text-xs text-[#6b5e52] mb-3">named peers tracked</p>
               <p class="text-[11px] text-amber-700 font-semibold">vs @hsakatrades · 2 catching up</p>
             </a>
 
-            <button onclick="document.getElementById('more-stats-panel').classList.toggle('hidden')" class="card block rounded-lg border border-dashed border-[#6b5e52] bg-[#ebe3d4]/40 p-5 text-left hover:border-[#9c2516] transition-colors">
+            <button onclick="document.getElementById('more-stats-panel').classList.toggle('hidden')" class="card block rounded-lg border border-dashed border-[#6b5e52] bg-[#ebe3d4]/40 p-5 text-left hover:border-[#9c2516] transition-colors relative group">
+              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">Expand ↓</span>
               <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">More stats</p>
               <p class="font-serif text-3xl tracking-tight mb-1 text-[#9c2516]">↗</p>
               <p class="text-xs text-[#6b5e52] mb-3">total tweets · interactions · age</p>
@@ -409,9 +395,6 @@
   <script>
     // Greet
     document.getElementById("greet-name").textContent = DEMO_KOL.displayName;
-
-    // Pulse strip
-    document.getElementById("pulse-mentions-1h").textContent = DEMO_KOL.pulse.mentions1h;
 
     // Digest
     const digestEl = document.getElementById("digest-list");

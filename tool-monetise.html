@@ -31,8 +31,8 @@
           <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">Token-gated content. Subscriber-only DD reports. $TRILL stake unlocks for the top tier of your audience. The Sentinels keep the institution honest — the institution keeps your monetisation honest.</p>
         </header>
 
-        <!-- REVENUE row -->
-        <div class="grid grid-cols-4 gap-4 mb-10">
+        <!-- REVENUE row (+ B2B brokerage added per Charles · new rail) -->
+        <div class="grid grid-cols-5 gap-4 mb-10">
           <div class="bg-[#fef4e8] border border-[#9c2516]/40 rounded-lg p-5">
             <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Revenue · 30d</p>
             <p class="font-serif text-4xl text-[#9c2516] tabular-nums">$2,140</p>
@@ -52,6 +52,11 @@
             <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">DD reports sold</p>
             <p class="font-serif text-4xl tabular-nums">9</p>
             <p class="text-xs text-[#6b5e52] mt-1">avg $87 · last 30d</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-amber-600/40 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-amber-700 font-semibold mb-2">B2B brokerage · 30d</p>
+            <p class="font-serif text-4xl tabular-nums">$1,680</p>
+            <p class="text-xs text-[#6b5e52] mt-1">3 campaigns · 80/20 split</p>
           </div>
         </div>
 
@@ -131,6 +136,150 @@
               <button class="text-xs text-[#9c2516] hover:underline font-semibold">Set up →</button>
             </div>
 
+          </div>
+        </section>
+
+        <!-- B2B ADVERTISING DESK (NEW · per Charles · COMPLIANCE-FLAGGED) -->
+        <section class="mb-12">
+          <!-- Doctrine warning banner -->
+          <div class="bg-amber-50 border-l-4 border-amber-600 p-4 mb-6 rounded-r">
+            <div class="flex items-start gap-3">
+              <span class="text-amber-700 text-lg font-bold leading-none">⚠</span>
+              <div class="flex-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-amber-700 font-semibold mb-1">Compliance review required · doctrine note</p>
+                <p class="text-sm text-[#1a1611] leading-relaxed">
+                  This rail surfaces <strong>paid B2B campaigns</strong>, brokered by Trill between advertisers (protocols, exchanges, infra) and starred KOLs. It sits in tension with the "no pay-to-play" doctrine that governs <em>Network</em> and <em>The Guide</em>. Three guardrails apply: (1) all sponsored posts carry a visible <code class="bg-amber-100 px-1 rounded text-xs">Trill Sponsored</code> label; (2) Trill rejects campaigns whose subject conflicts with a KOL's published thesis; (3) Sponsored posts do <em>not</em> count toward Trill Score · they are separately ledgered. <span class="font-semibold">Final policy is under review — Vincent + Charles + Max sign-off pending.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">B2B Advertising · brokered by Trill</p>
+              <h2 class="font-serif text-3xl tracking-tight">The institution as broker.</h2>
+            </div>
+            <p class="text-xs text-[#6b5e52] italic max-w-md text-right">Advertisers bring budget. Trill matches starred KOLs by vertical fit + thesis alignment + tier. Revenue split <strong>80% KOL / 20% Trill</strong>. No direct DMs from advertisers — all routed.</p>
+          </div>
+
+          <!-- Active campaigns list -->
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg overflow-hidden mb-5">
+            <div class="grid grid-cols-12 gap-3 px-5 py-3 bg-[#ebe3d4]/60 border-b border-subtle text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">
+              <div class="col-span-3">Advertiser</div>
+              <div class="col-span-3">Campaign</div>
+              <div class="col-span-2">Format</div>
+              <div class="col-span-2">Payout (80%)</div>
+              <div class="col-span-2 text-right">Status</div>
+            </div>
+
+            <!-- Active campaign 1 -->
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#1a1611] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">EL</div>
+                <div>
+                  <p class="text-sm font-semibold">EigenLayer</p>
+                  <p class="text-[10px] text-[#6b5e52]">vetted · vertical match: DeFi</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">Restaking primer thread</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">accepted on thesis alignment</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">Sponsored post</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$800</span><p class="text-[10px] text-[#6b5e52]">paid · 11d ago</p></div>
+              <div class="col-span-2 text-right text-[10px] text-emerald-700 font-semibold">✓ Posted · labelled</div>
+            </div>
+
+            <!-- Active campaign 2 -->
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#1a1611] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">SK</div>
+                <div>
+                  <p class="text-sm font-semibold">Symbiotic</p>
+                  <p class="text-[10px] text-[#6b5e52]">vetted · vertical match: Restaking</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">AVS launch · DD report</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">accepted · separately ledgered</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">Sponsored DD</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$640</span><p class="text-[10px] text-[#6b5e52]">paid · 4d ago</p></div>
+              <div class="col-span-2 text-right text-[10px] text-emerald-700 font-semibold">✓ Published · labelled</div>
+            </div>
+
+            <!-- Pending review -->
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center bg-amber-50/40">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#6b5e52] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">??</div>
+                <div>
+                  <p class="text-sm font-semibold">[Memecoin · DOG2]</p>
+                  <p class="text-[10px] text-amber-700 font-semibold">conflict with thesis · auto-rejected</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">"Buy DOG2 before TGE"</p>
+                <p class="text-[10px] text-amber-700 mt-0.5">conflicts with your Accuracy Discipline record</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-[10px] font-semibold">Auto-rejected</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-[#6b5e52]">—</span></div>
+              <div class="col-span-2 text-right text-[10px] text-amber-700 font-semibold">✗ Guardrail blocked</div>
+            </div>
+
+            <!-- New inquiry -->
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#9c2516] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">LR</div>
+                <div>
+                  <p class="text-sm font-semibold">Lido</p>
+                  <p class="text-[10px] text-[#6b5e52]">vetted · awaiting your decision</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">stETH rebrand · 1 thread</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">budget $1,000 · your share $800</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">Sponsored post</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$800</span><p class="text-[10px] text-[#6b5e52]">if accepted</p></div>
+              <div class="col-span-2 text-right">
+                <button class="text-[10px] text-[#f5efe7] bg-[#9c2516] hover:bg-[#7a1d11] px-2 py-1 rounded font-semibold">Review →</button>
+              </div>
+            </div>
+
+            <div class="px-5 py-3 text-center bg-[#ebe3d4]/40">
+              <a href="#" class="text-xs text-[#9c2516] hover:underline">Browse open advertiser briefs · 12 active in your vertical →</a>
+            </div>
+          </div>
+
+          <!-- Profile banner slot (COMPLIANCE-FLAGGED · per Charles) -->
+          <div class="grid grid-cols-3 gap-5">
+            <div class="card rounded-lg border-2 border-dashed border-amber-600/50 bg-amber-50/30 p-6 col-span-2">
+              <div class="flex items-start justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="font-serif text-3xl text-amber-700">▭</div>
+                  <h3 class="font-serif text-2xl tracking-tight">Profile banner slot</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest text-amber-700 font-semibold">⚠ Compliance review</span>
+              </div>
+              <p class="text-sm text-[#1a1611] mb-3 italic">"Reserved banner above your follower-side Creator page · auctioned to Trill-vetted advertisers in your vertical · labelled <code class="bg-amber-100 px-1 rounded">Sponsored</code> · 80/20 split"</p>
+              <div class="grid grid-cols-4 gap-3 pt-3 border-t border-amber-600/30">
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Slot value (est.)</p><p class="font-mono text-sm font-semibold">$240 / wk</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Your share</p><p class="font-mono text-sm font-semibold text-emerald-700">$192 / wk</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Trill take</p><p class="font-mono text-sm font-semibold">20%</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Status</p><p class="font-mono text-sm font-semibold text-amber-700">Pending policy</p></div>
+              </div>
+              <p class="text-[11px] text-amber-700 italic mt-3">⚠ Banner slot may conflict with "An institution, not a leaderboard" doctrine — sign-off required from Vincent before activation.</p>
+            </div>
+
+            <!-- Opt-out card -->
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="font-serif text-3xl text-[#6b5e52]">∅</div>
+                <h3 class="font-serif text-xl tracking-tight">Opt out · keep page clean</h3>
+              </div>
+              <p class="text-sm text-[#1a1611] leading-snug mb-4">Some KOLs refuse all sponsored revenue. Trill makes that visible too — a "No sponsored" badge on your Creator page.</p>
+              <button class="text-xs text-[#9c2516] border border-[#9c2516] hover:bg-[#9c2516] hover:text-[#f5efe7] px-3 py-1.5 rounded font-semibold transition-colors">Activate badge →</button>
+            </div>
           </div>
         </section>
 

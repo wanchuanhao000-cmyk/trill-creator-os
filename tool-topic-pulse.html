@@ -28,8 +28,51 @@
         <header class="mb-10 pb-8 border-b border-subtle">
           <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">Tools · Topic Pulse</p>
           <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">What should I write about today?</h1>
-          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">Narratives weighted by the discussion density of evaluated creators — not raw mention count. Only the heat that comes from voices the institution recognises.</p>
+          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">Narratives weighted by the discussion density of evaluated creators — not raw mention count. Only the heat that comes from voices the institution recognises. <span class="not-italic text-[#9c2516] font-semibold">Now cross-referenced with X trending (US · crypto-filtered).</span></p>
         </header>
+
+        <!-- X TRENDING INTEGRATION (Charles · placeholder · Noah-side scraper pending) -->
+        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
+          <div class="flex items-center justify-between gap-6 mb-4">
+            <div class="flex items-center gap-4">
+              <div class="font-serif text-4xl text-[#9c2516]">𝕏</div>
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">X trending · live signal</p>
+                <h2 class="font-serif text-2xl tracking-tight text-[#f5efe7]">What's hot on X right now — filtered to crypto.</h2>
+                <p class="text-xs text-[#d6cfc4] mt-1">US trending tab, intersected with our crypto-vertical lexicon. Cross-referenced with credible-voice density to rank by <em>which trends matter</em>, not just which trend.</p>
+              </div>
+            </div>
+            <span class="shrink-0 text-[10px] uppercase tracking-widest text-amber-300 font-semibold border border-amber-300/40 px-3 py-1.5 rounded">Placeholder · Noah scraper pending</span>
+          </div>
+          <div class="grid grid-cols-5 gap-3 pt-4 border-t border-[#6b5e52]/30">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#1 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">$EIGEN unlock</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice density: 0.78</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#2 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">Restaking risk</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice density: 0.71</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#3 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">AI agents · onchain</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice density: 0.62</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#4 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">DOGE2 launch</p>
+              <p class="text-[10px] text-amber-300 mt-0.5">credible-voice density: 0.08 · skip</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#5 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">Solana fees</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice density: 0.54</p>
+            </div>
+          </div>
+          <p class="text-[11px] text-[#d6cfc4] italic mt-4 pt-3 border-t border-[#6b5e52]/30">⚠ X trending data is currently placeholder. Backend implementation: Noah's scraper polling X trending US tab every 15 min, filtered through the Trill crypto-lexicon (~2,400 tokens).</p>
+        </section>
 
         <!-- 4 POSITION LEGEND -->
         <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-3">Four positions · every narrative falls into one</p>

@@ -8,10 +8,10 @@ const NAV_TREE = [
   {
     type: "section", key: "tools", label: "工具", icon: "✦", defaultOpen: true,
     items: [
+      { key: "tool-growth",      label: "Growth",      href: "tool-growth.html",      tag: "首推" },
       { key: "tool-ai-writer",   label: "AI Writer",   href: "tool-ai-writer.html",   tag: "旗舰" },
       { key: "tool-topic-pulse", label: "Topic Pulse", href: "tool-topic-pulse.html" },
       { key: "tool-network",     label: "Network",     href: "tool-network.html" },
-      { key: "tool-growth",      label: "Growth",      href: "tool-growth.html" },
       { key: "tool-monetise",    label: "Monetise",    href: "tool-monetise.html" },
     ],
   },

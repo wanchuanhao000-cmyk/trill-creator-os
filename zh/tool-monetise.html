@@ -31,8 +31,8 @@
           <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">Token gated 内容。订阅者专享 DD 报告。给你 audience 顶层的 $TRILL stake 解锁。Sentinel 保持机构公平 — 机构保持你的变现公平。</p>
         </header>
 
-        <!-- REVENUE row -->
-        <div class="grid grid-cols-4 gap-4 mb-10">
+        <!-- REVENUE row (+ B2B 经纪 已加 · Charles · 新增 rail) -->
+        <div class="grid grid-cols-5 gap-4 mb-10">
           <div class="bg-[#fef4e8] border border-[#9c2516]/40 rounded-lg p-5">
             <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">收入 · 30 天</p>
             <p class="font-serif text-4xl text-[#9c2516] tabular-nums">$2,140</p>
@@ -52,6 +52,11 @@
             <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">已售 DD 报告</p>
             <p class="font-serif text-4xl tabular-nums">9</p>
             <p class="text-xs text-[#6b5e52] mt-1">均价 $87 · 过去 30 天</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-amber-600/40 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-amber-700 font-semibold mb-2">B2B 经纪 · 30 天</p>
+            <p class="font-serif text-4xl tabular-nums">$1,680</p>
+            <p class="text-xs text-[#6b5e52] mt-1">3 个 campaign · 80/20 分账</p>
           </div>
         </div>
 
@@ -131,6 +136,146 @@
               <button class="text-xs text-[#9c2516] hover:underline font-semibold">设置 →</button>
             </div>
 
+          </div>
+        </section>
+
+        <!-- B2B 广告台 (新增 · Charles · 标记合规审查) -->
+        <section class="mb-12">
+          <!-- 原则警示 banner -->
+          <div class="bg-amber-50 border-l-4 border-amber-600 p-4 mb-6 rounded-r">
+            <div class="flex items-start gap-3">
+              <span class="text-amber-700 text-lg font-bold leading-none">⚠</span>
+              <div class="flex-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-amber-700 font-semibold mb-1">需合规审查 · 原则说明</p>
+                <p class="text-sm text-[#1a1611] leading-relaxed">
+                  这个 rail 展示的是 <strong>付费 B2B campaign</strong>,由 Trill 作为经纪人,在广告主(协议、交易所、基础设施)和 starred KOL 之间撮合。它跟 <em>Network</em> 和 <em>Guide</em> 的 "no pay-to-play" 原则有张力。三条护栏:(1) 所有付费 post 必须打上可见的 <code class="bg-amber-100 px-1 rounded text-xs">Trill Sponsored</code> 标识;(2) 当 campaign 主题跟 KOL 已发表的 thesis 冲突时 Trill 拒接;(3) 付费 post <em>不计入</em> Trill Score · 单独账本。<span class="font-semibold">最终政策审查中 — 待 Vincent + Charles + Max 签字。</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">B2B 广告 · Trill 经纪</p>
+              <h2 class="font-serif text-3xl tracking-tight">机构作为经纪。</h2>
+            </div>
+            <p class="text-xs text-[#6b5e52] italic max-w-md text-right">广告主出预算。Trill 按赛道契合 + thesis 一致 + tier 匹配 starred KOL。收入分账 <strong>KOL 80% / Trill 20%</strong>。不允许广告主直接发 DM — 全部走 Trill 通道。</p>
+          </div>
+
+          <!-- 活跃 campaign 列表 -->
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg overflow-hidden mb-5">
+            <div class="grid grid-cols-12 gap-3 px-5 py-3 bg-[#ebe3d4]/60 border-b border-subtle text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">
+              <div class="col-span-3">广告主</div>
+              <div class="col-span-3">Campaign</div>
+              <div class="col-span-2">形式</div>
+              <div class="col-span-2">分账(80%)</div>
+              <div class="col-span-2 text-right">状态</div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#1a1611] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">EL</div>
+                <div>
+                  <p class="text-sm font-semibold">EigenLayer</p>
+                  <p class="text-[10px] text-[#6b5e52]">已核 · 赛道匹配: DeFi</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">Restaking primer thread</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">通过 thesis 对齐验证</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">付费 post</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$800</span><p class="text-[10px] text-[#6b5e52]">已付 · 11 天前</p></div>
+              <div class="col-span-2 text-right text-[10px] text-emerald-700 font-semibold">✓ 已发 · 已标识</div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#1a1611] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">SK</div>
+                <div>
+                  <p class="text-sm font-semibold">Symbiotic</p>
+                  <p class="text-[10px] text-[#6b5e52]">已核 · 赛道匹配: Restaking</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">AVS 上线 · DD 报告</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">已接 · 单独账本</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">付费 DD</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$640</span><p class="text-[10px] text-[#6b5e52]">已付 · 4 天前</p></div>
+              <div class="col-span-2 text-right text-[10px] text-emerald-700 font-semibold">✓ 已发 · 已标识</div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center bg-amber-50/40">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#6b5e52] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">??</div>
+                <div>
+                  <p class="text-sm font-semibold">[Memecoin · DOG2]</p>
+                  <p class="text-[10px] text-amber-700 font-semibold">跟你的 thesis 冲突 · 自动拒绝</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">"TGE 前买 DOG2"</p>
+                <p class="text-[10px] text-amber-700 mt-0.5">跟你的 Accuracy Discipline 记录冲突</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-[10px] font-semibold">自动拒绝</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-[#6b5e52]">—</span></div>
+              <div class="col-span-2 text-right text-[10px] text-amber-700 font-semibold">✗ 护栏拦下</div>
+            </div>
+
+            <div class="grid grid-cols-12 gap-3 px-5 py-4 border-b border-subtle items-center">
+              <div class="col-span-3 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-[#9c2516] flex items-center justify-center text-xs font-mono font-bold text-[#f5efe7]">LR</div>
+                <div>
+                  <p class="text-sm font-semibold">Lido</p>
+                  <p class="text-[10px] text-[#6b5e52]">已核 · 等你决定</p>
+                </div>
+              </div>
+              <div class="col-span-3 text-xs">
+                <p class="text-[#1a1611] font-semibold">stETH 重塑 · 1 条 thread</p>
+                <p class="text-[10px] text-[#6b5e52] mt-0.5">预算 $1,000 · 你拿 $800</p>
+              </div>
+              <div class="col-span-2 text-xs"><span class="bg-[#fef4e8] text-[#9c2516] px-2 py-0.5 rounded text-[10px] font-semibold">付费 post</span></div>
+              <div class="col-span-2 text-xs"><span class="font-mono text-emerald-700 font-semibold">$800</span><p class="text-[10px] text-[#6b5e52]">如接受</p></div>
+              <div class="col-span-2 text-right">
+                <button class="text-[10px] text-[#f5efe7] bg-[#9c2516] hover:bg-[#7a1d11] px-2 py-1 rounded font-semibold">审阅 →</button>
+              </div>
+            </div>
+
+            <div class="px-5 py-3 text-center bg-[#ebe3d4]/40">
+              <a href="#" class="text-xs text-[#9c2516] hover:underline">浏览开放的广告主 brief · 你赛道里 12 个活跃 →</a>
+            </div>
+          </div>
+
+          <!-- 主页 banner 位(标记合规审查 · per Charles) -->
+          <div class="grid grid-cols-3 gap-5">
+            <div class="card rounded-lg border-2 border-dashed border-amber-600/50 bg-amber-50/30 p-6 col-span-2">
+              <div class="flex items-start justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="font-serif text-3xl text-amber-700">▭</div>
+                  <h3 class="font-serif text-2xl tracking-tight">主页 banner 位</h3>
+                </div>
+                <span class="text-[10px] uppercase tracking-widest text-amber-700 font-semibold">⚠ 合规审查中</span>
+              </div>
+              <p class="text-sm text-[#1a1611] mb-3 italic">"你 follower 端 Creator 页顶部的 banner 位 · 拍卖给 Trill 已审的同赛道广告主 · 必带 <code class="bg-amber-100 px-1 rounded">Sponsored</code> 标识 · 80/20 分账"</p>
+              <div class="grid grid-cols-4 gap-3 pt-3 border-t border-amber-600/30">
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">位置估值</p><p class="font-mono text-sm font-semibold">$240 / 周</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">你的分账</p><p class="font-mono text-sm font-semibold text-emerald-700">$192 / 周</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Trill 抽成</p><p class="font-mono text-sm font-semibold">20%</p></div>
+                <div><p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">状态</p><p class="font-mono text-sm font-semibold text-amber-700">政策待审</p></div>
+              </div>
+              <p class="text-[11px] text-amber-700 italic mt-3">⚠ Banner 位可能跟"一个机构,不是排行榜"原则冲突 — 启用前需 Vincent 签字。</p>
+            </div>
+
+            <!-- Opt-out 卡 -->
+            <div class="card rounded-lg border border-subtle bg-[#f5efe7] p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="font-serif text-3xl text-[#6b5e52]">∅</div>
+                <h3 class="font-serif text-xl tracking-tight">退出 · 保持页面干净</h3>
+              </div>
+              <p class="text-sm text-[#1a1611] leading-snug mb-4">有的 KOL 拒所有付费收入。Trill 也把这个公开 — 在你 Creator 页加 "No sponsored" 徽章。</p>
+              <button class="text-xs text-[#9c2516] border border-[#9c2516] hover:bg-[#9c2516] hover:text-[#f5efe7] px-3 py-1.5 rounded font-semibold transition-colors">启用徽章 →</button>
+            </div>
           </div>
         </section>
 

@@ -28,8 +28,51 @@
         <header class="mb-10 pb-8 border-b border-subtle">
           <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-3">工具 · Topic Pulse</p>
           <h1 class="font-serif text-5xl tracking-tight mb-4 leading-tight">我今天该写什么?</h1>
-          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">narrative 按 evaluated creator 的讨论密度加权 — 不是按 raw mention 数。只采纳来自机构认可声音的热度。</p>
+          <p class="font-serif italic text-lg text-[#6b5e52] max-w-3xl">narrative 按 evaluated creator 的讨论密度加权 — 不是按 raw mention 数。只采纳来自机构认可声音的热度。<span class="not-italic text-[#9c2516] font-semibold">现在交叉对照 X trending(美区 · crypto 过滤)。</span></p>
         </header>
+
+        <!-- X TRENDING 接入 (Charles · 占位 · Noah 端 scraper 待接) -->
+        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
+          <div class="flex items-center justify-between gap-6 mb-4">
+            <div class="flex items-center gap-4">
+              <div class="font-serif text-4xl text-[#9c2516]">𝕏</div>
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">X trending · 实时信号</p>
+                <h2 class="font-serif text-2xl tracking-tight text-[#f5efe7]">X 现在在热什么 — crypto 过滤后。</h2>
+                <p class="text-xs text-[#d6cfc4] mt-1">美区 trending tab,跟我们的 crypto 词典做交集。再跟 credible-voice 密度交叉,排出 <em>哪条 trend 才值得跟</em>。</p>
+              </div>
+            </div>
+            <span class="shrink-0 text-[10px] uppercase tracking-widest text-amber-300 font-semibold border border-amber-300/40 px-3 py-1.5 rounded">占位 · Noah scraper 待接</span>
+          </div>
+          <div class="grid grid-cols-5 gap-3 pt-4 border-t border-[#6b5e52]/30">
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#1 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">$EIGEN 解锁</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice 密度:0.78</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#2 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">Restaking 风险</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice 密度:0.71</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#3 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">AI agent · 链上</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice 密度:0.62</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#4 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">DOGE2 上线</p>
+              <p class="text-[10px] text-amber-300 mt-0.5">credible-voice 密度:0.08 · 跳过</p>
+            </div>
+            <div>
+              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">#5 trending</p>
+              <p class="font-mono text-sm text-[#f5efe7]">Solana 手续费</p>
+              <p class="text-[10px] text-emerald-400 mt-0.5">credible-voice 密度:0.54</p>
+            </div>
+          </div>
+          <p class="text-[11px] text-[#d6cfc4] italic mt-4 pt-3 border-t border-[#6b5e52]/30">⚠ X trending 数据目前是占位。后端实施:Noah 的 scraper 每 15 分钟轮询 X 美区 trending tab,过 Trill crypto 词典(~2,400 token)。</p>
+        </section>
 
         <!-- 4 POSITION LEGEND -->
         <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-3">4 个位置 · 每个 narrative 都落在其中之一</p>

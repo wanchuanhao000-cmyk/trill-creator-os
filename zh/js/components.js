@@ -5,6 +5,7 @@
 const NAV_TREE = [
   { type: "item", key: "home", label: "首页", href: "index.html", icon: "◆" },
   { type: "item", key: "score", label: "评分", href: "score.html", icon: "★", emphasis: true },
+  { type: "item", key: "calls", label: "Calls", href: "calls.html", icon: "❘", tag: "新" },
   {
     type: "section", key: "tools", label: "工具", icon: "✦", defaultOpen: true,
     items: [

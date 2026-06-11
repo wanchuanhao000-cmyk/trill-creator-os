@@ -85,6 +85,18 @@
           </div>
         </section>
 
+        <!-- WHAT CHANGED · digest (Max: must be at the top · returning user's first question) -->
+        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Since you were last here · 14h ago</p>
+              <h2 class="font-serif text-2xl tracking-tight">What changed.</h2>
+            </div>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">full activity log →</a>
+          </div>
+          <div class="space-y-3" id="digest-list"></div>
+        </section>
+
         <!-- AUDIENCE / CONTENT / PEERS quick-glance row (promoted from Insights drawer per Charles · daily-touch surface) -->
         <section class="mb-10">
           <div class="grid grid-cols-4 gap-4">
@@ -211,131 +223,77 @@
           </div>
         </section>
 
-        <!-- TOOLS — flagship section (Jackson: KOL wants tools to be better KOLs) -->
+        <!-- TRILL SCORE · 6 dimension tiles with 7d/30d trends (Max: tiles per dimension + 7-30d change) -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-2 pb-3 border-b border-subtle">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
             <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Tools</p>
-              <h2 class="font-serif text-3xl tracking-tight">Become a better KOL.</h2>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Trill Score · by dimension</p>
+              <h2 class="font-serif text-3xl tracking-tight">Where you're moving.</h2>
             </div>
-            <p class="text-xs text-[#6b5e52] italic">Five tools · built to grow what you're building.</p>
+            <a href="score.html" class="text-xs text-[#9c2516] hover:underline font-semibold">Open Score detail →</a>
+          </div>
+          <div id="dim-tile-grid" class="grid grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- TOOLS · compact status strip (Max: 5 big cards too heavy + redundant with sidebar · Charles: still surface "what Trill does for you") -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-subtle">
+            <div class="flex items-baseline gap-3">
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">Tools</p>
+              <h2 class="font-serif text-xl tracking-tight">Become a better KOL.</h2>
+            </div>
+            <p class="text-[10px] text-[#6b5e52] italic">Full pages in the sidebar →</p>
           </div>
 
-          <div class="grid grid-cols-3 gap-5 mt-6">
-
-            <!-- Growth (promoted to top per Charles · Trill-driven traffic is most visible value) -->
-            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-6 col-span-2">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Top Tool · What Trill does for you</span>
+          <div class="grid grid-cols-5 gap-3">
+            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-4 hover:bg-[#fef4e8]">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Growth</p>
                 <span class="font-mono text-[10px] text-[#9c2516]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-4xl text-[#9c2516]">↗</div>
-                <h3 class="font-serif text-3xl tracking-tight">Growth</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-relaxed mb-4">The Guide pushes new audience to you. Recommend appearances, conversion log, Seal embed, coordinated campaigns. The most visible value the institution delivers.</p>
-              <div class="grid grid-cols-3 gap-3 pt-3 border-t border-[#9c2516]/30">
-                <div>
-                  <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Trill-driven · 30d</p>
-                </div>
-                <div>
-                  <p class="font-mono text-2xl text-[#1a1611] tabular-nums">43.5%</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Conversion rate</p>
-                </div>
-                <div>
-                  <p class="font-mono text-2xl text-[#9c2516] tabular-nums">487</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#9c2516]">Recommend hits</p>
-                </div>
-              </div>
+              <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">Trill-driven · 30d</p>
             </a>
 
-            <!-- AI Writer (Flagship · demoted to 2nd · Charles: integrate Coze agent) -->
-            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Flagship</span>
+            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">AI Writer</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">✍</div>
-                <h3 class="font-serif text-2xl tracking-tight">AI Writer</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">Studies your last 30 posts · drafts in your voice · embeds Trill rubric.</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">3 drafts waiting · live experience via Coze agent →</p>
+              <p class="font-mono text-2xl tabular-nums">3</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">drafts waiting</p>
             </a>
 
-            <!-- Topic Pulse (Noah: hot data from X trending crypto pending) -->
-            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Unique to Trill</span>
+            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Topic Pulse</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">◉</div>
-                <h3 class="font-serif text-2xl tracking-tight">Topic Pulse</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">Heat weighted by credible-voice density + X trending (US · crypto-filtered).</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">3 opportunities open · Restaking, AI agents, DePIN</p>
+              <p class="font-mono text-2xl tabular-nums">3</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">opportunities open</p>
             </a>
 
-            <!-- Network (rebuilt per Charles · 3 functions + 3-step workflow) -->
-            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Rebuilt</span>
+            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Network</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">⌘</div>
-                <h3 class="font-serif text-2xl tracking-tight">Network</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">KOLs in your follower base · AI-drafted greetings, comment suggestions, joint action proposals.</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">12 KOL followers · 4 ready for next step</p>
+              <p class="font-mono text-2xl tabular-nums">4</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">ready for next step</p>
             </a>
 
-            <!-- Monetise -->
-            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">New</span>
+            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Monetise</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">◈</div>
-                <h3 class="font-serif text-2xl tracking-tight">Monetise</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">Token-gated content · paid subscriptions · DD-report monetisation · $TRILL stake unlocks.</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">$2,140 routed through Trill last month · 14 subs</p>
+              <p class="font-mono text-2xl tabular-nums">14</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">active subs · $2.1K/mo</p>
             </a>
-
           </div>
         </section>
 
-        <!-- TWO COLUMN: digest + score snapshot -->
-        <section class="grid grid-cols-3 gap-6 mb-10">
-
-          <!-- What changed (2 col) -->
-          <div class="col-span-2 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-              <h2 class="font-serif text-2xl tracking-tight">What changed since you were last here</h2>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline">full activity log →</a>
-            </div>
-            <div class="space-y-3" id="digest-list"></div>
-          </div>
-
-          <!-- Score snapshot (1 col) -->
-          <div class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-[#6b5e52]/30">
-              <h2 class="font-serif text-2xl tracking-tight">Trill Score</h2>
-              <a href="score.html" class="text-xs text-[#9c2516] hover:text-[#f5efe7]">drill in →</a>
-            </div>
-            <div class="text-center mb-5 pb-5 border-b border-[#6b5e52]/30">
-              <div id="score-stars" class="mb-2 font-serif text-4xl text-[#9c2516]">★★★★</div>
-              <p class="text-[11px] uppercase tracking-widest text-[#d6cfc4]">Trill Verified · top 13% in DeFi</p>
-            </div>
-            <div class="space-y-2.5" id="dim-mini-list"></div>
-          </div>
-        </section>
-
-        <!-- Insights row moved to hero (per Charles · daily-touch surface · now below Today's snapshot) -->
+        <!-- Old 2-col digest + score panel removed · digest moved to top per Max · score replaced by dim tiles -->
 
 
         <!-- TOP NOTIFICATIONS -->
@@ -415,21 +373,48 @@
       digestEl.insertAdjacentHTML("beforeend", html);
     });
 
-    // Dimensions mini list
-    const dimMiniEl = document.getElementById("dim-mini-list");
+    // Trill Score · 6 dimension tiles (Max: per-dim tiles with 7d/30d change + spark trend)
+    const dimTileEl = document.getElementById("dim-tile-grid");
+    // synth 7d change as roughly 0.4x 30d delta (demo data)
     DEMO_KOL.dimensions.forEach((d) => {
-      const flag = d.flagged ? `<span class="ml-1 text-[#9c2516] text-[9px] font-bold tracking-wider">LOW</span>` : "";
+      const delta30 = d.delta || 0;
+      const delta7 = Math.round(delta30 * 0.4 * 100) / 100;
+      const fmtDelta = (v) => v > 0 ? `+${v.toFixed(2)}` : v < 0 ? v.toFixed(2) : "±0.00";
+      const cls30 = delta30 > 0 ? "text-emerald-700" : delta30 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
+      const cls7 = delta7 > 0 ? "text-emerald-700" : delta7 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
+      const bandCls = { "Strong": "bg-emerald-50 text-emerald-800", "Solid": "bg-sky-50 text-sky-800", "Average": "bg-amber-50 text-amber-800", "Below Avg": "bg-[#fef4e8] text-[#9c2516]" }[d.band] || "bg-[#ebe3d4]/40 text-[#6b5e52]";
+      // synth a 7-point sparkline from the 30d delta (rises/falls toward current)
+      const trend = delta30 >= 0 ? ["▁","▂","▃","▄","▅","▆","█"] : ["█","▆","▅","▄","▃","▂","▁"];
+      if (delta30 === 0) trend.fill("▄");
+      const flag = d.flagged ? `<span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest bg-[#9c2516] text-[#f5efe7] px-1.5 py-0.5 rounded font-bold">LOW</span>` : "";
       const html = `
-        <div class="flex items-center gap-2 text-xs">
-          <span class="text-[#d6cfc4] font-mono w-8 font-semibold">${d.short}</span>
-          <div class="flex-1 bg-[#6b5e52]/30 rounded-full h-1.5 overflow-hidden">
-            <div class="bg-[#9c2516] h-full rounded-full" style="width: ${d.score * 100}%"></div>
-          </div>
-          <span class="font-mono text-[#f5efe7] tabular-nums w-8 text-right">${(d.score).toFixed(2)}</span>
+        <a href="score.html#${d.short.toLowerCase()}" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
           ${flag}
-        </div>
+          <div class="flex items-baseline justify-between mb-1">
+            <p class="font-mono text-[10px] text-[#6b5e52] uppercase tracking-widest font-semibold">${d.short}</p>
+            <span class="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded font-semibold ${bandCls}">${d.band}</span>
+          </div>
+          <p class="font-serif text-sm text-[#1a1611] tracking-tight mb-2 leading-tight">${d.name}</p>
+          <div class="flex items-baseline justify-between mb-2">
+            <p class="font-serif text-3xl tracking-tight tabular-nums">${d.score.toFixed(2)}</p>
+            <span class="font-mono text-[10px] text-[#9c2516]/60 tracking-tighter">${trend.join("")}</span>
+          </div>
+          <div class="h-1.5 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
+            <div class="h-full bg-[#9c2516] rounded-full" style="width: ${d.score * 100}%"></div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-subtle text-[10px]">
+            <div>
+              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">7d</p>
+              <p class="font-mono ${cls7} tabular-nums">${fmtDelta(delta7)}</p>
+            </div>
+            <div>
+              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">30d</p>
+              <p class="font-mono ${cls30} tabular-nums">${fmtDelta(delta30)}</p>
+            </div>
+          </div>
+        </a>
       `;
-      dimMiniEl.insertAdjacentHTML("beforeend", html);
+      dimTileEl.insertAdjacentHTML("beforeend", html);
     });
   </script>
 </body>

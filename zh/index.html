@@ -85,6 +85,18 @@
           </div>
         </section>
 
+        <!-- 上次离开后这些动了 · digest (Max: 必须放在顶部 · 回访用户第一关心的问题) -->
+        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">距上次访问 · 14 小时前</p>
+              <h2 class="font-serif text-2xl tracking-tight">这些动了。</h2>
+            </div>
+            <a href="#" class="text-xs text-[#9c2516] hover:underline">完整活动日志 →</a>
+          </div>
+          <div class="space-y-3" id="digest-list"></div>
+        </section>
+
         <!-- 受众 / 内容 / 对标 速览行 (Charles 让从洞察抽屉提到首屏 · 每日触达 surface) -->
         <section class="mb-10">
           <div class="grid grid-cols-4 gap-4">
@@ -211,128 +223,77 @@
           </div>
         </section>
 
-        <!-- TOOLS — 旗舰版块 (Jackson: KOL 要工具变更好的 KOL) -->
+        <!-- Trill 评分 · 6 个 dimension tile + 7-30 天趋势 (Max: per-dimension tile + 7-30d 变化) -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-2 pb-3 border-b border-subtle">
+          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
             <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">工具</p>
-              <h2 class="font-serif text-3xl tracking-tight">成为更好的 KOL。</h2>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Trill 评分 · 按维度拆解</p>
+              <h2 class="font-serif text-3xl tracking-tight">你的位置在动哪里。</h2>
             </div>
-            <p class="text-xs text-[#6b5e52] italic">5 个工具 · 放大你正在建的东西。</p>
+            <a href="score.html" class="text-xs text-[#9c2516] hover:underline font-semibold">查看评分详情 →</a>
+          </div>
+          <div id="dim-tile-grid" class="grid grid-cols-3 gap-4"></div>
+        </section>
+
+        <!-- 工具 · 紧凑状态条 (Max: 5 张大卡过重 + 跟侧边栏重复 · Charles: 仍要呈现"Trill 为你做了什么") -->
+        <section class="mb-10">
+          <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-subtle">
+            <div class="flex items-baseline gap-3">
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">工具</p>
+              <h2 class="font-serif text-xl tracking-tight">成为更好的 KOL。</h2>
+            </div>
+            <p class="text-[10px] text-[#6b5e52] italic">完整页面在侧边栏 →</p>
           </div>
 
-          <div class="grid grid-cols-3 gap-5 mt-6">
-
-            <!-- Growth (Charles 提到首位 · Trill 导流是最可见的价值) -->
-            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-6 col-span-2">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">首推工具 · Trill 为你做了什么</span>
+          <div class="grid grid-cols-5 gap-3">
+            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-4 hover:bg-[#fef4e8]">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Growth</p>
                 <span class="font-mono text-[10px] text-[#9c2516]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-4xl text-[#9c2516]">↗</div>
-                <h3 class="font-serif text-3xl tracking-tight">Growth</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-relaxed mb-4">Guide 把新受众推给你。Recommend 出现、转化日志、Seal 嵌入、联合战役。机构交付的最可见价值。</p>
-              <div class="grid grid-cols-3 gap-3 pt-3 border-t border-[#9c2516]/30">
-                <div>
-                  <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">Trill 导流 · 30 天</p>
-                </div>
-                <div>
-                  <p class="font-mono text-2xl text-[#1a1611] tabular-nums">43.5%</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">转化率</p>
-                </div>
-                <div>
-                  <p class="font-mono text-2xl text-[#9c2516] tabular-nums">487</p>
-                  <p class="text-[10px] uppercase tracking-widest text-[#9c2516]">Recommend 触达</p>
-                </div>
-              </div>
+              <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">Trill 导流 · 30 天</p>
             </a>
 
-            <!-- AI Writer (旗舰 · 降为第 2 · Charles: 接 Coze agent) -->
-            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">旗舰</span>
+            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">AI Writer</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">✍</div>
-                <h3 class="font-serif text-2xl tracking-tight">AI Writer</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">学习你最近 30 条 post · 用你的声音起草 · 嵌 Trill 维度评分。</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">3 条待处理 · 在 Coze agent 里实操 →</p>
+              <p class="font-mono text-2xl tabular-nums">3</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">draft 待处理</p>
             </a>
 
-            <!-- Topic Pulse (Noah: X trending crypto 热数据待接入) -->
-            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Trill 独有</span>
+            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Topic Pulse</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">◉</div>
-                <h3 class="font-serif text-2xl tracking-tight">Topic Pulse</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">热度按 credible-voice 密度加权 + X trending(美区 · crypto 过滤)。</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">3 个机会窗口开着 · Restaking、AI agents、DePIN</p>
+              <p class="font-mono text-2xl tabular-nums">3</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">机会窗口开着</p>
             </a>
 
-            <!-- Network (Charles 重做 · 3 功能 + 3 步工作流) -->
-            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">重做</span>
+            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Network</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">⌘</div>
-                <h3 class="font-serif text-2xl tracking-tight">Network</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">你的粉丝里的 KOL · AI 起草打招呼、评论建议、联合行动提议。</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">12 位 KOL 粉丝 · 4 位可推到下一步</p>
+              <p class="font-mono text-2xl tabular-nums">4</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">位可推下一步</p>
             </a>
 
-            <!-- Monetise -->
-            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-6">
-              <div class="flex items-start justify-between mb-3">
-                <span class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold">新</span>
+            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
+              <div class="flex items-baseline justify-between mb-2">
+                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Monetise</p>
                 <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
               </div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="font-serif text-3xl text-[#9c2516]">◈</div>
-                <h3 class="font-serif text-2xl tracking-tight">Monetise</h3>
-              </div>
-              <p class="text-sm text-[#1a1611] leading-snug mb-4">Token gated 内容 · 付费订阅 · DD report 变现 · $TRILL stake 解锁。</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">上月 Trill 通道收入 $2,140 · 14 位订阅</p>
+              <p class="font-mono text-2xl tabular-nums">14</p>
+              <p class="text-[10px] text-[#6b5e52] mt-0.5">订阅 · $2.1K/月</p>
             </a>
-
           </div>
         </section>
 
-        <section class="grid grid-cols-3 gap-6 mb-10">
-
-          <div class="col-span-2 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-              <h2 class="font-serif text-2xl tracking-tight">上次离开后,这些动了</h2>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline">完整活动日志 →</a>
-            </div>
-            <div class="space-y-3" id="digest-list"></div>
-          </div>
-
-          <div class="bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-[#6b5e52]/30">
-              <h2 class="font-serif text-2xl tracking-tight">Trill 评分</h2>
-              <a href="score.html" class="text-xs text-[#9c2516] hover:text-[#f5efe7]">查看详情 →</a>
-            </div>
-            <div class="text-center mb-5 pb-5 border-b border-[#6b5e52]/30">
-              <div id="score-stars" class="mb-2 font-serif text-4xl text-[#9c2516]">★★★★</div>
-              <p class="text-[11px] uppercase tracking-widest text-[#d6cfc4]">Trill Verified · DeFi 顶部 13%</p>
-            </div>
-            <div class="space-y-2.5" id="dim-mini-list"></div>
-          </div>
-        </section>
-
-        <!-- 洞察行已移到首屏 (Charles · 每日触达 surface · 现位于今日快照下) -->
+        <!-- 旧的 2 列 digest + score 板块已移除 · digest 移到上面 per Max · score 换成 dim tile -->
 
         <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
           <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
@@ -414,20 +375,58 @@
       digestEl.insertAdjacentHTML("beforeend", html);
     });
 
-    const dimMiniEl = document.getElementById("dim-mini-list");
+    // Trill 评分 · 6 个 dimension tile (Max: 按 dim 拆 tile + 7-30 天变化 + 趋势)
+    const dimTileEl = document.getElementById("dim-tile-grid");
+    const DIM_NAMES_ZH = {
+      "Analytical Depth": "分析深度",
+      "Accuracy Discipline": "准确度",
+      "Intellectual Honesty": "学识诚信",
+      "Community Care": "社区关怀",
+      "Educational Value": "教育价值",
+      "Entertainment & Engagement": "娱乐 & 互动",
+      "Community Confidence": "社区信心",
+    };
+    const BAND_ZH = { "Strong": "强", "Solid": "稳", "Average": "中等", "Below Avg": "偏弱" };
     DEMO_KOL.dimensions.forEach((d) => {
-      const flag = d.flagged ? `<span class="ml-1 text-[#9c2516] text-[9px] font-bold tracking-wider">弱</span>` : "";
+      const delta30 = d.delta || 0;
+      const delta7 = Math.round(delta30 * 0.4 * 100) / 100;
+      const fmtDelta = (v) => v > 0 ? `+${v.toFixed(2)}` : v < 0 ? v.toFixed(2) : "±0.00";
+      const cls30 = delta30 > 0 ? "text-emerald-700" : delta30 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
+      const cls7 = delta7 > 0 ? "text-emerald-700" : delta7 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
+      const bandCls = { "Strong": "bg-emerald-50 text-emerald-800", "Solid": "bg-sky-50 text-sky-800", "Average": "bg-amber-50 text-amber-800", "Below Avg": "bg-[#fef4e8] text-[#9c2516]" }[d.band] || "bg-[#ebe3d4]/40 text-[#6b5e52]";
+      const trend = delta30 >= 0 ? ["▁","▂","▃","▄","▅","▆","█"] : ["█","▆","▅","▄","▃","▂","▁"];
+      if (delta30 === 0) trend.fill("▄");
+      const flag = d.flagged ? `<span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest bg-[#9c2516] text-[#f5efe7] px-1.5 py-0.5 rounded font-bold">弱</span>` : "";
+      const nameZH = DIM_NAMES_ZH[d.name] || d.name;
+      const bandZH = BAND_ZH[d.band] || d.band;
       const html = `
-        <div class="flex items-center gap-2 text-xs">
-          <span class="text-[#d6cfc4] font-mono w-8 font-semibold">${d.short}</span>
-          <div class="flex-1 bg-[#6b5e52]/30 rounded-full h-1.5 overflow-hidden">
-            <div class="bg-[#9c2516] h-full rounded-full" style="width: ${d.score * 100}%"></div>
-          </div>
-          <span class="font-mono text-[#f5efe7] tabular-nums w-8 text-right">${(d.score).toFixed(2)}</span>
+        <a href="score.html#${d.short.toLowerCase()}" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
           ${flag}
-        </div>
+          <div class="flex items-baseline justify-between mb-1">
+            <p class="font-mono text-[10px] text-[#6b5e52] uppercase tracking-widest font-semibold">${d.short}</p>
+            <span class="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded font-semibold ${bandCls}">${bandZH}</span>
+          </div>
+          <p class="font-serif text-sm text-[#1a1611] tracking-tight mb-2 leading-tight">${nameZH}</p>
+          <div class="flex items-baseline justify-between mb-2">
+            <p class="font-serif text-3xl tracking-tight tabular-nums">${d.score.toFixed(2)}</p>
+            <span class="font-mono text-[10px] text-[#9c2516]/60 tracking-tighter">${trend.join("")}</span>
+          </div>
+          <div class="h-1.5 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
+            <div class="h-full bg-[#9c2516] rounded-full" style="width: ${d.score * 100}%"></div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-subtle text-[10px]">
+            <div>
+              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">7 天</p>
+              <p class="font-mono ${cls7} tabular-nums">${fmtDelta(delta7)}</p>
+            </div>
+            <div>
+              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">30 天</p>
+              <p class="font-mono ${cls30} tabular-nums">${fmtDelta(delta30)}</p>
+            </div>
+          </div>
+        </a>
       `;
-      dimMiniEl.insertAdjacentHTML("beforeend", html);
+      dimTileEl.insertAdjacentHTML("beforeend", html);
     });
   </script>
 </body>

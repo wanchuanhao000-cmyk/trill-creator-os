@@ -52,6 +52,41 @@
           </div>
         </header>
 
+        <!-- AUDIENCE / CONTENT / PEERS · mini row (Charles 2nd meeting 7:16-8:14: "3 个,迷你,放到上面去 · 标题下面第一个模块") -->
+        <section class="mb-8">
+          <div class="grid grid-cols-3 gap-3">
+            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Audience</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">78%</p>
+                <p class="text-[11px] text-[#6b5e52]">smart-follower</p>
+              </div>
+              <p class="text-[10px] text-emerald-700 font-semibold">+428 / 24h · 142.8K total</p>
+            </a>
+
+            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Content</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">0.79</p>
+                <p class="text-[11px] text-[#6b5e52]">top post · smart engagement</p>
+              </div>
+              <p class="text-[10px] text-emerald-700 font-semibold">MEV walkthrough · +312 followers</p>
+            </a>
+
+            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Peers</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">5</p>
+                <p class="text-[11px] text-[#6b5e52]">named peers tracked</p>
+              </div>
+              <p class="text-[10px] text-amber-700 font-semibold">vs @hsakatrades · 2 catching up</p>
+            </a>
+          </div>
+        </section>
+
         <!-- TODAY'S SNAPSHOT strip (now hosts the 4 daily stats Charles asked for · star tier promoted to hero) -->
         <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
           <div class="flex items-center justify-between mb-5">
@@ -97,74 +132,7 @@
           <div class="space-y-3" id="digest-list"></div>
         </section>
 
-        <!-- AUDIENCE / CONTENT / PEERS quick-glance row (promoted from Insights drawer per Charles · daily-touch surface) -->
-        <section class="mb-10">
-          <div class="grid grid-cols-4 gap-4">
-
-            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Audience</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">78%</p>
-              <p class="text-xs text-[#6b5e52] mb-3">smart-follower ratio</p>
-              <p class="text-[11px] text-emerald-700 font-semibold">+428 / 24h · 142.8K total</p>
-            </a>
-
-            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Content</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">0.79</p>
-              <p class="text-xs text-[#6b5e52] mb-3">top post · smart engagement</p>
-              <p class="text-[11px] text-emerald-700 font-semibold">MEV walkthrough · +312 followers</p>
-            </a>
-
-            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">Peers</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">5</p>
-              <p class="text-xs text-[#6b5e52] mb-3">named peers tracked</p>
-              <p class="text-[11px] text-amber-700 font-semibold">vs @hsakatrades · 2 catching up</p>
-            </a>
-
-            <button onclick="document.getElementById('more-stats-panel').classList.toggle('hidden')" class="card block rounded-lg border border-dashed border-[#6b5e52] bg-[#ebe3d4]/40 p-5 text-left hover:border-[#9c2516] transition-colors relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">Expand ↓</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">More stats</p>
-              <p class="font-serif text-3xl tracking-tight mb-1 text-[#9c2516]">↗</p>
-              <p class="text-xs text-[#6b5e52] mb-3">total tweets · interactions · age</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">Click to expand</p>
-            </button>
-
-          </div>
-
-          <!-- More stats panel · hidden by default -->
-          <div id="more-stats-panel" class="hidden mt-4 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-[#6b5e52]/30">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">Account totals · since joining X</p>
-              <button onclick="document.getElementById('more-stats-panel').classList.add('hidden')" class="text-[#d6cfc4] hover:text-[#f5efe7] text-xs">× close</button>
-            </div>
-            <div class="grid grid-cols-5 gap-4">
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">142,847</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Total followers</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">3,124</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Total posts</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">87,492</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Total interactions</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">47</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Calls on Trill record</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">Sep 2024</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Joined Trill</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <!-- Mini Audience/Content/Peers row moved to right under hero · "More stats" dropped per Charles 2nd meeting · basics live inside each Insight page -->
 
         <!-- WHAT OTHER KOLS IN MY VERTICAL ARE DOING (per Charles · highest-value daily surface) -->
         <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">

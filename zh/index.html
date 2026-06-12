@@ -52,6 +52,41 @@
           </div>
         </header>
 
+        <!-- 受众 / 内容 / 对标 · mini 行(Charles 第二次会议 7:16-8:14: "3 个、迷你、放到上面去 · 标题下面第一个模块") -->
+        <section class="mb-8">
+          <div class="grid grid-cols-3 gap-3">
+            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">受众</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">78%</p>
+                <p class="text-[11px] text-[#6b5e52]">smart-follower</p>
+              </div>
+              <p class="text-[10px] text-emerald-700 font-semibold">+428 / 24h · 共 142.8K</p>
+            </a>
+
+            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">内容</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">0.79</p>
+                <p class="text-[11px] text-[#6b5e52]">最佳 post · smart engagement</p>
+              </div>
+              <p class="text-[10px] text-emerald-700 font-semibold">MEV walkthrough · +312 粉丝</p>
+            </a>
+
+            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
+              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">对标</p>
+              <div class="flex items-baseline gap-2 mb-1">
+                <p class="font-serif text-2xl tracking-tight tabular-nums">5</p>
+                <p class="text-[11px] text-[#6b5e52]">已 track 的具名同行</p>
+              </div>
+              <p class="text-[10px] text-amber-700 font-semibold">vs @hsakatrades · 2 位追上来了</p>
+            </a>
+          </div>
+        </section>
+
         <!-- 今日快照 strip (现在承载 Charles 要的 4 个 daily stat · 星级提到上面 hero) -->
         <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
           <div class="flex items-center justify-between mb-5">
@@ -97,74 +132,7 @@
           <div class="space-y-3" id="digest-list"></div>
         </section>
 
-        <!-- 受众 / 内容 / 对标 速览行 (Charles 让从洞察抽屉提到首屏 · 每日触达 surface) -->
-        <section class="mb-10">
-          <div class="grid grid-cols-4 gap-4">
-
-            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">受众</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">78%</p>
-              <p class="text-xs text-[#6b5e52] mb-3">smart-follower 比例</p>
-              <p class="text-[11px] text-emerald-700 font-semibold">+428 / 24h · 共 142.8K</p>
-            </a>
-
-            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">内容</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">0.79</p>
-              <p class="text-xs text-[#6b5e52] mb-3">最佳 post · smart engagement</p>
-              <p class="text-[11px] text-emerald-700 font-semibold">MEV walkthrough · +312 粉丝</p>
-            </a>
-
-            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">对标</p>
-              <p class="font-serif text-3xl tracking-tight mb-1">5</p>
-              <p class="text-xs text-[#6b5e52] mb-3">已 track 的具名同行</p>
-              <p class="text-[11px] text-amber-700 font-semibold">vs @hsakatrades · 2 位追上来了</p>
-            </a>
-
-            <button onclick="document.getElementById('more-stats-panel').classList.toggle('hidden')" class="card block rounded-lg border border-dashed border-[#6b5e52] bg-[#ebe3d4]/40 p-5 text-left hover:border-[#9c2516] transition-colors relative group">
-              <span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">展开 ↓</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-2">更多数据</p>
-              <p class="font-serif text-3xl tracking-tight mb-1 text-[#9c2516]">↗</p>
-              <p class="text-xs text-[#6b5e52] mb-3">总推文 · 总互动 · 账号年龄</p>
-              <p class="text-[11px] text-[#9c2516] font-semibold">点击展开</p>
-            </button>
-
-          </div>
-
-          <!-- 更多数据 面板 · 默认隐藏 -->
-          <div id="more-stats-panel" class="hidden mt-4 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-            <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-[#6b5e52]/30">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">账号总数 · 自加入 X 起</p>
-              <button onclick="document.getElementById('more-stats-panel').classList.add('hidden')" class="text-[#d6cfc4] hover:text-[#f5efe7] text-xs">× 关闭</button>
-            </div>
-            <div class="grid grid-cols-5 gap-4">
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">142,847</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">总粉丝</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">3,124</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">总推文</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">87,492</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">总互动</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">47</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">Trill 在录 call 数</p>
-              </div>
-              <div>
-                <p class="font-mono text-2xl text-[#f5efe7]">2024 年 9 月</p>
-                <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mt-1">加入 Trill</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <!-- 受众/内容/对标 mini 行已移到 hero 下面 · "更多数据"已移除 per Charles 第二次会议 · 基础数字在每个 Insight 页里 -->
 
         <!-- 你的赛道同行在干什么 (Charles · 最高价值的每日 surface) -->
         <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">

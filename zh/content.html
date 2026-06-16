@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content · Trill CreatorOS</title>
+  <title>内容 · Trill 创作者操作系统</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -28,22 +28,22 @@
         <!-- Header -->
         <div class="mb-5 flex items-end justify-between">
           <div>
-            <h1 class="text-2xl font-semibold text-[#1a1611] tracking-tight">Content</h1>
-            <p class="text-sm text-[#6b5e52] mt-1">Every post · scored · with feedback fast enough to shape the next one</p>
+            <h1 class="text-2xl font-semibold text-[#1a1611] tracking-tight">内容</h1>
+            <p class="text-sm text-[#6b5e52] mt-1">每条 post · 打分 · 反馈速度足够影响你写下一条</p>
           </div>
           <div class="flex items-center gap-2 text-xs">
-            <span class="text-[#6b5e52]">feedback windows</span>
-            <button class="px-3 py-1.5 rounded bg-violet-500/20 border border-[#9c2516]/40 text-[#9c2516]">24h</button>
-            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">7d</button>
-            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">30d</button>
+            <span class="text-[#6b5e52]">反馈窗口</span>
+            <button class="px-3 py-1.5 rounded bg-violet-500/20 border border-[#9c2516]/40 text-[#9c2516]">24 小时</button>
+            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">7 天</button>
+            <button class="px-3 py-1.5 rounded bg-[#ebe3d4] border border-[#d6cfc4] text-[#1a1611]">30 天</button>
           </div>
         </div>
 
         <!-- Recent posts table -->
         <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5 mb-5">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-sm font-semibold text-[#1a1611]">Recent posts · ranked by smart engagement</h2>
-            <span class="text-[11px] text-[#6b5e52]">smart-engagement = quality-weighted, not raw</span>
+            <h2 class="text-sm font-semibold text-[#1a1611]">最近 post · 按 smart engagement 排序</h2>
+            <span class="text-[11px] text-[#6b5e52]">smart-engagement = 质量加权,不是 raw 数</span>
           </div>
           <div id="posts-list" class="space-y-3"></div>
         </div>
@@ -54,24 +54,24 @@
           <div class="relative grid grid-cols-3 gap-5">
             <div class="col-span-2">
               <div class="flex items-center gap-2 mb-2">
-                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/30 text-indigo-100 border border-indigo-300/40 font-mono uppercase tracking-wider">Coming Soon</span>
-                <span class="text-xs text-indigo-200/70">Pre-publish Score Simulator</span>
+                <span class="text-[10px] px-2 py-0.5 rounded bg-indigo-500/30 text-indigo-100 border border-indigo-300/40 font-mono uppercase tracking-wider">即将上线</span>
+                <span class="text-xs text-indigo-200/70">发布前评分 Simulator</span>
               </div>
-              <h2 class="text-lg font-semibold text-[#1a1611] mb-2">See your draft's dimension impact before you publish</h2>
+              <h2 class="text-lg font-semibold text-[#1a1611] mb-2">发布前先看见你的草稿对 6 维的影响</h2>
               <p class="text-sm text-[#1a1611] leading-relaxed mb-3">
-                Type into the draft box; Trill scores your text live across all 7 dimensions. Reasoning · Conviction · Originality · Source-density · Disclosure-readiness. Concrete rewrite suggestions for each weak signal — before the post ever leaves your fingers.
+                在草稿框里打字,Trill 跨 6 个 dimension 实时给你打分。推理 · 信念 · 原创性 · 证据密度 · 披露完备性。每个弱信号都附具体重写建议 — 你 post 还没离开手指就拿到反馈。
               </p>
-              <p class="text-xs text-[#6b5e52]">Unlike Kaito/Cookie3, this is post-action-aware: the simulator knows which evidence the live post will generate, and feeds back to your score in real-time after publish.</p>
+              <p class="text-xs text-[#6b5e52]">跟 Kaito/Cookie3 不同,这个是 post-action-aware 的:simulator 知道这条 post 发出去会产生什么证据,发出后实时反馈到你的总分。</p>
             </div>
             <div class="rounded-lg bg-[#f5efe7] border border-indigo-400/20 p-3 self-end">
-              <div class="text-[10px] uppercase text-indigo-300/70 font-mono mb-2">simulator preview</div>
+              <div class="text-[10px] uppercase text-indigo-300/70 font-mono mb-2">simulator 预览</div>
               <div class="text-xs text-[#6b5e52] mb-2 italic">"Long $SOL here, target 250..."</div>
               <div class="space-y-1 text-[11px]">
-                <div class="flex justify-between"><span class="text-[#6b5e52]">Reasoning</span><span class="font-mono text-rose-400">0.18</span></div>
-                <div class="flex justify-between"><span class="text-[#6b5e52]">Conviction</span><span class="font-mono text-amber-300">0.62</span></div>
-                <div class="flex justify-between"><span class="text-[#6b5e52]">Source density</span><span class="font-mono text-rose-400">0.05</span></div>
+                <div class="flex justify-between"><span class="text-[#6b5e52]">推理</span><span class="font-mono text-rose-400">0.18</span></div>
+                <div class="flex justify-between"><span class="text-[#6b5e52]">信念</span><span class="font-mono text-amber-300">0.62</span></div>
+                <div class="flex justify-between"><span class="text-[#6b5e52]">证据密度</span><span class="font-mono text-rose-400">0.05</span></div>
               </div>
-              <div class="mt-2 pt-2 border-t border-[#d6cfc4] text-[10px] text-indigo-300">+ add invalidation level → +0.15 Reasoning</div>
+              <div class="mt-2 pt-2 border-t border-[#d6cfc4] text-[10px] text-indigo-300">+ 加止损位 → 推理 +0.15</div>
             </div>
           </div>
         </div>
@@ -82,13 +82,13 @@
           <!-- Format performance -->
           <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
             <div class="flex items-center justify-between mb-4">
-              <h2 class="text-sm font-semibold text-[#1a1611]">Format performance</h2>
-              <span class="text-[11px] text-[#6b5e52]">avg smart engagement</span>
+              <h2 class="text-sm font-semibold text-[#1a1611]">format 表现</h2>
+              <span class="text-[11px] text-[#6b5e52]">平均 smart engagement</span>
             </div>
             <div class="space-y-3">
               <div>
                 <div class="flex items-center justify-between mb-1.5 text-xs">
-                  <span class="text-[#1a1611]">Long thread (8+ tweets)</span>
+                  <span class="text-[#1a1611]">长 thread(8+ 条)</span>
                   <span class="font-mono text-emerald-300 font-semibold">0.74</span>
                 </div>
                 <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
@@ -97,7 +97,7 @@
               </div>
               <div>
                 <div class="flex items-center justify-between mb-1.5 text-xs">
-                  <span class="text-[#1a1611]">Short thread (3-5 tweets)</span>
+                  <span class="text-[#1a1611]">短 thread(3-5 条)</span>
                   <span class="font-mono text-emerald-300 font-semibold">0.66</span>
                 </div>
                 <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
@@ -106,7 +106,7 @@
               </div>
               <div>
                 <div class="flex items-center justify-between mb-1.5 text-xs">
-                  <span class="text-[#1a1611]">Single (with media)</span>
+                  <span class="text-[#1a1611]">单条(带媒体)</span>
                   <span class="font-mono text-sky-300 font-semibold">0.58</span>
                 </div>
                 <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
@@ -115,7 +115,7 @@
               </div>
               <div>
                 <div class="flex items-center justify-between mb-1.5 text-xs">
-                  <span class="text-[#1a1611]">Single (text only)</span>
+                  <span class="text-[#1a1611]">单条(纯文字)</span>
                   <span class="font-mono text-[#1a1611] font-semibold">0.42</span>
                 </div>
                 <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
@@ -124,7 +124,7 @@
               </div>
               <div>
                 <div class="flex items-center justify-between mb-1.5 text-xs">
-                  <span class="text-[#1a1611]">Reply (to peer)</span>
+                  <span class="text-[#1a1611]">回复(给同行)</span>
                   <span class="font-mono text-amber-300 font-semibold">0.39</span>
                 </div>
                 <div class="w-full bg-[#ebe3d4] rounded-full h-2 overflow-hidden">
@@ -133,15 +133,15 @@
               </div>
             </div>
             <div class="mt-4 pt-3 border-t border-[#d6cfc4] text-[11px] text-[#6b5e52]">
-              Suggestion: your long threads consistently outperform — your last 4 threads averaged 0.78 vs 0.51 for singles in same period.
+              建议:你的长 thread 一直跑赢 — 近 4 条 thread 平均 0.78,同期单条平均 0.51。
             </div>
           </div>
 
           <!-- Best time to post heatmap -->
           <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
             <div class="flex items-center justify-between mb-4">
-              <h2 class="text-sm font-semibold text-[#1a1611]">Best time to post</h2>
-              <span class="text-[11px] text-[#6b5e52]">UTC · audience activity</span>
+              <h2 class="text-sm font-semibold text-[#1a1611]">最佳发文时段</h2>
+              <span class="text-[11px] text-[#6b5e52]">UTC · 受众活跃度</span>
             </div>
             <div class="overflow-x-auto">
               <div class="inline-flex flex-col gap-1">
@@ -165,7 +165,7 @@
               </div>
             </div>
             <div class="mt-4 pt-3 border-t border-[#d6cfc4] text-[11px] text-[#6b5e52]">
-              Peak: Mon-Wed 14:00-16:00 UTC (US East market open, EU lunch). Your @cryptodemo posts at 21:00 UTC perform 30% above your own average.
+              峰值:周一-周三 14:00-16:00 UTC(美东开盘 + 欧洲午休)。你 @cryptodemo 在 21:00 UTC 发的 post 比自身均值高 30%。
             </div>
           </div>
         </div>
@@ -173,24 +173,24 @@
         <!-- Topic breakdown -->
         <div class="rounded-xl bg-[#f5efe7] border border-[#d6cfc4] p-5">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-sm font-semibold text-[#1a1611]">Sub-vertical performance</h2>
-            <span class="text-[11px] text-[#6b5e52]">smart engagement · this 30d</span>
+            <h2 class="text-sm font-semibold text-[#1a1611]">子赛道表现</h2>
+            <span class="text-[11px] text-[#6b5e52]">smart engagement · 30 天</span>
           </div>
           <div class="grid grid-cols-3 gap-4">
             <div class="rounded-lg bg-emerald-500/5 border border-emerald-400/30 p-3">
               <div class="text-xs text-[#6b5e52] mb-1">MEV</div>
               <div class="text-xl font-bold text-emerald-300 font-mono">0.79</div>
-              <div class="text-[11px] text-[#6b5e52] mt-1">8 posts · best performer</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">8 条 · 最强子话题</div>
             </div>
             <div class="rounded-lg bg-sky-500/5 border border-sky-400/30 p-3">
               <div class="text-xs text-[#6b5e52] mb-1">Solana</div>
               <div class="text-xl font-bold text-sky-300 font-mono">0.71</div>
-              <div class="text-[11px] text-[#6b5e52] mt-1">12 posts</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">12 条</div>
             </div>
             <div class="rounded-lg bg-amber-500/5 border border-amber-400/30 p-3">
               <div class="text-xs text-[#6b5e52] mb-1">Liquid Staking</div>
               <div class="text-xl font-bold text-amber-300 font-mono">0.52</div>
-              <div class="text-[11px] text-[#6b5e52] mt-1">5 posts · weakest topic</div>
+              <div class="text-[11px] text-[#6b5e52] mt-1">5 条 · 最弱子话题</div>
             </div>
           </div>
         </div>
@@ -201,8 +201,8 @@
 
   <script>
     window.PAGE_KEY = "content";
-    window.PAGE_TITLE = "Content";
-    window.PAGE_SUBTITLE = "per-post performance, format, timing";
+    window.PAGE_TITLE = "内容";
+    window.PAGE_SUBTITLE = "逐 post 表现 · format · 时段";
   </script>
   <script src="data/demo-kol.js"></script>
   <script src="js/utils.js"></script>
@@ -213,7 +213,7 @@
     const postsEl = document.getElementById("posts-list");
     DEMO_KOL.recentPosts.forEach((p, i) => {
       const flagBadge = p.flag ? `<div class="text-[11px] text-amber-300 mt-1.5 italic">⚑ ${p.flag}</div>` : "";
-      const onchainBadge = p.onchainImpact ? `<div class="text-[11px] text-emerald-300 mt-1.5 inline-flex items-center gap-1"><span>🔗</span> on-chain: ${p.onchainImpact.volumeLift} volume, ${p.onchainImpact.walletsActivated} wallets activated</div>` : "";
+      const onchainBadge = p.onchainImpact ? `<div class="text-[11px] text-emerald-300 mt-1.5 inline-flex items-center gap-1"><span>🔗</span> 链上:成交量 ${p.onchainImpact.volumeLift},${p.onchainImpact.walletsActivated} 个 wallet 被激活</div>` : "";
       const html = `
         <div id="${p.id}" class="rounded-lg bg-slate-800/30 border border-[#d6cfc4] p-4 hover:border-[#9c2516]/40 transition-colors">
           <div class="flex items-start justify-between gap-4 mb-2">
@@ -240,15 +240,15 @@
               <div class="font-mono ${p.smartEngagement >= 0.7 ? 'text-emerald-300' : p.smartEngagement >= 0.5 ? 'text-sky-300' : 'text-amber-300'} font-semibold">${fmtScore(p.smartEngagement)}</div>
             </div>
             <div>
-              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Sentiment</div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">情绪</div>
               <div class="font-mono ${p.sentiment >= 0.6 ? 'text-emerald-300' : 'text-[#1a1611]'} font-semibold">+${p.sentiment.toFixed(2)}</div>
             </div>
             <div>
-              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Follower lift</div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">粉丝增量</div>
               <div class="font-mono text-emerald-300 font-semibold">+${p.followerLift}</div>
             </div>
             <div>
-              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">Length</div>
+              <div class="text-[10px] text-[#6b5e52] uppercase font-mono mb-0.5">长度</div>
               <div class="text-[#1a1611]">${p.lengthBucket}</div>
             </div>
           </div>
@@ -258,7 +258,7 @@
     });
 
     // Heatmap: 7 days x 12 (every-2-hour) buckets
-    const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const days = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"];
     const heatmapData = [
       [1,1,2,2,3,3,5,7,8,6,5,3], // Mon
       [1,1,2,3,3,4,6,9,8,7,5,3], // Tue
@@ -272,7 +272,7 @@
     days.forEach((d, di) => {
       const cells = heatmapData[di].map((v) => {
         const opacity = Math.min(1, v / 9);
-        return `<div class="heatmap-cell w-3 h-3 rounded-sm bg-violet-400" style="opacity: ${opacity};" title="${d} · activity ${v}"></div>`;
+        return `<div class="heatmap-cell w-3 h-3 rounded-sm bg-violet-400" style="opacity: ${opacity};" title="${d} · 活跃度 ${v}"></div>`;
       }).join("");
       const row = `<div class="flex items-center gap-1"><span class="text-[10px] text-[#6b5e52] font-mono w-7 text-right">${d}</span>${cells}</div>`;
       heatmapGrid.insertAdjacentHTML("beforeend", row);

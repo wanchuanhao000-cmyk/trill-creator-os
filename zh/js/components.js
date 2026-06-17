@@ -21,7 +21,6 @@ const NAV_TREE = [
     items: [
       { key: "audience", label: "受众", href: "audience.html" },
       { key: "content",  label: "内容", href: "content.html" },
-      { key: "peers",    label: "对标", href: "peers.html" },
     ],
   },
   { type: "item", key: "profile", label: "档案", href: "profile.html", icon: "◐" },

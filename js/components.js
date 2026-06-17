@@ -21,7 +21,6 @@ const NAV_TREE = [
     items: [
       { key: "audience", label: "Audience", href: "audience.html" },
       { key: "content",  label: "Content",  href: "content.html" },
-      { key: "peers",    label: "Peers",    href: "peers.html" },
     ],
   },
   { type: "item", key: "profile", label: "Profile", href: "profile.html", icon: "◐" },

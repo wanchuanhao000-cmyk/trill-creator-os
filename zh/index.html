@@ -28,280 +28,107 @@
 
     <main class="flex-1 flex flex-col overflow-hidden">
       <div id="topbar"></div>
-      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+      <div class="flex-1 overflow-y-auto p-10 scrollbar-thin">
 
-        <!-- Hero (Vincent: 星级提到右上角 · 4 个 stat 下沉到 Today's snapshot 黑条) -->
-        <header class="mb-10 pb-8 border-b border-subtle">
+        <!-- HERO · Hi, [name] + Star Tier 卡 (Jackson 2026-06-16: Apple 风格,看一眼就懂) -->
+        <header class="mb-12 pb-10 border-b border-subtle">
           <div class="grid grid-cols-5 gap-10 items-center">
             <div class="col-span-3">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-4">工作台</p>
-              <h1 class="font-serif text-6xl tracking-tight mb-3 leading-tight">欢迎回来,<br><span id="greet-name" class="text-[#9c2516] italic">Cryptodemo</span>。</h1>
-              <p class="font-serif italic text-xl text-[#6b5e52]">你的社区是你自己建的。机构把工具递给你。</p>
+              <h1 class="font-serif text-6xl tracking-tight mb-3 leading-tight">你好,<span id="greet-name" class="text-[#9c2516] italic">Cryptodemo</span>。</h1>
+              <p class="font-serif italic text-xl text-[#6b5e52]">下面是你今天要看的东西。</p>
             </div>
 
-            <!-- Star Tier · 奶油 + 红边 Michelin 风(Vincent: 避免跟下面 snapshot 双黑) -->
+            <!-- Star Tier 卡 -->
             <div class="col-span-2">
               <a href="score.html" class="block bg-[#fef4e8] border-2 border-[#9c2516] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Trill Verified · 当前等级</p>
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Trill Verified</p>
                 <p class="font-mono text-6xl text-[#9c2516] tracking-wider leading-none mb-4">★ ★ ★ ★</p>
-                <p class="font-serif text-2xl text-[#1a1611] tracking-tight mb-1" style="font-family:'Cormorant Garamond','Noto Serif SC',Georgia,serif;">Four-Star Creator</p>
-                <p class="text-[11px] text-[#6b5e52] italic mb-4">DeFi · 顶部 13% · 39 天后复评</p>
-                <p class="text-[10px] text-[#9c2516] uppercase tracking-widest font-semibold border-t border-[#9c2516]/30 pt-3">查看评分详情 →</p>
+                <p class="font-serif text-2xl text-[#1a1611] tracking-tight" style="font-family:'Cormorant Garamond','Noto Serif SC',Georgia,serif;">四星 Creator</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-1">DeFi · 顶部 13%</p>
               </a>
             </div>
           </div>
         </header>
 
-        <!-- 受众 / 内容 / 对标 · mini 行(Charles 第二次会议 7:16-8:14: "3 个、迷你、放到上面去 · 标题下面第一个模块") -->
-        <section class="mb-8">
-          <div class="grid grid-cols-3 gap-3">
-            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">受众</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">78%</p>
-                <p class="text-[11px] text-[#6b5e52]">smart-follower</p>
-              </div>
-              <p class="text-[10px] text-emerald-700 font-semibold">+428 / 24h · 共 142.8K</p>
-            </a>
+        <!-- SECTION 1 · 每日 check(4 个数字 + 1 个 next action) -->
+        <section class="mb-14">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-5">过去 24 小时</p>
 
-            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">内容</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">0.79</p>
-                <p class="text-[11px] text-[#6b5e52]">最佳 post · smart engagement</p>
-              </div>
-              <p class="text-[10px] text-emerald-700 font-semibold">MEV walkthrough · +312 粉丝</p>
-            </a>
-
-            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">查看 →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">对标</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">5</p>
-                <p class="text-[11px] text-[#6b5e52]">已 track 的具名同行</p>
-              </div>
-              <p class="text-[10px] text-amber-700 font-semibold">vs @hsakatrades · 2 位追上来了</p>
-            </a>
-          </div>
-        </section>
-
-        <!-- 今日快照 strip (现在承载 Charles 要的 4 个 daily stat · 星级提到上面 hero) -->
-        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-          <div class="flex items-center justify-between mb-5">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-[#9c2516]"></span>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-[#d6cfc4] font-mono">今日快照 · 每日 UTC 9 点更新</span>
+          <div class="grid grid-cols-4 gap-5 mb-8">
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">粉丝</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+428</p>
+              <p class="text-xs text-[#6b5e52] mt-2">共 142.8K</p>
             </div>
-            <span class="text-[10px] text-[#d6cfc4] italic">距上次访问 · 14 小时前</span>
-          </div>
-          <div class="grid grid-cols-4 gap-6">
-            <div class="border-l-2 border-[#9c2516] pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">粉丝 · 24h</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+428</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">总计 142.8K</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">互动</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+247</p>
+              <p class="text-xs text-[#6b5e52] mt-2">回复 · 引用 · 提及</p>
             </div>
-            <div class="border-l-2 border-[#9c2516] pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">互动 · 24h</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+247</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">回复 · 引用 · 提及</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">评分 · 30 天</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+0.08</p>
+              <p class="text-xs text-[#6b5e52] mt-2">6 维平均提升</p>
             </div>
-            <div class="border-l-2 border-emerald-500 pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">6 维 · 30 天</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+0.08</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">均提升 · 4 升 / 2 平</p>
-            </div>
-            <div class="border-l-2 border-emerald-500 pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Trill 导流 · 30 天</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+212</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">来自 The Guide 的粉丝</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Trill 导流 · 30 天</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+212</p>
+              <p class="text-xs text-[#6b5e52] mt-2">来自 The Guide 的粉丝</p>
             </div>
           </div>
-        </section>
 
-        <!-- 上次离开后这些动了 · digest (Max: 必须放在顶部 · 回访用户第一关心的问题) -->
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">距上次访问 · 14 小时前</p>
-              <h2 class="font-serif text-2xl tracking-tight">这些动了。</h2>
-            </div>
-            <a href="#" class="text-xs text-[#9c2516] hover:underline">完整活动日志 →</a>
-          </div>
-          <div class="space-y-3" id="digest-list"></div>
-        </section>
-
-        <!-- 受众/内容/对标 mini 行已移到 hero 下面 · "更多数据"已移除 per Charles 第二次会议 · 基础数字在每个 Insight 页里 -->
-
-        <!-- 你的赛道同行在干什么 (Charles · 最高价值的每日 surface) -->
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">你的赛道在干什么</p>
-              <h2 class="font-serif text-2xl tracking-tight">同赛道动态 · DeFi 同行</h2>
-            </div>
-            <span class="text-[10px] text-[#6b5e52] italic">数据来自 Noah · 叙事聚类来自 BERTopic</span>
-          </div>
-
-          <div class="space-y-3">
-            <div class="flex items-start gap-4 pb-3 border-b border-subtle">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">H</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@hsakatrades</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">2 小时前</span>
+          <!-- Next-action CTA · 1 行,替代首页 6 个 dim tile -->
+          <a href="tool-ai-writer.html" class="card block bg-[#1a1611] text-[#f5efe7] rounded-lg p-7 hover:bg-[#2a201a] transition-colors">
+            <div class="flex items-center justify-between gap-6">
+              <div class="flex items-center gap-5">
+                <span class="text-3xl">💡</span>
+                <div>
+                  <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">Trill 今天建议你</p>
+                  <p class="font-serif text-2xl tracking-tight leading-tight">本周期你的 Community Care 跌了 <span class="text-[#9c2516]">−0.08</span>。</p>
+                  <p class="text-sm text-[#d6cfc4] mt-1">用 AI Writer 起草一条关怀社区的 thread。</p>
                 </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"Restaking 集中度已经成真风险 · 53% TVL · 该想想 Symbiotic 仓位"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">叙事:<strong>Restaking 风险</strong> · 本周 6 位 ★★★ 中 4 位在写</p>
               </div>
+              <span class="text-sm uppercase tracking-widest text-[#9c2516] font-semibold whitespace-nowrap">开始 →</span>
             </div>
-
-            <div class="flex items-start gap-4 pb-3 border-b border-subtle">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">V</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@vance_research</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">5 小时前</span>
-                </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"新写了 18 页 liquid restaking 风险 primer · 公开 thread"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">仓位:long EIGEN 减到 60% · 链上确认</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">R</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@ren</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">11 小时前</span>
-                </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"承认 5 月 $SOL→$200 这条 call 踩错了 · 这是 call 漏掉的部分"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">叙事:<strong>认错 call</strong> · 计入 Intellectual Honesty</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 pt-3 border-t border-subtle flex items-center justify-between">
-            <p class="text-[11px] text-[#6b5e52] italic">同赛道 · 同等级或以上 · 24 小时窗口</p>
-            <a href="#" class="text-xs text-[#9c2516] hover:underline font-semibold">查看全部同行动态 →</a>
-          </div>
+          </a>
         </section>
 
-        <!-- Trill 评分 · 6 个 dimension tile + 7-30 天趋势 (Max: per-dimension tile + 7-30d 变化) -->
+        <!-- SECTION 2 · Booster Tools(3 卡 · Charles 2026-06-16 措辞) -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Trill 评分 · 按维度拆解</p>
-              <h2 class="font-serif text-3xl tracking-tight">你的位置在动哪里。</h2>
-            </div>
-            <a href="score.html" class="text-xs text-[#9c2516] hover:underline font-semibold">查看评分详情 →</a>
-          </div>
-          <div id="dim-tile-grid" class="grid grid-cols-3 gap-4"></div>
-        </section>
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">你的工具</p>
+          <h2 class="font-serif text-3xl tracking-tight mb-7">3 个 booster 帮你长大。</h2>
 
-        <!-- 工具 · 紧凑状态条 (Max: 5 张大卡过重 + 跟侧边栏重复 · Charles: 仍要呈现"Trill 为你做了什么") -->
-        <section class="mb-10">
-          <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-subtle">
-            <div class="flex items-baseline gap-3">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">工具</p>
-              <h2 class="font-serif text-xl tracking-tight">成为更好的 KOL。</h2>
-            </div>
-            <p class="text-[10px] text-[#6b5e52] italic">完整页面在侧边栏 →</p>
-          </div>
+          <div class="grid grid-cols-3 gap-5">
 
-          <div class="grid grid-cols-5 gap-3">
-            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-4 hover:bg-[#fef4e8]">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Growth</p>
-                <span class="font-mono text-[10px] text-[#9c2516]">→</span>
-              </div>
-              <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">Trill 导流 · 30 天</p>
+            <!-- AI Writer -->
+            <a href="tool-ai-writer.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">✍</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">AI Writer</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
+              <p class="text-sm text-[#6b5e52] mb-6">条 draft 等你</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">打开 →</p>
             </a>
 
-            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">AI Writer</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">3</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">draft 待处理</p>
+            <!-- Topic Pulse -->
+            <a href="tool-topic-pulse.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">◉</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Topic Pulse</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
+              <p class="text-sm text-[#6b5e52] mb-6">个热门话题开着</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">查看 →</p>
             </a>
 
-            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Topic Pulse</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">3</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">机会窗口开着</p>
+            <!-- Network -->
+            <a href="tool-network.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">⌘</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Network</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">4</p>
+              <p class="text-sm text-[#6b5e52] mb-6">位 KOL 等你回应</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">回应 →</p>
             </a>
 
-            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Network</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">4</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">位可推下一步</p>
-            </a>
-
-            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Monetise</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">14</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">订阅 · $2.1K/月</p>
-            </a>
           </div>
         </section>
-
-        <!-- 旧的 2 列 digest + score 板块已移除 · digest 移到上面 per Max · score 换成 dim tile -->
-
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <h2 class="font-serif text-2xl tracking-tight">重要通知</h2>
-            <span class="text-xs text-[#6b5e52] italic">同行 · 回复 · 情绪尖峰</span>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3 py-2">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">H</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]"><strong>@hsakatrades</strong> <span class="font-mono text-[#9c2516] text-xs">★★★★</span> 在 Solana economics 一篇 thread 里引用了你的 validator-queue thesis。</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">3 小时前 · 那条 quote 上 24 个互动</p>
-              </div>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">查看 →</a>
-            </div>
-            <div class="flex items-start gap-3 py-2 border-t border-subtle pt-3">
-              <div class="w-10 h-10 rounded-full bg-[#fef4e8] border border-[#9c2516]/40 flex items-center justify-center text-base flex-shrink-0">⚡</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]">你的 <strong>FIL thesis revision</strong> 那条情绪尖峰 · 过去 4 小时 +0.18 · 84% smart-engagement。</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">5 小时前 · 带来 +24 粉丝</p>
-              </div>
-              <a href="content.html" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">查看 →</a>
-            </div>
-            <div class="flex items-start gap-3 py-2 border-t border-subtle pt-3">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">B</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]"><strong>@blknoiz06</strong> <span class="font-mono text-[#9c2516] text-xs">★★★</span> quote-tweet 了你的 validator queue thesis(正面)。</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">12 小时前 · 下游带来 +89 个互动</p>
-              </div>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">查看 →</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Closing line -->
-        <div class="mt-12 pt-8 border-t border-subtle text-center">
-          <p class="font-serif italic text-base text-[#6b5e52] max-w-2xl mx-auto leading-relaxed">
-            "机构放大你建的东西。工具就是怎么放大。"
-          </p>
-        </div>
 
       </div>
     </main>
@@ -318,84 +145,6 @@
 
   <script>
     document.getElementById("greet-name").textContent = DEMO_KOL.displayName;
-
-    const digestEl = document.getElementById("digest-list");
-    const DIGEST_ZH = [
-      { type: "score", text: "Educational Value 上升 +0.06 — 你 5/17 的 MEV explainer thread 贡献了 3 个证据条目", impact: "good" },
-      { type: "score", text: "Community Confidence 下降 −0.08 — Layer 2 命中率跌破 50%(ENA call 结算为 MISS 之后)", impact: "bad" },
-      { type: "mentions", text: "@hsakatrades(4★)引用了你的 validator-queue thesis", impact: "good" },
-      { type: "audience", text: "24 小时 +428 粉丝 — 67% 是 Trader 类型,smart-follower 比例 78%", impact: "neutral" },
-    ];
-    DIGEST_ZH.forEach((d) => {
-      const colorMap = {
-        good:    { border: "border-emerald-600", bg: "bg-emerald-50" },
-        bad:     { border: "border-[#9c2516]",   bg: "bg-[#fef4e8]"  },
-        neutral: { border: "border-[#6b5e52]",   bg: "bg-[#ebe3d4]/40" },
-      };
-      const c = colorMap[d.impact] || colorMap.neutral;
-      const iconMap = { score: "★", mentions: "❝", audience: "○" };
-      const html = `
-        <div class="flex items-start gap-3 py-2 border-l-2 ${c.border} pl-3 ${c.bg} rounded-r">
-          <span class="text-sm mt-0.5 text-[#9c2516] font-serif">${iconMap[d.type] || "•"}</span>
-          <div class="flex-1 min-w-0 text-sm text-[#1a1611] leading-relaxed">${d.text}</div>
-        </div>
-      `;
-      digestEl.insertAdjacentHTML("beforeend", html);
-    });
-
-    // Trill 评分 · 6 个 dimension tile (Max: 按 dim 拆 tile + 7-30 天变化 + 趋势)
-    const dimTileEl = document.getElementById("dim-tile-grid");
-    const DIM_NAMES_ZH = {
-      "Analytical Depth": "分析深度",
-      "Accuracy Discipline": "准确度",
-      "Intellectual Honesty": "学识诚信",
-      "Community Care": "社区关怀",
-      "Educational Value": "教育价值",
-      "Entertainment & Engagement": "娱乐 & 互动",
-      "Community Confidence": "社区信心",
-    };
-    const BAND_ZH = { "Strong": "强", "Solid": "稳", "Average": "中等", "Below Avg": "偏弱" };
-    DEMO_KOL.dimensions.forEach((d) => {
-      const delta30 = d.delta || 0;
-      const delta7 = Math.round(delta30 * 0.4 * 100) / 100;
-      const fmtDelta = (v) => v > 0 ? `+${v.toFixed(2)}` : v < 0 ? v.toFixed(2) : "±0.00";
-      const cls30 = delta30 > 0 ? "text-emerald-700" : delta30 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
-      const cls7 = delta7 > 0 ? "text-emerald-700" : delta7 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
-      const bandCls = { "Strong": "bg-emerald-50 text-emerald-800", "Solid": "bg-sky-50 text-sky-800", "Average": "bg-amber-50 text-amber-800", "Below Avg": "bg-[#fef4e8] text-[#9c2516]" }[d.band] || "bg-[#ebe3d4]/40 text-[#6b5e52]";
-      const trend = delta30 >= 0 ? ["▁","▂","▃","▄","▅","▆","█"] : ["█","▆","▅","▄","▃","▂","▁"];
-      if (delta30 === 0) trend.fill("▄");
-      const flag = d.flagged ? `<span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest bg-[#9c2516] text-[#f5efe7] px-1.5 py-0.5 rounded font-bold">弱</span>` : "";
-      const nameZH = DIM_NAMES_ZH[d.name] || d.name;
-      const bandZH = BAND_ZH[d.band] || d.band;
-      const html = `
-        <a href="score.html#${d.short.toLowerCase()}" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-          ${flag}
-          <div class="flex items-baseline justify-between mb-1">
-            <p class="font-mono text-[10px] text-[#6b5e52] uppercase tracking-widest font-semibold">${d.short}</p>
-            <span class="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded font-semibold ${bandCls}">${bandZH}</span>
-          </div>
-          <p class="font-serif text-sm text-[#1a1611] tracking-tight mb-2 leading-tight">${nameZH}</p>
-          <div class="flex items-baseline justify-between mb-2">
-            <p class="font-serif text-3xl tracking-tight tabular-nums">${d.score.toFixed(2)}</p>
-            <span class="font-mono text-[10px] text-[#9c2516]/60 tracking-tighter">${trend.join("")}</span>
-          </div>
-          <div class="h-1.5 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-            <div class="h-full bg-[#9c2516] rounded-full" style="width: ${d.score * 100}%"></div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-subtle text-[10px]">
-            <div>
-              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">7 天</p>
-              <p class="font-mono ${cls7} tabular-nums">${fmtDelta(delta7)}</p>
-            </div>
-            <div>
-              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">30 天</p>
-              <p class="font-mono ${cls30} tabular-nums">${fmtDelta(delta30)}</p>
-            </div>
-          </div>
-        </a>
-      `;
-      dimTileEl.insertAdjacentHTML("beforeend", html);
-    });
   </script>
 </body>
 </html>

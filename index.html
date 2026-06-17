@@ -28,282 +28,107 @@
 
     <main class="flex-1 flex flex-col overflow-hidden">
       <div id="topbar"></div>
-      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+      <div class="flex-1 overflow-y-auto p-10 scrollbar-thin">
 
-        <!-- HERO greeting (Vincent feedback · star tier promoted to top right · stats moved into dark band) -->
-        <header class="mb-10 pb-8 border-b border-subtle">
+        <!-- HERO · Hi, [name] + Star Tier card (Jackson 2026-06-16: Apple-style, no explanation needed) -->
+        <header class="mb-12 pb-10 border-b border-subtle">
           <div class="grid grid-cols-5 gap-10 items-center">
             <div class="col-span-3">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-4">Workbench</p>
-              <h1 class="font-serif text-6xl tracking-tight mb-3 leading-tight">Welcome back,<br><span id="greet-name" class="text-[#9c2516] italic">Cryptodemo</span>.</h1>
-              <p class="font-serif italic text-xl text-[#6b5e52]">Your community is what you build. The institution hands you the tools.</p>
+              <h1 class="font-serif text-6xl tracking-tight mb-3 leading-tight">Hi, <span id="greet-name" class="text-[#9c2516] italic">Cryptodemo</span>.</h1>
+              <p class="font-serif italic text-xl text-[#6b5e52]">Here's what to check today.</p>
             </div>
 
-            <!-- Star Tier · cream + red Michelin style (Vincent: avoid double black with snapshot below) -->
+            <!-- Star Tier card -->
             <div class="col-span-2">
               <a href="score.html" class="block bg-[#fef4e8] border-2 border-[#9c2516] rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Trill Verified · current standing</p>
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Trill Verified</p>
                 <p class="font-mono text-6xl text-[#9c2516] tracking-wider leading-none mb-4">★ ★ ★ ★</p>
-                <p class="font-serif text-2xl text-[#1a1611] tracking-tight mb-1" style="font-family:'Cormorant Garamond',Georgia,serif;">Four-Star Creator</p>
-                <p class="text-[11px] text-[#6b5e52] italic mb-4">DeFi · top 13% · next review 39d</p>
-                <p class="text-[10px] text-[#9c2516] uppercase tracking-widest font-semibold border-t border-[#9c2516]/30 pt-3">Open Score detail →</p>
+                <p class="font-serif text-2xl text-[#1a1611] tracking-tight" style="font-family:'Cormorant Garamond',Georgia,serif;">Four-Star Creator</p>
+                <p class="text-[11px] text-[#6b5e52] italic mt-1">DeFi · top 13%</p>
               </a>
             </div>
           </div>
         </header>
 
-        <!-- AUDIENCE / CONTENT / PEERS · mini row (Charles 2nd meeting 7:16-8:14: "3 个,迷你,放到上面去 · 标题下面第一个模块") -->
-        <section class="mb-8">
-          <div class="grid grid-cols-3 gap-3">
-            <a href="audience.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Audience</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">78%</p>
-                <p class="text-[11px] text-[#6b5e52]">smart-follower</p>
-              </div>
-              <p class="text-[10px] text-emerald-700 font-semibold">+428 / 24h · 142.8K total</p>
-            </a>
+        <!-- SECTION 1 · Daily check (4 stats + 1 next-action) -->
+        <section class="mb-14">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-5">Past 24 hours</p>
 
-            <a href="content.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Content</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">0.79</p>
-                <p class="text-[11px] text-[#6b5e52]">top post · smart engagement</p>
-              </div>
-              <p class="text-[10px] text-emerald-700 font-semibold">MEV walkthrough · +312 followers</p>
-            </a>
-
-            <a href="peers.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4 relative group">
-              <span class="absolute top-2.5 right-3 text-[9px] uppercase tracking-widest text-[#9c2516] font-semibold opacity-70 group-hover:opacity-100">View →</span>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1.5">Peers</p>
-              <div class="flex items-baseline gap-2 mb-1">
-                <p class="font-serif text-2xl tracking-tight tabular-nums">5</p>
-                <p class="text-[11px] text-[#6b5e52]">named peers tracked</p>
-              </div>
-              <p class="text-[10px] text-amber-700 font-semibold">vs @hsakatrades · 2 catching up</p>
-            </a>
-          </div>
-        </section>
-
-        <!-- TODAY'S SNAPSHOT strip (now hosts the 4 daily stats Charles asked for · star tier promoted to hero) -->
-        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-6">
-          <div class="flex items-center justify-between mb-5">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-[#9c2516]"></span>
-              <span class="text-[10px] uppercase tracking-[0.2em] text-[#d6cfc4] font-mono">Today's snapshot · updated daily 9am UTC</span>
+          <div class="grid grid-cols-4 gap-5 mb-8">
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Followers</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+428</p>
+              <p class="text-xs text-[#6b5e52] mt-2">142.8K total</p>
             </div>
-            <span class="text-[10px] text-[#d6cfc4] italic">since last visit · 14h ago</span>
-          </div>
-          <div class="grid grid-cols-4 gap-6">
-            <div class="border-l-2 border-[#9c2516] pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Followers · 24h</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+428</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">142.8K total</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Interactions</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+247</p>
+              <p class="text-xs text-[#6b5e52] mt-2">replies · quotes · mentions</p>
             </div>
-            <div class="border-l-2 border-[#9c2516] pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Interactions · 24h</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+247</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">replies · quotes · mentions</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Score · 30d</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+0.08</p>
+              <p class="text-xs text-[#6b5e52] mt-2">avg lift across 6 dimensions</p>
             </div>
-            <div class="border-l-2 border-emerald-500 pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">6 dim · 30d</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+0.08</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">avg lift · 4 up / 2 flat</p>
-            </div>
-            <div class="border-l-2 border-emerald-500 pl-4">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] font-mono mb-1">Trill-driven · 30d</p>
-              <p class="font-serif text-4xl text-emerald-400 tabular-nums">+212</p>
-              <p class="text-[10px] text-[#d6cfc4] mt-1">followers from The Guide</p>
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Trill-driven · 30d</p>
+              <p class="font-serif text-5xl text-emerald-700 tabular-nums tracking-tight">+212</p>
+              <p class="text-xs text-[#6b5e52] mt-2">followers from The Guide</p>
             </div>
           </div>
-        </section>
 
-        <!-- WHAT CHANGED · digest (Max: must be at the top · returning user's first question) -->
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Since you were last here · 14h ago</p>
-              <h2 class="font-serif text-2xl tracking-tight">What changed.</h2>
-            </div>
-            <a href="#" class="text-xs text-[#9c2516] hover:underline">full activity log →</a>
-          </div>
-          <div class="space-y-3" id="digest-list"></div>
-        </section>
-
-        <!-- Mini Audience/Content/Peers row moved to right under hero · "More stats" dropped per Charles 2nd meeting · basics live inside each Insight page -->
-
-        <!-- WHAT OTHER KOLS IN MY VERTICAL ARE DOING (per Charles · highest-value daily surface) -->
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">What your vertical is doing</p>
-              <h2 class="font-serif text-2xl tracking-tight">Same-vertical activity · DeFi peers</h2>
-            </div>
-            <span class="text-[10px] text-[#6b5e52] italic">data via Noah · narrative clusters via BERTopic</span>
-          </div>
-
-          <div class="space-y-3">
-            <div class="flex items-start gap-4 pb-3 border-b border-subtle">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">H</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@hsakatrades</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">2h ago</span>
+          <!-- Next-action CTA · 1 line, replaces 6 dim tiles on Home -->
+          <a href="tool-ai-writer.html" class="card block bg-[#1a1611] text-[#f5efe7] rounded-lg p-7 hover:bg-[#2a201a] transition-colors">
+            <div class="flex items-center justify-between gap-6">
+              <div class="flex items-center gap-5">
+                <span class="text-3xl">💡</span>
+                <div>
+                  <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">Trill suggests today</p>
+                  <p class="font-serif text-2xl tracking-tight leading-tight">Your Community Care dropped <span class="text-[#9c2516]">−0.08</span> this cycle.</p>
+                  <p class="text-sm text-[#d6cfc4] mt-1">Open AI Writer to draft a community-focused thread.</p>
                 </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"Restaking concentration is now a real risk · 53% TVL · time to think about Symbiotic positioning"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">Narrative: <strong>Restaking risk</strong> · 4 of 6 ★★★ writing on it this week</p>
               </div>
+              <span class="text-sm uppercase tracking-widest text-[#9c2516] font-semibold whitespace-nowrap">Start →</span>
             </div>
-
-            <div class="flex items-start gap-4 pb-3 border-b border-subtle">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">V</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@vance_research</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">5h ago</span>
-                </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"New 18-page primer on liquid restaking risk surfaces · open thread"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">Position: long EIGEN reduced to 60% · onchain confirmed</p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">R</div>
-              <div class="flex-1">
-                <div class="flex items-baseline gap-2 mb-1">
-                  <p class="text-sm font-semibold">@ren</p>
-                  <span class="font-mono text-[#9c2516] text-xs">★★</span>
-                  <span class="text-[10px] text-[#6b5e52] font-mono">11h ago</span>
-                </div>
-                <p class="text-sm text-[#1a1611] leading-snug italic">"Owning my May $SOL→$200 miss · here's what the call missed"</p>
-                <p class="text-[11px] text-[#9c2516] mt-1">Narrative: <strong>Owned miss</strong> · counts for Intellectual Honesty</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-4 pt-3 border-t border-subtle flex items-center justify-between">
-            <p class="text-[11px] text-[#6b5e52] italic">Same vertical · same tier or above · 24h window</p>
-            <a href="#" class="text-xs text-[#9c2516] hover:underline font-semibold">See all peer activity →</a>
-          </div>
+          </a>
         </section>
 
-        <!-- TRILL SCORE · 6 dimension tiles with 7d/30d trends (Max: tiles per dimension + 7-30d change) -->
+        <!-- SECTION 2 · Booster Tools (3 cards · Charles 2026-06-16 wording) -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Trill Score · by dimension</p>
-              <h2 class="font-serif text-3xl tracking-tight">Where you're moving.</h2>
-            </div>
-            <a href="score.html" class="text-xs text-[#9c2516] hover:underline font-semibold">Open Score detail →</a>
-          </div>
-          <div id="dim-tile-grid" class="grid grid-cols-3 gap-4"></div>
-        </section>
+          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">Your tools</p>
+          <h2 class="font-serif text-3xl tracking-tight mb-7">Three boosters to grow.</h2>
 
-        <!-- TOOLS · compact status strip (Max: 5 big cards too heavy + redundant with sidebar · Charles: still surface "what Trill does for you") -->
-        <section class="mb-10">
-          <div class="flex items-baseline justify-between mb-3 pb-2 border-b border-subtle">
-            <div class="flex items-baseline gap-3">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">Tools</p>
-              <h2 class="font-serif text-xl tracking-tight">Become a better KOL.</h2>
-            </div>
-            <p class="text-[10px] text-[#6b5e52] italic">Full pages in the sidebar →</p>
-          </div>
+          <div class="grid grid-cols-3 gap-5">
 
-          <div class="grid grid-cols-5 gap-3">
-            <a href="tool-growth.html" class="card block rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-4 hover:bg-[#fef4e8]">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Growth</p>
-                <span class="font-mono text-[10px] text-[#9c2516]">→</span>
-              </div>
-              <p class="font-mono text-2xl text-emerald-700 tabular-nums">+212</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">Trill-driven · 30d</p>
+            <!-- AI Writer -->
+            <a href="tool-ai-writer.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">✍</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">AI Writer</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
+              <p class="text-sm text-[#6b5e52] mb-6">drafts waiting</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">Open →</p>
             </a>
 
-            <a href="tool-ai-writer.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">AI Writer</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">3</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">drafts waiting</p>
+            <!-- Topic Pulse -->
+            <a href="tool-topic-pulse.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">◉</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Topic Pulse</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
+              <p class="text-sm text-[#6b5e52] mb-6">hot topics open</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">See →</p>
             </a>
 
-            <a href="tool-topic-pulse.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Topic Pulse</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">3</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">opportunities open</p>
+            <!-- Network -->
+            <a href="tool-network.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
+              <div class="font-serif text-4xl text-[#9c2516] mb-3">⌘</div>
+              <h3 class="font-serif text-2xl tracking-tight mb-2">Network</h3>
+              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">4</p>
+              <p class="text-sm text-[#6b5e52] mb-6">KOLs ready for you</p>
+              <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">Reply →</p>
             </a>
 
-            <a href="tool-network.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Network</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">4</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">ready for next step</p>
-            </a>
-
-            <a href="tool-monetise.html" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-4">
-              <div class="flex items-baseline justify-between mb-2">
-                <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Monetise</p>
-                <span class="font-mono text-[10px] text-[#6b5e52]">→</span>
-              </div>
-              <p class="font-mono text-2xl tabular-nums">14</p>
-              <p class="text-[10px] text-[#6b5e52] mt-0.5">active subs · $2.1K/mo</p>
-            </a>
           </div>
         </section>
-
-        <!-- Old 2-col digest + score panel removed · digest moved to top per Max · score replaced by dim tiles -->
-
-
-        <!-- TOP NOTIFICATIONS -->
-        <section class="mb-10 bg-[#f5efe7] border border-subtle rounded-lg p-6">
-          <div class="flex items-baseline justify-between mb-4 pb-3 border-b border-subtle">
-            <h2 class="font-serif text-2xl tracking-tight">Top notifications</h2>
-            <span class="text-xs text-[#6b5e52] italic">peers · replies · sentiment spikes</span>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-start gap-3 py-2">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">H</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]"><strong>@hsakatrades</strong> <span class="font-mono text-[#9c2516] text-xs">★★★★</span> referenced your validator-queue thesis in a thread on Solana economics.</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">3h ago · 24 engagements on the quote</p>
-              </div>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">view →</a>
-            </div>
-            <div class="flex items-start gap-3 py-2 border-t border-subtle pt-3">
-              <div class="w-10 h-10 rounded-full bg-[#fef4e8] border border-[#9c2516]/40 flex items-center justify-center text-base flex-shrink-0">⚡</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]">Sentiment spike on your <strong>FIL thesis revision</strong> post · +0.18 over last 4h · 84% smart-engagement.</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">5h ago · drove +24 followers</p>
-              </div>
-              <a href="content.html" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">view →</a>
-            </div>
-            <div class="flex items-start gap-3 py-2 border-t border-subtle pt-3">
-              <div class="w-10 h-10 rounded-full bg-[#9c2516] flex items-center justify-center text-sm font-serif font-bold text-[#f5efe7] flex-shrink-0">B</div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm text-[#1a1611]"><strong>@blknoiz06</strong> <span class="font-mono text-[#9c2516] text-xs">★★★</span> quote-tweeted your validator queue thesis (positive).</p>
-                <p class="text-xs text-[#6b5e52] italic mt-0.5">12h ago · +89 engagements downstream</p>
-              </div>
-              <a href="#" class="text-xs text-[#9c2516] hover:underline flex-shrink-0">view →</a>
-            </div>
-          </div>
-        </section>
-
-        <!-- Closing line -->
-        <div class="mt-12 pt-8 border-t border-subtle text-center">
-          <p class="font-serif italic text-base text-[#6b5e52] max-w-2xl mx-auto leading-relaxed">
-            "The institution amplifies what you build. The tools are how."
-          </p>
-        </div>
 
       </div>
     </main>
@@ -319,71 +144,7 @@
   <script src="js/components.js"></script>
 
   <script>
-    // Greet
     document.getElementById("greet-name").textContent = DEMO_KOL.displayName;
-
-    // Digest
-    const digestEl = document.getElementById("digest-list");
-    DEMO_KOL.digest.forEach((d) => {
-      const colorMap = {
-        good:    { border: "border-emerald-600", bg: "bg-emerald-50" },
-        bad:     { border: "border-[#9c2516]",   bg: "bg-[#fef4e8]"  },
-        neutral: { border: "border-[#6b5e52]",   bg: "bg-[#ebe3d4]/40" },
-      };
-      const c = colorMap[d.impact] || colorMap.neutral;
-      const iconMap = { score: "★", mentions: "❝", audience: "○" };
-      const html = `
-        <div class="flex items-start gap-3 py-2 border-l-2 ${c.border} pl-3 ${c.bg} rounded-r">
-          <span class="text-sm mt-0.5 text-[#9c2516] font-serif">${iconMap[d.type] || "•"}</span>
-          <div class="flex-1 min-w-0 text-sm text-[#1a1611] leading-relaxed">${d.text}</div>
-        </div>
-      `;
-      digestEl.insertAdjacentHTML("beforeend", html);
-    });
-
-    // Trill Score · 6 dimension tiles (Max: per-dim tiles with 7d/30d change + spark trend)
-    const dimTileEl = document.getElementById("dim-tile-grid");
-    // synth 7d change as roughly 0.4x 30d delta (demo data)
-    DEMO_KOL.dimensions.forEach((d) => {
-      const delta30 = d.delta || 0;
-      const delta7 = Math.round(delta30 * 0.4 * 100) / 100;
-      const fmtDelta = (v) => v > 0 ? `+${v.toFixed(2)}` : v < 0 ? v.toFixed(2) : "±0.00";
-      const cls30 = delta30 > 0 ? "text-emerald-700" : delta30 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
-      const cls7 = delta7 > 0 ? "text-emerald-700" : delta7 < 0 ? "text-[#9c2516]" : "text-[#6b5e52]";
-      const bandCls = { "Strong": "bg-emerald-50 text-emerald-800", "Solid": "bg-sky-50 text-sky-800", "Average": "bg-amber-50 text-amber-800", "Below Avg": "bg-[#fef4e8] text-[#9c2516]" }[d.band] || "bg-[#ebe3d4]/40 text-[#6b5e52]";
-      // synth a 7-point sparkline from the 30d delta (rises/falls toward current)
-      const trend = delta30 >= 0 ? ["▁","▂","▃","▄","▅","▆","█"] : ["█","▆","▅","▄","▃","▂","▁"];
-      if (delta30 === 0) trend.fill("▄");
-      const flag = d.flagged ? `<span class="absolute top-3 right-3 text-[9px] uppercase tracking-widest bg-[#9c2516] text-[#f5efe7] px-1.5 py-0.5 rounded font-bold">LOW</span>` : "";
-      const html = `
-        <a href="score.html#${d.short.toLowerCase()}" class="card block rounded-lg border border-subtle bg-[#f5efe7] p-5 relative group">
-          ${flag}
-          <div class="flex items-baseline justify-between mb-1">
-            <p class="font-mono text-[10px] text-[#6b5e52] uppercase tracking-widest font-semibold">${d.short}</p>
-            <span class="text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded font-semibold ${bandCls}">${d.band}</span>
-          </div>
-          <p class="font-serif text-sm text-[#1a1611] tracking-tight mb-2 leading-tight">${d.name}</p>
-          <div class="flex items-baseline justify-between mb-2">
-            <p class="font-serif text-3xl tracking-tight tabular-nums">${d.score.toFixed(2)}</p>
-            <span class="font-mono text-[10px] text-[#9c2516]/60 tracking-tighter">${trend.join("")}</span>
-          </div>
-          <div class="h-1.5 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-            <div class="h-full bg-[#9c2516] rounded-full" style="width: ${d.score * 100}%"></div>
-          </div>
-          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-subtle text-[10px]">
-            <div>
-              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">7d</p>
-              <p class="font-mono ${cls7} tabular-nums">${fmtDelta(delta7)}</p>
-            </div>
-            <div>
-              <p class="text-[#6b5e52] uppercase tracking-widest font-semibold">30d</p>
-              <p class="font-mono ${cls30} tabular-nums">${fmtDelta(delta30)}</p>
-            </div>
-          </div>
-        </a>
-      `;
-      dimTileEl.insertAdjacentHTML("beforeend", html);
-    });
   </script>
 </body>
 </html>

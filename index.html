@@ -44,7 +44,6 @@
                 <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-4">Trill Verified</p>
                 <p class="font-mono text-6xl text-[#9c2516] tracking-wider leading-none mb-4">★ ★ ★</p>
                 <p class="font-serif text-2xl text-[#1a1611] tracking-tight" style="font-family:'Cormorant Garamond',Georgia,serif;">Three-Star Creator</p>
-                <p class="text-[11px] text-[#6b5e52] italic mt-2">Distinguished in Analytical Depth · Accuracy Discipline</p>
               </a>
               <a href="profile.html" class="mt-3 flex items-center justify-center gap-1.5 text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold hover:text-[#7a1d11]">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -56,7 +55,15 @@
 
         <!-- SECTION 1 · At a glance (4 stats + 1 next-action) -->
         <section class="mb-14">
-          <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-5">At a glance</p>
+          <div class="flex items-center justify-between mb-5">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">At a glance</p>
+            <div class="flex items-center gap-1">
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#9c2516] bg-[#fef4e8] border border-[#9c2516] font-semibold">24h</button>
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#6b5e52] hover:bg-[#ebe3d4] transition-colors">7d</button>
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#6b5e52] hover:bg-[#ebe3d4] transition-colors">30d</button>
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#6b5e52] hover:bg-[#ebe3d4] transition-colors">90d</button>
+            </div>
+          </div>
 
           <div class="grid grid-cols-4 gap-5 mb-8">
             <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
@@ -107,29 +114,106 @@
             <!-- AI Writer -->
             <a href="tool-ai-writer.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
               <div class="font-serif text-4xl text-[#9c2516] mb-3">✍</div>
-              <h3 class="font-serif text-2xl tracking-tight mb-2">AI Writer</h3>
-              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
-              <p class="text-sm text-[#6b5e52] mb-6">drafts waiting</p>
+              <h3 class="font-serif text-2xl tracking-tight mb-16">AI Writer</h3>
               <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">Open →</p>
             </a>
 
             <!-- Topic Pulse -->
             <a href="tool-topic-pulse.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
               <div class="font-serif text-4xl text-[#9c2516] mb-3">◉</div>
-              <h3 class="font-serif text-2xl tracking-tight mb-2">Topic Pulse</h3>
-              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">3</p>
-              <p class="text-sm text-[#6b5e52] mb-6">hot topics open</p>
+              <h3 class="font-serif text-2xl tracking-tight mb-16">Topic Pulse</h3>
               <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">See →</p>
             </a>
 
             <!-- Network -->
             <a href="tool-network.html" class="card block bg-[#f5efe7] border border-subtle rounded-lg p-7">
               <div class="font-serif text-4xl text-[#9c2516] mb-3">⌘</div>
-              <h3 class="font-serif text-2xl tracking-tight mb-2">Network</h3>
-              <p class="font-serif text-5xl text-[#1a1611] tabular-nums tracking-tight mt-6 mb-2">4</p>
-              <p class="text-sm text-[#6b5e52] mb-6">KOLs ready for you</p>
+              <h3 class="font-serif text-2xl tracking-tight mb-16">Network</h3>
               <p class="text-xs uppercase tracking-widest text-[#9c2516] font-semibold border-t border-subtle pt-4">Reply →</p>
             </a>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3 · Trends (4 smooth-curve mini line charts) -->
+        <section class="mb-12">
+          <div class="flex items-baseline justify-between mb-7">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">Trends</p>
+              <h2 class="font-serif text-3xl tracking-tight">How you're moving.</h2>
+            </div>
+            <div class="flex items-center gap-1">
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#6b5e52] hover:bg-[#ebe3d4] transition-colors">7d</button>
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#9c2516] bg-[#fef4e8] border border-[#9c2516] font-semibold">30d</button>
+              <button class="text-[10px] uppercase tracking-widest px-3 py-1.5 rounded text-[#6b5e52] hover:bg-[#ebe3d4] transition-colors">90d</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-4 gap-5">
+
+            <!-- Followers trend (strong steady up) -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Followers</p>
+              <svg viewBox="0 0 280 80" class="w-full h-16" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="grad-f-en" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#047857" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#047857" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 0 68 C 25 65, 50 58, 75 55 C 100 52, 125 45, 150 42 C 175 38, 200 30, 225 25 C 250 20, 265 15, 280 10 L 280 80 L 0 80 Z" fill="url(#grad-f-en)"/>
+                <path d="M 0 68 C 25 65, 50 58, 75 55 C 100 52, 125 45, 150 42 C 175 38, 200 30, 225 25 C 250 20, 265 15, 280 10" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-xs text-emerald-700 font-semibold mt-2">+3,124 over 30d</p>
+            </div>
+
+            <!-- Interactions trend (volatile but up) -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Interactions</p>
+              <svg viewBox="0 0 280 80" class="w-full h-16" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="grad-i-en" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#047857" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#047857" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 0 60 C 20 56, 40 65, 60 50 C 80 35, 100 55, 120 40 C 140 28, 160 50, 180 30 C 200 20, 220 35, 240 18 C 260 10, 270 22, 280 12 L 280 80 L 0 80 Z" fill="url(#grad-i-en)"/>
+                <path d="M 0 60 C 20 56, 40 65, 60 50 C 80 35, 100 55, 120 40 C 140 28, 160 50, 180 30 C 200 20, 220 35, 240 18 C 260 10, 270 22, 280 12" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-xs text-emerald-700 font-semibold mt-2">+7.4K over 30d</p>
+            </div>
+
+            <!-- Score trend (gentle steady up) -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Score</p>
+              <svg viewBox="0 0 280 80" class="w-full h-16" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="grad-s-en" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#047857" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#047857" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 0 65 C 30 63, 60 60, 90 55 C 120 50, 150 47, 180 42 C 210 38, 240 33, 280 28 L 280 80 L 0 80 Z" fill="url(#grad-s-en)"/>
+                <path d="M 0 65 C 30 63, 60 60, 90 55 C 120 50, 150 47, 180 42 C 210 38, 240 33, 280 28" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-xs text-emerald-700 font-semibold mt-2">+0.08 over 30d</p>
+            </div>
+
+            <!-- Trill-driven trend (slow start, accelerating) -->
+            <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+              <p class="text-xs uppercase tracking-widest text-[#6b5e52] mb-3">Trill-driven</p>
+              <svg viewBox="0 0 280 80" class="w-full h-16" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="grad-t-en" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#9c2516" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#9c2516" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 0 70 C 30 68, 60 65, 90 62 C 120 58, 150 50, 180 40 C 210 28, 240 18, 280 8 L 280 80 L 0 80 Z" fill="url(#grad-t-en)"/>
+                <path d="M 0 70 C 30 68, 60 65, 90 62 C 120 58, 150 50, 180 40 C 210 28, 240 18, 280 8" stroke="#9c2516" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="text-xs text-[#9c2516] font-semibold mt-2">+212 over 30d</p>
+            </div>
 
           </div>
         </section>

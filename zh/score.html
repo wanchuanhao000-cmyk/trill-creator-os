@@ -40,20 +40,20 @@
 
               <div class="flex items-center gap-6 mt-6">
                 <div class="border-l-2 border-[#9c2516] pl-4">
-                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">本周期</p>
-                  <p class="font-mono text-3xl text-emerald-700 tabular-nums">+2 维度</p>
-                  <p class="text-[11px] text-[#6b5e52]">提升 · 0 降级</p>
+                  <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">状态</p>
+                  <p class="font-serif text-3xl text-emerald-700">上升中</p>
+                  <p class="text-[11px] text-[#6b5e52]">6 个维度中 2 个提升</p>
                 </div>
                 <div class="border-l-2 border-subtle pl-4">
                   <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">下次复评</p>
                   <p class="font-mono text-2xl text-[#1a1611]">39 天</p>
-                  <p class="text-[11px] text-[#6b5e52]">2026 Q3 周期</p>
+                  <p class="text-[11px] text-[#6b5e52]">2026 Q3 复评</p>
                 </div>
               </div>
             </div>
 
             <div class="col-span-2 flex items-center justify-center">
-              <svg viewBox="0 0 200 200" class="w-72 h-72">
+              <svg viewBox="-30 -15 260 230" class="w-72 h-72">
                 <polygon points="100,20 169,55 169,145 100,180 31,145 31,55" fill="none" stroke="#d6cfc4" stroke-width="0.8"/>
                 <polygon points="100,40 152,67 152,133 100,160 48,133 48,67" fill="none" stroke="#d6cfc4" stroke-width="0.6"/>
                 <polygon points="100,60 135,80 135,120 100,140 65,120 65,80" fill="none" stroke="#d6cfc4" stroke-width="0.4"/>
@@ -63,6 +63,20 @@
                 <line x1="100" y1="100" x2="100" y2="180" stroke="#d6cfc4" stroke-width="0.6"/>
                 <line x1="100" y1="100" x2="31" y2="145" stroke="#d6cfc4" stroke-width="0.6"/>
                 <line x1="100" y1="100" x2="31" y2="55" stroke="#d6cfc4" stroke-width="0.6"/>
+
+                <!-- 上一周期 2026 Q1 -->
+                <polygon points="100,55 145,75 148,135 100,144 65,123 56,72"
+                         fill="#6b5e52" fill-opacity="0.07"
+                         stroke="#6b5e52" stroke-opacity="0.55" stroke-width="1.2"
+                         stroke-dasharray="3,2"/>
+                <circle cx="100" cy="55" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                <circle cx="145" cy="75" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                <circle cx="148" cy="135" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                <circle cx="100" cy="144" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                <circle cx="65" cy="123" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                <circle cx="56" cy="72" r="2" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+
+                <!-- 本周期 2026 Q2 -->
                 <polygon points="100,42 153,68 144,131 100,144 56,127 47,68"
                          fill="#9c2516" fill-opacity="0.18"
                          stroke="#9c2516" stroke-width="2"/>
@@ -72,12 +86,22 @@
                 <circle cx="100" cy="144" r="3" fill="#9c2516"/>
                 <circle cx="56" cy="127" r="3" fill="#9c2516"/>
                 <circle cx="47" cy="68" r="3" fill="#9c2516"/>
-                <text x="100" y="13" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">分析深度</text>
-                <text x="180" y="51" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">准确性</text>
-                <text x="180" y="155" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">知识诚实度</text>
-                <text x="100" y="195" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">社区关怀</text>
-                <text x="20" y="155" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">教育价值</text>
-                <text x="20" y="51" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" fill="#1a1611" font-weight="600">娱乐性</text>
+
+                <!-- 标签 -->
+                <text x="100" y="10" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">分析深度</text>
+                <text x="180" y="55" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">准确性</text>
+                <text x="180" y="155" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">知识诚实度</text>
+                <text x="100" y="197" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">社区关怀</text>
+                <text x="20" y="155" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">教育价值</text>
+                <text x="20" y="55" text-anchor="middle" font-family="Cormorant Garamond, 'Noto Serif SC', serif" font-size="11" fill="#1a1611" font-weight="600">娱乐性</text>
+
+                <!-- 图例 -->
+                <g transform="translate(-22, 212)">
+                  <circle cx="0" cy="0" r="3" fill="#9c2516"/>
+                  <text x="7" y="3" font-family="Inter, 'PingFang SC', sans-serif" font-size="8" fill="#1a1611" font-weight="500">本周期</text>
+                  <circle cx="48" cy="0" r="3" fill="none" stroke="#6b5e52" stroke-opacity="0.7" stroke-width="1.2"/>
+                  <text x="55" y="3" font-family="Inter, 'PingFang SC', sans-serif" font-size="8" fill="#6b5e52" font-weight="500">2026 Q1</text>
+                </g>
               </svg>
             </div>
 
@@ -86,12 +110,9 @@
 
         <!-- DISTINGUISHED -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-5 pb-3 border-b border-[#9c2516]/40">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">在这些维度 Distinguished</p>
-              <h2 class="font-serif text-3xl tracking-tight">你出色的地方。</h2>
-            </div>
-            <p class="text-xs text-[#6b5e52] italic">机构公开认可的维度。</p>
+          <div class="mb-5 pb-3 border-b border-[#9c2516]/40">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">在这些维度 Distinguished</p>
+            <h2 class="font-serif text-3xl tracking-tight">你出色的地方。</h2>
           </div>
 
           <div class="grid grid-cols-2 gap-5">
@@ -99,8 +120,7 @@
             <div class="card rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-6">
               <div class="flex items-start justify-between mb-4">
                 <div>
-                  <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Distinguished</span>
-                  <h3 class="font-serif text-3xl tracking-tight mt-2 mb-1">分析深度</h3>
+                  <h3 class="font-serif text-3xl tracking-tight mb-1">分析深度</h3>
                   <p class="text-xs text-[#6b5e52] italic">原创思考 · 具名来源 · 框架驱动</p>
                 </div>
                 <span class="font-serif text-5xl text-[#9c2516]">●</span>
@@ -112,7 +132,7 @@
                 </div>
                 <div>
                   <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">趋势</p>
-                  <p class="font-mono text-lg text-emerald-700">+0.04 ↗</p>
+                  <p class="font-serif text-lg text-emerald-700">进步中 ↗</p>
                 </div>
               </div>
             </div>
@@ -120,8 +140,7 @@
             <div class="card rounded-lg border-2 border-[#9c2516] bg-[#fef4e8] p-6">
               <div class="flex items-start justify-between mb-4">
                 <div>
-                  <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold">Distinguished</span>
-                  <h3 class="font-serif text-3xl tracking-tight mt-2 mb-1">准确性纪律</h3>
+                  <h3 class="font-serif text-3xl tracking-tight mb-1">准确性纪律</h3>
                   <p class="text-xs text-[#6b5e52] italic">验证兑现率 · 已结算 call · 公开 miss</p>
                 </div>
                 <span class="font-serif text-5xl text-[#9c2516]">●</span>
@@ -133,7 +152,7 @@
                 </div>
                 <div>
                   <p class="text-[10px] uppercase tracking-widest text-[#6b5e52]">趋势</p>
-                  <p class="font-mono text-lg text-emerald-700">+0.02 ↗</p>
+                  <p class="font-serif text-lg text-emerald-700">稳健保持 →</p>
                 </div>
               </div>
             </div>
@@ -143,12 +162,9 @@
 
         <!-- ALL SIX DIMENSIONS -->
         <section class="mb-12">
-          <div class="flex items-baseline justify-between mb-5 pb-3 border-b border-subtle">
-            <div>
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">全部 6 个维度</p>
-              <h2 class="font-serif text-3xl tracking-tight">完整画面。</h2>
-            </div>
-            <p class="text-xs text-[#6b5e52] italic">点击弱维度直接进 AI Writer(rubric 已加载)。</p>
+          <div class="mb-5 pb-3 border-b border-subtle">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">全部 6 个维度</p>
+            <h2 class="font-serif text-3xl tracking-tight">三项 Strong · 两项 Solid · 一项待提升。</h2>
           </div>
 
           <div class="grid grid-cols-3 gap-4">
@@ -159,11 +175,11 @@
                 <span class="band-strong text-[10px] uppercase tracking-widest px-2 py-0.5 rounded font-semibold">Strong</span>
               </div>
               <div class="h-2 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-                <div class="h-full bg-[#9c2516] rounded-full" style="width:72%"></div>
+                <div class="h-full bg-[#047857] rounded-full" style="width:72%"></div>
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-emerald-700 font-semibold font-mono">+0.04 · 30d ↗</span>
+                <span class="text-emerald-700 font-semibold">进步中 · 30 天 ↗</span>
               </div>
             </div>
 
@@ -173,11 +189,11 @@
                 <span class="band-strong text-[10px] uppercase tracking-widest px-2 py-0.5 rounded font-semibold">Strong</span>
               </div>
               <div class="h-2 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-                <div class="h-full bg-[#9c2516] rounded-full" style="width:78%"></div>
+                <div class="h-full bg-[#047857] rounded-full" style="width:78%"></div>
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-emerald-700 font-semibold font-mono">+0.02 · 30d ↗</span>
+                <span class="text-emerald-700 font-semibold">进步中 · 30 天 ↗</span>
               </div>
             </div>
 
@@ -187,11 +203,11 @@
                 <span class="band-strong text-[10px] uppercase tracking-widest px-2 py-0.5 rounded font-semibold">Strong</span>
               </div>
               <div class="h-2 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-                <div class="h-full bg-[#9c2516] rounded-full" style="width:71%"></div>
+                <div class="h-full bg-[#047857] rounded-full" style="width:71%"></div>
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-emerald-700 font-semibold font-mono">+0.01 · 30d ↗</span>
+                <span class="text-emerald-700 font-semibold">微升 · 30 天 ↗</span>
               </div>
             </div>
 
@@ -201,11 +217,11 @@
                 <span class="band-solid text-[10px] uppercase tracking-widest px-2 py-0.5 rounded font-semibold">Solid</span>
               </div>
               <div class="h-2 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-                <div class="h-full bg-[#9c2516] rounded-full" style="width:66%"></div>
+                <div class="h-full bg-[#1e40af] rounded-full" style="width:66%"></div>
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-[#6b5e52] font-semibold font-mono">−0.01 · flat</span>
+                <span class="text-[#6b5e52] font-semibold">持平 · 30 天 →</span>
               </div>
             </div>
 
@@ -215,11 +231,11 @@
                 <span class="band-solid text-[10px] uppercase tracking-widest px-2 py-0.5 rounded font-semibold">Solid</span>
               </div>
               <div class="h-2 bg-[#ebe3d4] rounded-full overflow-hidden mb-3">
-                <div class="h-full bg-[#9c2516] rounded-full" style="width:64%"></div>
+                <div class="h-full bg-[#1e40af] rounded-full" style="width:64%"></div>
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-emerald-700 font-semibold font-mono">+0.06 · 30d ↗</span>
+                <span class="text-emerald-700 font-semibold">明显提升 · 30 天 ↗</span>
               </div>
             </div>
 
@@ -233,9 +249,8 @@
               </div>
               <div class="flex items-baseline justify-between text-[11px]">
                 <span class="text-[#6b5e52] italic">趋势</span>
-                <span class="text-[#6b5e52] font-semibold font-mono">flat · 30d</span>
+                <span class="text-[#6b5e52] font-semibold">持平 · 30 天 →</span>
               </div>
-              <p class="text-[11px] text-amber-700 font-semibold mt-3 pt-2 border-t border-amber-300">→ 打开 AI Writer · 提升它</p>
             </a>
 
           </div>
@@ -243,46 +258,14 @@
 
         <!-- ACTION QUEUE -->
         <section class="mb-12 bg-[#1a1611] text-[#f5efe7] rounded-lg overflow-hidden">
-          <div class="px-8 py-5 border-b border-[#6b5e52]/40">
-            <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">本周期行动</p>
-            <h2 class="font-serif text-3xl tracking-tight">一步锁定下次复评的 ★★★ 位置。</h2>
-          </div>
-
-          <div class="px-8 py-6 grid grid-cols-5 gap-8 items-center">
-            <div class="col-span-2">
-              <span class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold bg-[#9c2516]/20 px-2 py-1 rounded">低于均值 · 最高杠杆</span>
-              <h3 class="font-serif text-4xl tracking-tight mt-3 mb-2">社区关怀</h3>
-              <p class="font-serif italic text-base text-[#d6cfc4] leading-relaxed mb-4">回复质量 + miss-acknowledgement 率 · 3 个周期持平到下降的那一个维度。提升一档,锁定下次复评的 ★★★ 位置。</p>
-              <div class="flex items-center gap-3">
-                <a href="tool-ai-writer.html" class="px-6 py-3 bg-[#9c2516] text-[#f5efe7] text-sm font-semibold rounded">打开 AI Writer · 加载 rubric →</a>
-                <span class="text-xs text-[#d6cfc4] italic">建议:4 周内 4 篇 draft</span>
-              </div>
+          <div class="px-8 py-7 flex items-center justify-between gap-8">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-2">本周期行动</p>
+              <h2 class="font-serif text-3xl tracking-tight leading-snug">提升 <span class="text-[#9c2516]">社区关怀</span>,锁定下次复评的 <span class="font-mono">★★★</span>。</h2>
             </div>
-
-            <div class="col-span-3">
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mb-3">提升这个维度的 3 件事</p>
-              <div class="space-y-2.5 mb-4">
-                <div class="flex items-start gap-3 border-l-2 border-[#9c2516] pl-3 py-1">
-                  <span class="text-[#9c2516] font-semibold shrink-0">✓</span>
-                  <p class="text-sm">在公开可见的 call 上主动承认 miss(如你 $SOL $200 unwind)</p>
-                </div>
-                <div class="flex items-start gap-3 border-l-2 border-[#9c2516] pl-3 py-1">
-                  <span class="text-[#9c2516] font-semibold shrink-0">✓</span>
-                  <p class="text-sm">每周给 3+ 位 verified follower 高质量回复</p>
-                </div>
-                <div class="flex items-start gap-3 border-l-2 border-[#9c2516] pl-3 py-1">
-                  <span class="text-[#9c2516] font-semibold shrink-0">✓</span>
-                  <p class="text-sm">围绕社区相关决策建可复用框架(不是简单 take)</p>
-                </div>
-              </div>
-
-              <p class="text-[10px] uppercase tracking-widest text-[#d6cfc4] mb-2">避免</p>
-              <div class="flex items-start gap-3 border-l-2 border-[#6b5e52] pl-3 py-1 opacity-70">
-                <span class="text-[#d6cfc4] font-semibold shrink-0">✗</span>
-                <p class="text-sm">对 follower 的好问题用敷衍或 "lol" 回</p>
-              </div>
-
-              <a href="methodology.html" class="inline-block mt-4 text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold hover:text-[#f5efe7]">查看完整 rubric →</a>
+            <div class="flex items-center gap-5 shrink-0">
+              <a href="methodology.html" class="text-[10px] uppercase tracking-widest text-[#d6cfc4] hover:text-[#f5efe7] whitespace-nowrap">查看完整 rubric →</a>
+              <a href="tool-ai-writer.html" class="px-6 py-3 bg-[#9c2516] text-[#f5efe7] text-sm font-semibold rounded whitespace-nowrap">打开 AI Writer · 加载 rubric →</a>
             </div>
           </div>
         </section>
@@ -294,7 +277,7 @@
               <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">复评历史</p>
               <h2 class="font-serif text-3xl tracking-tight">你走过的路。</h2>
             </div>
-            <p class="text-xs text-[#6b5e52] italic">近 4 个季度周期 · 机构对你轨迹的记录。</p>
+            <p class="text-xs text-[#6b5e52] italic">近四次季度复评 · 你的机构档案。</p>
           </div>
 
           <div class="bg-[#f5efe7] border border-subtle rounded-lg p-6">
@@ -307,21 +290,18 @@
               <div class="border-l-2 border-subtle pl-4">
                 <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">2025 Q4</p>
                 <p class="font-mono text-2xl text-[#9c2516]">★★★</p>
-                <p class="text-[11px] text-emerald-700 font-semibold mt-1">↑ 升级 · AD +0.08</p>
+                <p class="text-[11px] text-emerald-700 font-semibold mt-1">↑ 升级 · 分析深度提升</p>
               </div>
               <div class="border-l-2 border-subtle pl-4">
                 <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] mb-1">2026 Q1</p>
                 <p class="font-mono text-2xl text-[#9c2516]">★★★</p>
-                <p class="text-[11px] text-[#6b5e52] mt-1 italic">保持 · Acc +0.04 · CC 持平</p>
+                <p class="text-[11px] text-[#6b5e52] mt-1 italic">保持 · 准确性提升 · 关怀持稳</p>
               </div>
               <div class="border-l-2 border-[#9c2516] pl-4 bg-[#fef4e8]/40 -mr-4 pr-4 py-2 rounded">
                 <p class="text-[10px] uppercase tracking-widest text-[#9c2516] mb-1 font-semibold">2026 Q2 · 当前</p>
                 <p class="font-mono text-2xl text-[#9c2516]">★★★</p>
                 <p class="text-[11px] text-emerald-700 font-semibold mt-1">↑ 升级 · Distinguished × 2</p>
               </div>
-            </div>
-            <div class="mt-5 pt-5 border-t border-subtle text-center">
-              <p class="font-serif italic text-sm text-[#6b5e52]">"每次复评都公开宣告。升级和降级都是。机构 outlive 任何一个声音。"</p>
             </div>
           </div>
         </section>

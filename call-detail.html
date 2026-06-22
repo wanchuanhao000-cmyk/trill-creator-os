@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$RUNE long · Resolution trail · Trill CreatorOS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <!-- BREADCRUMB -->
+        <div class="mb-6">
+          <a href="calls.html" class="text-xs text-[#9c2516] hover:underline">← Back to all calls</a>
+        </div>
+
+        <!-- HERO -->
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">HIT</span>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold">Resolution trail</span>
+          </div>
+          <h1 class="font-serif text-5xl tracking-tight mb-3 leading-tight">$RUNE long · <span class="italic">"Capital efficiency unlock in v3"</span></h1>
+          <p class="text-sm text-[#6b5e52] font-mono">Opened May 17 · Resolved May 31 · 14d window · auto-detected from X</p>
+        </header>
+
+        <!-- KEY METRICS -->
+        <div class="grid grid-cols-3 gap-4 mb-10">
+          <div class="bg-emerald-50 border border-emerald-700/30 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-emerald-700 font-semibold mb-2">Result</p>
+            <p class="font-serif text-3xl text-emerald-700 tabular-nums">+24%</p>
+            <p class="text-xs text-[#6b5e52] mt-1">vs target +18% · exceeded by 6pts</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Resolution day</p>
+            <p class="font-serif text-3xl text-[#1a1611]">May 25</p>
+            <p class="text-xs text-[#6b5e52] mt-1">target reached 6 days before window close</p>
+          </div>
+          <div class="bg-[#fef4e8] border border-[#9c2516]/30 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Score impact</p>
+            <p class="font-serif text-3xl text-[#9c2516]">Accuracy lifted</p>
+            <p class="text-xs text-[#6b5e52] mt-1">early hit = stronger signal</p>
+          </div>
+        </div>
+
+        <!-- ORIGINAL PREDICTION -->
+        <section class="mb-10">
+          <div class="mb-4 pb-3 border-b border-subtle">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">Original prediction</p>
+            <h2 class="font-serif text-2xl tracking-tight">The X post Trill detected.</h2>
+          </div>
+
+          <div class="bg-white border border-subtle rounded-lg p-6">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-full bg-[#1a1611] flex-shrink-0 flex items-center justify-center text-[#f5efe7] font-bold">Z</div>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">@zachxbt <span class="text-xs text-[#6b5e52] font-normal ml-1">· May 17, 2026 · 14:32 UTC</span></p>
+                <p class="text-sm mt-2 leading-relaxed">RUNE's v3 unlock is mispriced. Capital efficiency goes 3-4x with the new pool design. Looking for +18% over the next 2 weeks. Posting this on record.</p>
+                <a href="#" onclick="event.preventDefault(); showToast('<span class=&quot;toast-x&quot;>𝕏</span> Opening original X post');" class="inline-block mt-3 text-[10px] uppercase tracking-widest text-[#1d9bf0] font-semibold hover:underline">View on X →</a>
+              </div>
+            </div>
+            <div class="border-t border-subtle pt-4 mt-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Trill parsed:</p>
+              <div class="grid grid-cols-4 gap-3 text-xs">
+                <div><span class="text-[#6b5e52]">Asset</span><br><span class="font-mono font-semibold">$RUNE</span></div>
+                <div><span class="text-[#6b5e52]">Direction</span><br><span class="font-mono font-semibold">Long</span></div>
+                <div><span class="text-[#6b5e52]">Target</span><br><span class="font-mono font-semibold">+18%</span></div>
+                <div><span class="text-[#6b5e52]">Window</span><br><span class="font-mono font-semibold">14d (Jun 1)</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="mb-10">
+          <div class="mb-4 pb-3 border-b border-subtle">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">Resolution timeline</p>
+            <h2 class="font-serif text-2xl tracking-tight">From post to resolved.</h2>
+          </div>
+
+          <div class="space-y-4">
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#9c2516] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Call opened</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">May 17 · 14:32 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">Original X post · target +18% · 14d window · base price $3.42</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#6b5e52] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Context update detected</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">May 22 · 09:15 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">Trill detected follow-up X post · "v3 pool design confirmed by core team" · reinforces thesis</p>
+                <a href="#" onclick="event.preventDefault(); showToast('<span class=&quot;toast-x&quot;>𝕏</span> Opening context post');" class="inline-block mt-1 text-[10px] uppercase tracking-widest text-[#1d9bf0] font-semibold hover:underline">View on X →</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-emerald-600 mt-1.5 flex-shrink-0 ring-4 ring-emerald-100"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold text-emerald-700">Target reached</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">May 25 · 18:47 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">Price hit $4.04 (+18.1%) · 6 days before window close · HIT confirmed</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#6b5e52] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Window closed</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">May 31 · 23:59 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">Final price $4.24 (+24%) · result locked · added to Accuracy aggregate</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- HOW TRILL RESOLVED -->
+        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-7">
+          <div class="mb-4 pb-3 border-b border-[#6b5e52]/40">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">How Trill resolved this</p>
+            <h2 class="font-serif text-2xl tracking-tight">Transparent by default.</h2>
+          </div>
+          <div class="grid grid-cols-2 gap-6 text-sm leading-relaxed text-[#d6cfc4]">
+            <div>
+              <p class="text-[11px] uppercase tracking-widest text-[#f5efe7] font-semibold mb-2">Rule applied</p>
+              <p>Price target (any-time touch within window). Onchain price feed: Pyth + Chainlink median. Target reached when feed price ≥ $4.04 for ≥ 15 min continuous.</p>
+            </div>
+            <div>
+              <p class="text-[11px] uppercase tracking-widest text-[#f5efe7] font-semibold mb-2">Score weighting</p>
+              <p>Early hit (6d before window close) multiplied by 1.15 timing factor. Context update on May 22 added to call timeline · no scoring change.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <style>
+    .toast {
+      position: fixed; bottom: 24px; left: 50%;
+      transform: translateX(-50%);
+      background: #1a1611; color: #f5efe7;
+      padding: 12px 20px; border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(26,22,17,0.22);
+      font-size: 13px; font-weight: 500;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      z-index: 100; max-width: 380px; text-align: center;
+    }
+    .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-4px); }
+    .toast-x { color: #1d9bf0; font-weight: 700; margin-right: 6px; }
+  </style>
+  <script>
+    window.PAGE_KEY = "calls";
+    window.PAGE_TITLE = "Resolution trail";
+    window.PAGE_SUBTITLE = "$RUNE long · resolved HIT on May 25.";
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerHTML = msg;
+      t.classList.add('show');
+      clearTimeout(window._tt);
+      window._tt = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

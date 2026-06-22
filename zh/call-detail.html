@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$RUNE long · 结算轨迹 · Trill 创作者操作系统</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', 'PingFang SC', system-ui, sans-serif; background: #f5efe7; color: #1a1611; }
+    .font-serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .border-subtle { border-color: #d6cfc4; }
+    .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+    .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div class="flex h-screen overflow-hidden">
+    <aside class="w-60 flex-shrink-0"><div id="sidebar"></div></aside>
+
+    <main class="flex-1 flex flex-col overflow-hidden">
+      <div id="topbar"></div>
+      <div class="flex-1 overflow-y-auto p-8 scrollbar-thin">
+
+        <!-- 面包屑 -->
+        <div class="mb-6">
+          <a href="calls.html" class="text-xs text-[#9c2516] hover:underline">← 返回 Calls 列表</a>
+        </div>
+
+        <!-- HERO -->
+        <header class="mb-10 pb-8 border-b border-subtle">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold">命中</span>
+            <span class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold">结算轨迹</span>
+          </div>
+          <h1 class="font-serif text-5xl tracking-tight mb-3 leading-tight">$RUNE long · <span class="italic">"v3 资本效率释放"</span></h1>
+          <p class="text-sm text-[#6b5e52] font-mono">5/17 立 · 5/31 结算 · 14 天窗口 · Trill 自动从 X 抓取</p>
+        </header>
+
+        <!-- 关键指标 -->
+        <div class="grid grid-cols-3 gap-4 mb-10">
+          <div class="bg-emerald-50 border border-emerald-700/30 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-emerald-700 font-semibold mb-2">结果</p>
+            <p class="font-serif text-3xl text-emerald-700 tabular-nums">+24%</p>
+            <p class="text-xs text-[#6b5e52] mt-1">vs 目标 +18% · 超出 6 个点</p>
+          </div>
+          <div class="bg-[#f5efe7] border border-subtle rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">命中日</p>
+            <p class="font-serif text-3xl text-[#1a1611]">5/25</p>
+            <p class="text-xs text-[#6b5e52] mt-1">提前 6 天达到 target</p>
+          </div>
+          <div class="bg-[#fef4e8] border border-[#9c2516]/30 rounded-lg p-5">
+            <p class="text-[10px] uppercase tracking-widest text-[#9c2516] font-semibold mb-2">Score 影响</p>
+            <p class="font-serif text-3xl text-[#9c2516]">Accuracy 提升</p>
+            <p class="text-xs text-[#6b5e52] mt-1">提前命中 · 信号更强</p>
+          </div>
+        </div>
+
+        <!-- 原始 prediction -->
+        <section class="mb-10">
+          <div class="mb-4 pb-3 border-b border-subtle">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">原始 prediction</p>
+            <h2 class="font-serif text-2xl tracking-tight">Trill 检测到的那条 X post。</h2>
+          </div>
+
+          <div class="bg-white border border-subtle rounded-lg p-6">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-10 h-10 rounded-full bg-[#1a1611] flex-shrink-0 flex items-center justify-center text-[#f5efe7] font-bold">Z</div>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">@zachxbt <span class="text-xs text-[#6b5e52] font-normal ml-1">· 2026/5/17 · 14:32 UTC</span></p>
+                <p class="text-sm mt-2 leading-relaxed">RUNE 的 v3 解锁定价偏低。新池设计让资本效率提升 3-4 倍。预计 2 周内 +18%。立此存照。</p>
+                <a href="#" onclick="event.preventDefault(); showToast('<span class=&quot;toast-x&quot;>𝕏</span> 跳转 X · 查看原始 post');" class="inline-block mt-3 text-[10px] uppercase tracking-widest text-[#1d9bf0] font-semibold hover:underline">在 X 上查看 →</a>
+              </div>
+            </div>
+            <div class="border-t border-subtle pt-4 mt-4">
+              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] font-semibold mb-2">Trill 解析为：</p>
+              <div class="grid grid-cols-4 gap-3 text-xs">
+                <div><span class="text-[#6b5e52]">资产</span><br><span class="font-mono font-semibold">$RUNE</span></div>
+                <div><span class="text-[#6b5e52]">方向</span><br><span class="font-mono font-semibold">多</span></div>
+                <div><span class="text-[#6b5e52]">Target</span><br><span class="font-mono font-semibold">+18%</span></div>
+                <div><span class="text-[#6b5e52]">窗口</span><br><span class="font-mono font-semibold">14d (6/1)</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 时间线 -->
+        <section class="mb-10">
+          <div class="mb-4 pb-3 border-b border-subtle">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#6b5e52] font-semibold mb-1">结算时间线</p>
+            <h2 class="font-serif text-2xl tracking-tight">从立到结。</h2>
+          </div>
+
+          <div class="space-y-4">
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#9c2516] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Call 立此</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">5/17 · 14:32 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">原始 X post · 目标 +18% · 14 天窗口 · base 价 $3.42</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#6b5e52] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Context 更新检测</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">5/22 · 09:15 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">Trill 检测到后续 X post · "v3 池设计已被核心团队确认" · 强化 thesis</p>
+                <a href="#" onclick="event.preventDefault(); showToast('<span class=&quot;toast-x&quot;>𝕏</span> 跳转 X · 查看 context post');" class="inline-block mt-1 text-[10px] uppercase tracking-widest text-[#1d9bf0] font-semibold hover:underline">在 X 上查看 →</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-emerald-600 mt-1.5 flex-shrink-0 ring-4 ring-emerald-100"></div>
+              <div class="flex-1 pb-4 border-b border-subtle">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold text-emerald-700">Target 达成</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">5/25 · 18:47 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">价格触及 $4.04 (+18.1%) · 距 window 结束还有 6 天 · 命中确认</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 rounded-full bg-[#6b5e52] mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1">
+                <div class="flex items-baseline justify-between mb-1">
+                  <p class="text-sm font-semibold">Window 关闭</p>
+                  <span class="text-[10px] font-mono text-[#6b5e52]">5/31 · 23:59 UTC</span>
+                </div>
+                <p class="text-xs text-[#6b5e52]">最终价 $4.24 (+24%) · 结果锁定 · 计入 Accuracy 聚合</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Trill 怎么结算 -->
+        <section class="mb-10 bg-[#1a1611] text-[#f5efe7] rounded-lg p-7">
+          <div class="mb-4 pb-3 border-b border-[#6b5e52]/40">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold mb-1">Trill 是这么结算的</p>
+            <h2 class="font-serif text-2xl tracking-tight">默认透明。</h2>
+          </div>
+          <div class="grid grid-cols-2 gap-6 text-sm leading-relaxed text-[#d6cfc4]">
+            <div>
+              <p class="text-[11px] uppercase tracking-widest text-[#f5efe7] font-semibold mb-2">规则</p>
+              <p>价格 target(window 内任意时刻触及)。链上价格源:Pyth + Chainlink 中位数。价格 ≥ $4.04 持续 ≥ 15 分钟即判达成。</p>
+            </div>
+            <div>
+              <p class="text-[11px] uppercase tracking-widest text-[#f5efe7] font-semibold mb-2">Score 加权</p>
+              <p>提前命中(距 window 结束 6 天)乘 1.15 时间因子。5/22 的 context 更新加入 call timeline · 不改变评分。</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <style>
+    .toast {
+      position: fixed; bottom: 24px; left: 50%;
+      transform: translateX(-50%);
+      background: #1a1611; color: #f5efe7;
+      padding: 12px 20px; border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(26,22,17,0.22);
+      font-size: 13px; font-weight: 500;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+      z-index: 100; max-width: 380px; text-align: center;
+    }
+    .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-4px); }
+    .toast-x { color: #1d9bf0; font-weight: 700; margin-right: 6px; }
+  </style>
+  <script>
+    window.PAGE_KEY = "calls";
+    window.PAGE_TITLE = "结算轨迹";
+    window.PAGE_SUBTITLE = "$RUNE long · 5/25 命中结算。";
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerHTML = msg;
+      t.classList.add('show');
+      clearTimeout(window._tt);
+      window._tt = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+  </script>
+  <script src="data/demo-kol.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+</body>
+</html>

@@ -17,20 +17,6 @@
     .scrollbar-thin::-webkit-scrollbar { width: 6px; }
     .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
     .scrollbar-thin::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 3px; }
-    .toast {
-      position: fixed; bottom: 24px; left: 50%;
-      transform: translateX(-50%);
-      background: #1a1611; color: #f5efe7;
-      padding: 12px 20px; border-radius: 6px;
-      box-shadow: 0 8px 24px rgba(26,22,17,0.22);
-      font-size: 13px; font-weight: 500;
-      opacity: 0; visibility: hidden; pointer-events: none;
-      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-      z-index: 100; max-width: 380px; text-align: center;
-    }
-    .toast.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-4px); }
-    .toast-x { color: #1d9bf0; font-weight: 700; margin-right: 6px; }
-    .toast-check { color: #10b981; font-weight: 700; margin-right: 6px; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -62,38 +48,6 @@
             </div>
           </div>
         </header>
-
-        <!-- AFFILIATE STRIP · invite link + share + funnel (affiliate-framing) -->
-        <section class="mb-14">
-          <div class="bg-[#fef4e8] border-2 border-[#9c2516]/40 rounded-lg p-6">
-            <div class="flex items-center justify-between mb-4">
-              <p class="text-[10px] uppercase tracking-[0.3em] text-[#9c2516] font-semibold">Your Trill affiliate link</p>
-              <p class="text-[10px] uppercase tracking-widest text-[#6b5e52] italic">Earnings live soon</p>
-            </div>
-
-            <div class="flex items-stretch gap-3 mb-4">
-              <div class="flex-1 bg-white border border-subtle rounded px-4 py-3 font-mono text-sm text-[#1a1611] flex items-center select-all">
-                trill.xyz/r/zachxbt
-              </div>
-              <button onclick="copyAffiliate()" class="px-5 py-3 bg-[#9c2516] text-[#f5efe7] text-sm font-semibold rounded hover:bg-[#7a1d11] transition-colors flex items-center gap-2 whitespace-nowrap">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                Copy
-              </button>
-              <button onclick="shareAffiliate()" class="px-5 py-3 bg-white border border-[#9c2516] text-[#9c2516] text-sm font-semibold rounded hover:bg-[#fef4e8] transition-colors flex items-center gap-2 whitespace-nowrap">
-                <span class="text-base font-bold">𝕏</span>
-                Share on X
-              </button>
-            </div>
-
-            <div class="flex items-center gap-4 text-xs text-[#6b5e52]">
-              <span><strong class="text-[#1a1611] font-mono tabular-nums">12</strong> invited</span>
-              <span class="text-[#d6cfc4]">·</span>
-              <span><strong class="text-emerald-700 font-mono tabular-nums">8</strong> joined</span>
-              <span class="text-[#d6cfc4]">·</span>
-              <span><strong class="text-emerald-700 font-mono tabular-nums">5</strong> active (30d)</span>
-            </div>
-          </div>
-        </section>
 
         <!-- SECTION 1 · At a glance (4 stats + 1 next-action) -->
         <section class="mb-14">
@@ -264,32 +218,10 @@
     </main>
   </div>
 
-  <div id="toast" class="toast"></div>
   <script>
     window.PAGE_KEY = "home";
     window.PAGE_TITLE = "";
     window.PAGE_SUBTITLE = "";
-    function showToast(msg) {
-      const t = document.getElementById('toast');
-      t.innerHTML = msg;
-      t.classList.add('show');
-      clearTimeout(window._tt);
-      window._tt = setTimeout(() => t.classList.remove('show'), 2400);
-    }
-    function copyAffiliate() {
-      const link = 'https://trill.xyz/r/zachxbt';
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(link).then(
-          () => showToast('<span class="toast-check">✓</span> Affiliate link copied to clipboard'),
-          () => showToast('<span class="toast-check">✓</span> Affiliate link copied')
-        );
-      } else {
-        showToast('<span class="toast-check">✓</span> Affiliate link copied');
-      }
-    }
-    function shareAffiliate() {
-      showToast('<span class="toast-x">𝕏</span> Opening X · share your invite');
-    }
   </script>
   <script src="data/demo-kol.js"></script>
   <script src="js/utils.js"></script>
